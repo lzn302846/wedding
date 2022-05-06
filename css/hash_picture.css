@@ -1,0 +1,120 @@
+/* 散列图样式 */
+.hash_picture{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    perspective: 700px;
+    perspective-origin: top;
+    transition: .5s;
+}
+.hash_picture ul{
+    width: 100%;
+    height: 100%;
+    animation: all_picture 10s infinite linear;
+    animation-delay:6s;
+    -webkit-animation-delay:6s;
+}
+.hash_picture ul li{
+    position: absolute;
+    
+}
+.hash_picture ul li:nth-child(1){
+    transform: translateX(-100%) translateY(-100%);
+    animation: hash_first_picture 1s linear;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+}
+.hash_picture ul li:nth-child(2){
+    transform: translateX(-50%) translateY(-100%);
+    left: 50%;
+    animation: hash_second_picture 1s ease-out;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:1s;
+    -webkit-animation-delay:1s;
+}
+.hash_picture ul li:nth-child(3){
+    transform: translateX(100%) translateY(-100%);
+    right: 0;
+    animation: hash_third_picture 1s linear;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:2s;
+    -webkit-animation-delay:2s;
+}
+.hash_picture ul li:nth-child(4){
+    transform: translateX(100%) translateY(100%);
+    animation: hash_fourth_picture 1s linear;
+    right: 0;
+    bottom: 0;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:4s;
+    -webkit-animation-delay:3s;
+}
+.hash_picture ul li:nth-child(5){
+    transform: translateX(-50%) translateY(100%);
+    animation: hash_fifth_picture 1s linear;
+    left: 50%;
+    bottom: 0;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:4s;
+    -webkit-animation-delay:4s;
+}
+.hash_picture ul li:nth-child(6){
+    transform: translateX(-100%) translateY(100%);
+    animation: hash_sixth_picture 1s linear;
+    bottom: 0;
+    left: 0;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:5s;
+    -webkit-animation-delay:5s;
+}
+@keyframes hash_first_picture {
+    0%{transform: translateX(-100%) translateY(-100%) rotateZ(0deg);}
+    50%{transform: translateX(100%) translateY(50%) rotateZ(160deg);}
+    100%{transform: translateX(200%) translateY(50%) rotateZ(320deg);} 
+}
+@keyframes hash_second_picture {
+    0%{transform: translateX(-50%) translateY(-100%);}
+    50%{transform: translateX(-50%) translateY(25%);}
+    60%{transform:translateX(-50%)  translateY(5%);} 
+    70%{transform:translateX(-50%)  translateY(5%) rotateZ(45deg);} 
+    80%{transform:translateX(-50%)  translateY(5%) rotateZ(0deg);} 
+    90%{transform: translateX(-50%)  translateY(5%) rotateZ(-45deg);} 
+    99%{transform:translateX(-50%)  translateY(5%) rotateZ(0deg);} 
+    100%{transform:translateX(-50%)  translateY(5%);}
+}
+@keyframes hash_third_picture {
+    0%{transform: translateX(100%) translateY(-100%) rotateZ(0deg);}
+    50%{transform: translateX(-50%) translateY(-25%) rotateZ(-160deg);}
+    100%{transform: translateX(-200%) translateY(50%) rotateZ(-320deg);} 
+}
+@keyframes hash_fourth_picture {
+    0%{transform: translateX(100%) translateY(100%) rotateZ(0deg);}
+    50%{transform: translateX(-50%) translateY(-25%) rotateZ(80deg);}
+    100%{transform: translateX(-200%) translateY(-55%) rotateZ(140deg);} 
+}
+@keyframes hash_fifth_picture {
+    0%{transform: translateX(-50%) translateY(100%);}
+    50%{transform: translateX(-50%) translateY(-25%);}
+    60%{transform: translateX(-50%) translateY(-5%);}  
+    70%{transform:translateX(-50%)  translateY(-5%) rotateZ(45deg);} 
+    80%{transform:translateX(-50%)  translateY(-5%) rotateZ(0deg);} 
+    90%{transform: translateX(-50%)  translateY(-5%) rotateZ(-45deg);} 
+    99%{transform:translateX(-50%)  translateY(-5%) rotateZ(0deg);} 
+    100%{transform: translateX(-50%) translateY(-5%);} 
+}
+@keyframes hash_sixth_picture {
+    0%{transform: translateX(-100%) translateY(100%) rotateZ(0deg);}
+    50%{transform: translateX(50%) translateY(25%) rotateZ(-70deg);}
+    100%{transform: translateX(200%) translateY(-55%) rotateZ(-140deg);} 
+}
+@keyframes all_picture {
+    0%{}
+    100%{transform: rotateZ(-360deg);} 
+}

@@ -1,0 +1,438 @@
+/* 最爱 */
+.wedding_words_favorite{
+    --favorite_delay: 10s; /* 最爱的延迟时间 10s*/
+    
+    position: relative;
+    top: 100vh;
+    animation: wedding_words_favorite 5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay));
+    -webkit-animation-delay:calc(var(--favorite_delay));
+}
+@keyframes wedding_words_favorite {
+    0%{}
+    15%{transform: translateY(-100vh);} 
+    70%{transform: translateY(-100vh);} 
+    100%{transform: translateY(-200vh);} 
+}
+.wedding_words_favorite .favorite_sentence_lace{
+    width: 100%;
+}
+.wedding_words_favorite .favorite_sentence_lace .first_lace{
+    width: 100%;
+    height: 8vh;
+    animation: favorite_sentence_lace .9s ease;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .3s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .3s);
+}
+.wedding_words_favorite .favorite_sentence_lace .first_lace img{
+    width: 100%;
+    height: 100%;
+}
+.wedding_words_favorite .favorite_sentence_lace .second_lace{
+    width: 100%;
+    height: 8vh;
+    animation: favorite_sentence_lace .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .3s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .3s);
+}
+.wedding_words_favorite .favorite_sentence_lace .second_lace img{
+    width: 100%;
+    height: 100%;
+}
+.wedding_words_favorite .favorite_sentence_lace .third_lace{
+    width: 100%;
+    height: 8vh;
+    animation: favorite_sentence_lace .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .3s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .3s);
+}
+.wedding_words_favorite .favorite_sentence_lace .third_lace img{
+    width: 100%;
+    height: 100%;
+}
+.wedding_words_favorite .favorite_sentence_lace .fourth_lace{
+    width: 100%;
+    height: 40vh;
+    background-color: #313131;
+    animation: favorite_sentence_lace .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .3s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .3s);
+}
+@keyframes favorite_sentence_lace {
+    0%{}
+    100%{height: 0;} 
+}
+
+/* 最爱的效果抽离复用 */
+.favorite_sentence_box{
+    width: 100%;
+    background-color: black;
+    height: 100vh;
+    position: relative;
+}
+.favorite_sentence_box .favorite_sentence{
+    color: #FF2555;
+    position: absolute;
+    left: 35%;
+    top: 35%;
+    font-size: 40px;
+}
+.favorite_sentence .favorite_sentence_english{
+    display: flex;
+    color: white;
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_1{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .3s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .3s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_2{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .4s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .4s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_3{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .5s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .5s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_4{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .6s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .6s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_5{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .7s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .7s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_6{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .8s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .8s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_7{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .9s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .9s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_8{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_9{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.1s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.1s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_10{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.2s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.2s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_11{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.3s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.3s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_12{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.4s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.4s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_13{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.5s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.5s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_14{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.6s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.6s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_15{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.7s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.7s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_16{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.8s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.8s);
+}
+.favorite_sentence .favorite_sentence_english .favorite_sentence_english_17{
+    opacity: 0;
+    animation: favorite_sentence_english .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.9s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.9s);
+}
+@keyframes favorite_sentence_english {
+    0%{transform: translateY(5vh);}
+    50%{transform: translateY(-5vh);opacity: 1;}
+    100%{transform: translateY(0vh);opacity: 1;} 
+}
+.favorite_sentence .favorite_sentence_text{
+    display: flex;
+    position: absolute;
+    left: 100vw;
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_1{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .3s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .3s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_2{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .4s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .4s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_3{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .5s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .5s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_4{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .6s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .6s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_5{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .7s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .7s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_6{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .8s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .8s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_7{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + .9s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + .9s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_8{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_9{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.1s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.1s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_10{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.2s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.2s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_11{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.3s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.3s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_12{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.4s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.4s);
+}
+.favorite_sentence .favorite_sentence_text .favorite_sentence_text_13{
+    animation: favorite_sentence_text .9s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--favorite_delay) + 1.5s);
+    -webkit-animation-delay:calc(var(--favorite_delay) + 1.5s);
+}
+@keyframes favorite_sentence_text {
+    0%{}
+    50%{transform: translateX(-102vw);}
+    100%{transform: translateX(-100vw);} 
+}
+
+/* 大声告诉你 */
+.tell_you_outer{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    animation: tell_you_outer 8s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:var(--tell_delay);
+    -webkit-animation-delay:var(--tell_delay);
+}
+@keyframes tell_you_outer {
+    0%{}
+    10%{transform: translateY(-100vh);opacity: 1;} 
+    98%{transform: translateY(-100vh);opacity: 1;} 
+    100%{transform: translateY(-100vh);opacity: 0;} 
+}
+.tell_you_outer .tell_you{
+    width: 100%;
+    height: 100%;
+    font-size: 9.6vh;
+    line-height: 12.4vh;
+    letter-spacing: 1vw;
+    color: rgba(255, 255, 255, 0);
+    animation: tell_you 5.5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + 1s);
+    -webkit-animation-delay:calc(var(--tell_delay) + 1s);
+}
+@keyframes tell_you {
+    0%{}
+    50%{color: rgba(255, 255, 255, .5);} 
+    80%{color: rgba(255, 255, 255, .5);} 
+    100%{color: rgba(255, 255, 255, 0);} 
+}
+.tell_you_outer .tell_you .tell_you_group .tell_you_tell{
+    animation: tell_you_tell 1.5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + 5.3s);
+    -webkit-animation-delay:calc(var(--tell_delay) + 5.3s);
+}
+@keyframes tell_you_tell {
+    0%{}
+    100%{color: rgba(255, 255, 255, 0);} 
+}
+.tell_you_outer .tell_you .tell_you_group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tell_you_outer .tell_you .tell_you_group .tell_you_tell{
+    font-size: 5vh;
+    color: #E33E66;
+}
+
+/* I LOVE YOU */
+.i_love_you_outer{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+@keyframes i_love_you_outer {
+    0%{}
+    20%{transform: translateY(-200vh);opacity: 1;} 
+    90%{transform: translateY(-200vh);opacity: 1;} 
+    100%{transform: translateY(-200vh);} 
+}
+.i_love_you_outer .i_love_you{
+    position: absolute;
+    top: 30%;
+    left: 36%;
+    font-size: 9.8vh;
+    text-align: center;
+    transform-origin: top;
+    color: white;
+    animation: i_love_you .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--i_love_you_delay) + 11s);
+    -webkit-animation-delay:calc(var(--i_love_you_delay) + 11s);
+}
+@keyframes i_love_you {
+    0%{}
+    100%{transform: translateY(-90vh) scale(.5); opacity: 0;} 
+}
+.i_love_you_outer .i_love_you .i_love_you_img{
+    animation: i_love_you_outer 4s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--i_love_you_delay) + 9s);
+    -webkit-animation-delay:calc(var(--i_love_you_delay) + 9s);
+}
+.i_love_you_outer .i_love_you .i_love_you_word{
+    animation: i_love_you_outer 4s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--i_love_you_delay) + 9.1s);
+    -webkit-animation-delay:calc(var(--i_love_you_delay) + 9.1s);
+}

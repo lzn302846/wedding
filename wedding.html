@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEDDING</title>
+  <link rel="stylesheet" href="./font_ico/iconfont.css">
+
+  <link rel="stylesheet" href="./css/common_variable.css">
+  <link rel="stylesheet" href="./css/hash_picture.css">
+  <link rel="stylesheet" href="./css/merry_go_round.css">
+  <link rel="stylesheet" href="./css/rotation_map.css">
+  <link rel="stylesheet" href="./css/wedding_words.css">
+  <link rel="stylesheet" href="./css/blackBlock_showPicture.css">
+  <link rel="stylesheet" href="./css/wedding.css">
+  <link rel="stylesheet" href="./css/love_story.css">
+  <link rel="stylesheet" href="./css/our_wedding.css">
+  <link rel="stylesheet" href="./css/favorite.css">
+  <link rel="stylesheet" href="./css/qxqy_hwbl.css">
+  <link rel="stylesheet" href="./css/yes_i_do.css">
+  <link rel="stylesheet" href="./css/meet_the_perfect_you.css">
+  <link rel="stylesheet" href="./css/only_picture_switch.css">
+  <link rel="stylesheet" href="./css/fp_picture.css">
+  <link rel="stylesheet" href="./css/fp_picture_1.css">
+  <link rel="stylesheet" href="./css/ninth_palace.css">
+  <link rel="stylesheet" href="./css/xsczmh.css">
+  <link rel="stylesheet" href="./css/fiveImg_turnBook.css">
+  <link rel="stylesheet" href="./css/youAndMe_twoHeartOneLove.css">
+  <link rel="stylesheet" href="./css/tenPictureRotate.css">
+  <link rel="stylesheet" href="./css/more_red_lace.css">
+  <link rel="stylesheet" href="./css/jump_heart_and_end_love.css">
+
+  <script src="./font_ico/iconfont.js"></script>
+</head>
+
+<body>
+  <div id="wedding-container" class="container">
+    <!-- 最大化、最小化图标 -->
+    <div class="max-min-screen-box">
+      <span id="full-screen" class="iconfont iconzuidahua max-min-screen"></span>
+      <span id="exit-fullscreen" class="iconfont icon3zuidahua-3 max-min-screen"></span>
+    </div>
+
+    <div class="jump_heart">
+      <div class="jump_heart_content">
+        <div class="jump_heart_i">
+          <div style="color: white;">I</div>
+          <div style="color: #2ABCBF;">I</div>
+          <div style="color: white;">I</div>
+          <div style="color: #F34F70;">I</div>
+        </div>
+        <div class="jump_heart_img">
+          <div><img src="./image/blackBackground_heart.png" alt=""></div>
+          <div><img src="./image/blackBackground_heart.png" alt=""></div>
+          <div><img src="./image/blackBackground_heart.png" alt=""></div>
+          <div><img src="./image/blackBackground_heart.png" alt=""></div>
+          <div><img src="./image/blackBackground_heart.png" alt=""></div>
+          <div><img src="./image/blackBackground_heart.png" alt=""></div>
+        </div>
+        <div class="jump_heart_you">
+          <div>YOU</div>
+          <div>YOU</div>
+          <div>YOU</div>
+          <div>YOU</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 黑色方块逐渐展开显示图片 -->
+    <!-- <div id="animation_box" class="animation_box"></div> -->
+
+    <!-- 散列图 -->
+    <!-- <div id="hash_picture" class="hash_picture">
+      <ul>
+        <li><img src="./image/f2.jpg" alt=""></li>
+        <li><img src="./image/f2.jpg" alt=""></li>
+        <li><img src="./image/f3.jpg" alt=""></li>
+        <li><img src="./image/f4.jpg" alt=""></li>
+        <li><img src="./image/f5.jpg" alt=""></li>
+        <li><img src="./image/f4.jpg" alt=""></li>
+      </ul>
+    </div> -->
+
+    <!-- 旋转木马 -->
+    <!-- <div id="merry-go-round" class="merry-go-round">
+      <ul>
+        <li><img src="./image/f2.jpg" alt=""></li>
+        <li><img src="./image/f2.jpg" alt=""></li>
+        <li><img src="./image/f3.jpg" alt=""></li>
+        <li><img src="./image/f4.jpg" alt=""></li>
+        <li><img src="./image/f5.jpg" alt=""></li>
+        <li><img src="./image/f4.jpg" alt=""></li>
+      </ul>
+    </div> -->
+
+    <!-- 轮播图 -->
+    <!-- <div id="rotation-map">
+      <div>
+        <img src="./image/rotationMap/changehouyi.jpg" alt="">
+      </div>
+      <div>
+        <img src="./image/rotationMap/dianwei.jpg" alt="">
+      </div>
+    </div> -->
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.js"></script>
+  <script>
+
+    var viewFullScreen = document.getElementById("full-screen"); // 最大化图标
+    var cancelFullScreen = document.getElementById("exit-fullscreen"); // 最小化图标
+    class AnimationClass {
+      animationBox = document.querySelector("#animation_box"); // 方块揭幕盒子
+      blackBlockStartArr = []; // 黑色方块开幕动画的数组
+      blackBlockShowPictureEl; // 黑色方块动画组标签（交替进入animation_box标签内）
+      bottomToTopElGroup; // 自下而上推图标签组
+      firstGroupSentenceEl; // 从天而降的文字的内层标签
+      hashPicture = document.getElementById("hash_picture"); // 散列图
+      merryGoRound = document.getElementById("merry-go-round"); // 旋转木马
+
+      qxqyHwblOuterEl; // 全心全意毫无保留最外层标签
+      rightToLeftPushPictureOuterEl;
+      rotationMap; // 轮播图标签
+      rotationMapArr = []; // 轮播图数组
+      rotationMapOuter; // 轮播图最外层标签
+      secondRotationMapArr = []; // 第二组轮播图数组
+      koreanAndTextAndImgObj = {}; // 韩文、中文和图片的效果的对象
+
+      weddingContainer = document.getElementById("wedding-container"); // 最外层标签，整体的内容
+      weddingWordsEl; // 从天而降的文字的标签
+
+      // 构造
+      constructor() {
+        // 轮播图数组
+        this.rotationMapArr = [
+          {
+            id: 1,
+            rotationMapForeignLang: 'Sayeyou',
+            rotationMapText: '说出口的誓言有回音',
+            rotationMap: './image/rotationMap/changehouyi.jpg',
+          },
+          {
+            id: 2,
+            rotationMapForeignLang: 'Askeour',
+            rotationMapCenterBigTxt: '轮播图',
+            rotationMapText: '那就让我们勇敢约定',
+            rotationMap: './image/rotationMap/dianwei.jpg',
+          },
+        ]
+        // 黑色方块开幕动画的数组
+        this.blackBlockStartArr = [
+          {
+            id: 1,
+            blackBlockEnglishWord: 'Loveyou',
+            blackBlockWeddingWord: '晚风里藏着多少精灵',
+            blackBlockImage: './image/blackBlockStartImg/daqiao.jpg',
+          },
+          // {
+          //   id: 2,
+          //   blackBlockEnglishWord: 'Missyou',
+          //   blackBlockWeddingWord: '满天的星辰都被唤醒',
+          //   blackBlockImage: './image/blackBlockStartImg/caocao.jpg',
+          // },
+          // {
+          //   id: 3,
+          //   blackBlockEnglishWord: 'Careyou',
+          //   blackBlockWeddingWord: '白天那些流放的光明',
+          //   blackBlockImage: './image/blackBlockStartImg/gongsunli.jpg',
+          // },
+          // {
+          //   id: 4,
+          //   blackBlockEnglishWord: 'Giveyou',
+          //   blackBlockWeddingWord: '剪接成夜空仰望的风景',
+          //   blackBlockImage: './image/blackBlockStartImg/nvwa.jpg',
+          // },
+          // {
+          //   id: 5,
+          //   blackBlockEnglishWord: 'Lookyou',
+          //   blackBlockWeddingWord: '看天台上路过几颗流星',
+          //   blackBlockImage: './image/blackBlockStartImg/yuji.jpg',
+          // },
+        ];
+        // 第二组轮播图的数组
+        this.secondRotationMapArr = [
+          {
+            id: 1,
+            imgUrl: './image/huamulan.jpg',
+          },
+          {
+            id: 2,
+            imgUrl: './image/jialuo_jyfx.jpg',
+          },
+          {
+            id: 3,
+            imgUrl: './image/jialuo_taihua.jpg',
+          },
+        ]
+      };
+
+      // 循环黑色方块开幕动画的数组生成标签
+      loopBlackBlockStartArrGenerateEl() {
+        this.blackBlockStartArr.forEach((item, index) => {
+          // 起始标签
+          var blackBlockStartElement = `
+      <div id="blackBlock_showPicture" class="blackBlock_showPicture">
+        `;
+          // 黑色方块开幕外语
+          var blackBlockWeddingForeignLangStr = `
+      <div class="wedding_words">
+        <div class="firstGroup_sentence">
+          <div class="firstGroup_sentence_english">
+            `;
+          for (var i = 0; i < item.blackBlockEnglishWord.length; i++) {
+            blackBlockWeddingForeignLangStr += `
+        <div class="firstGroup_sentence_english_${i + 1}">
+          <div class="firstGroup_sentence_english_${i + 1}_end">
+            ${item.blackBlockEnglishWord[i]}
+          </div>
+        </div>
+        `;
+            if (i == item.blackBlockEnglishWord.length - 1) {
+              blackBlockWeddingForeignLangStr += `</div>`;
+            }
+          }
+
+          // 黑色方块开幕中文
+          var blackBlockWeddingWordStr = `<div class="firstGroup_sentence_main">`;
+          for (var i = 0; i < item.blackBlockWeddingWord.length; i++) {
+            blackBlockWeddingWordStr += `
+        <div class="firstGroup_sentence_${i + 1}">
+          <div class="firstGroup_sentence_${i + 1}_end">${item.blackBlockWeddingWord[i]}</div>
+        </div>
+        `;
+            if (i == item.blackBlockWeddingWord.length - 1) {
+              blackBlockWeddingWordStr += `</div></div></div>`;
+            }
+          }
+
+          // 黑色方块
+          var blackBlock = `
+        <div class="first_group">
+          <div class="black_block">
+            <div class="black_block_first_row">
+              <div class="black_block_first_row_first"></div>
+              <div class="black_block_first_row_second"></div>
+              <div class="black_block_first_row_third"></div>
+              <div class="black_block_first_row_fourth"></div>
+              <div class="black_block_first_row_fifth"></div>
+              <div class="black_block_first_row_sixth"></div>
+              <div class="black_block_first_row_seventh"></div>
+              <div class="black_block_first_row_eighth"></div>
+              <div class="black_block_first_row_ninth"></div>
+              <div class="black_block_first_row_tenth"></div>
+              <div class="black_block_first_row_eleventh"></div>
+              <div class="black_block_first_row_twelfth"></div>
+              <div class="black_block_first_row_thirteenth"></div>
+            </div>
+            <div class="black_block_second_row">
+              <div class="black_block_second_row_first"></div>
+              <div class="black_block_second_row_second"></div>
+              <div class="black_block_second_row_third"></div>
+              <div class="black_block_second_row_fourth"></div>
+              <div class="black_block_second_row_fifth"></div>
+              <div class="black_block_second_row_sixth"></div>
+              <div class="black_block_second_row_seventh"></div>
+              <div class="black_block_second_row_eighth"></div>
+              <div class="black_block_second_row_ninth"></div>
+              <div class="black_block_second_row_tenth"></div>
+              <div class="black_block_second_row_eleventh"></div>
+              <div class="black_block_second_row_twelfth"></div>
+              <div class="black_block_second_row_thirteenth"></div>
+            </div>
+            <div class="black_block_third_row">
+              <div class="black_block_third_row_first"></div>
+              <div class="black_block_third_row_second"></div>
+              <div class="black_block_third_row_third"></div>
+              <div class="black_block_third_row_fourth"></div>
+              <div class="black_block_third_row_fifth"></div>
+              <div class="black_block_third_row_sixth"></div>
+              <div class="black_block_third_row_seventh"></div>
+              <div class="black_block_third_row_eighth"></div>
+              <div class="black_block_third_row_ninth"></div>
+              <div class="black_block_third_row_tenth"></div>
+              <div class="black_block_third_row_eleventh"></div>
+              <div class="black_block_third_row_twelfth"></div>
+              <div class="black_block_third_row_thirteenth"></div>
+            </div>
+            <div class="black_block_fourth_row">
+              <div class="black_block_fourth_row_first"></div>
+              <div class="black_block_fourth_row_second"></div>
+              <div class="black_block_fourth_row_third"></div>
+              <div class="black_block_fourth_row_fourth"></div>
+              <div class="black_block_fourth_row_fifth"></div>
+              <div class="black_block_fourth_row_sixth"></div>
+              <div class="black_block_fourth_row_seventh"></div>
+              <div class="black_block_fourth_row_eighth"></div>
+              <div class="black_block_fourth_row_ninth"></div>
+              <div class="black_block_fourth_row_tenth"></div>
+              <div class="black_block_fourth_row_eleventh"></div>
+              <div class="black_block_fourth_row_twelfth"></div>
+              <div class="black_block_fourth_row_thirteenth"></div>
+            </div>
+            <div class="black_block_fifth_row">
+              <div class="black_block_fifth_row_first"></div>
+              <div class="black_block_fifth_row_second"></div>
+              <div class="black_block_fifth_row_third"></div>
+              <div class="black_block_fifth_row_fourth"></div>
+              <div class="black_block_fifth_row_fifth"></div>
+              <div class="black_block_fifth_row_sixth"></div>
+              <div class="black_block_fifth_row_seventh"></div>
+              <div class="black_block_fifth_row_eighth"></div>
+              <div class="black_block_fifth_row_ninth"></div>
+              <div class="black_block_fifth_row_tenth"></div>
+              <div class="black_block_fifth_row_eleventh"></div>
+              <div class="black_block_fifth_row_twelfth"></div>
+              <div class="black_block_fifth_row_thirteenth"></div>
+            </div>
+            <div class="black_block_sixth_row">
+              <div class="black_block_sixth_row_first"></div>
+              <div class="black_block_sixth_row_second"></div>
+              <div class="black_block_sixth_row_third"></div>
+              <div class="black_block_sixth_row_fourth"></div>
+              <div class="black_block_sixth_row_fifth"></div>
+              <div class="black_block_sixth_row_sixth"></div>
+              <div class="black_block_sixth_row_seventh"></div>
+              <div class="black_block_sixth_row_eighth"></div>
+              <div class="black_block_sixth_row_ninth"></div>
+              <div class="black_block_sixth_row_tenth"></div>
+              <div class="black_block_sixth_row_eleventh"></div>
+              <div class="black_block_sixth_row_twelfth"></div>
+              <div class="black_block_sixth_row_thirteenth"></div>
+            </div>
+            <div class="black_block_seventh_row">
+              <div class="black_block_seventh_row_first"></div>
+              <div class="black_block_seventh_row_second"></div>
+              <div class="black_block_seventh_row_third"></div>
+              <div class="black_block_seventh_row_fourth"></div>
+              <div class="black_block_seventh_row_fifth"></div>
+              <div class="black_block_seventh_row_sixth"></div>
+              <div class="black_block_seventh_row_seventh"></div>
+              <div class="black_block_seventh_row_eighth"></div>
+              <div class="black_block_seventh_row_ninth"></div>
+              <div class="black_block_seventh_row_tenth"></div>
+              <div class="black_block_seventh_row_eleventh"></div>
+              <div class="black_block_seventh_row_twelfth"></div>
+              <div class="black_block_seventh_row_thirteenth"></div>
+            </div>
+            <div class="black_block_eighth_row">
+              <div class="black_block_eighth_row_first"></div>
+              <div class="black_block_eighth_row_second"></div>
+              <div class="black_block_eighth_row_third"></div>
+              <div class="black_block_eighth_row_fourth"></div>
+              <div class="black_block_eighth_row_fifth"></div>
+              <div class="black_block_eighth_row_sixth"></div>
+              <div class="black_block_eighth_row_seventh"></div>
+              <div class="black_block_eighth_row_eighth"></div>
+              <div class="black_block_eighth_row_ninth"></div>
+              <div class="black_block_eighth_row_tenth"></div>
+              <div class="black_block_eighth_row_eleventh"></div>
+              <div class="black_block_eighth_row_twelfth"></div>
+              <div class="black_block_eighth_row_thirteenth"></div>
+            </div>
+          </div>
+      `;
+
+          // 黑色方块下的图片
+          var blackBlockDownPicture = `
+          <div class="picture">
+            <img src="${item.blackBlockImage}" alt="">
+          </div>
+        </div>
+      `
+          // 结尾标签
+          var blackBlockEndElement = `</div>`;
+          // 标签集合
+          var blackBlockStartElTotal = blackBlockStartElement + blackBlockWeddingForeignLangStr + blackBlockWeddingWordStr + blackBlock + blackBlockDownPicture + blackBlockEndElement;
+
+          setTimeout(() => {
+            if (index == 0) {
+              this.animationBox.innerHTML = blackBlockStartElTotal;
+              this.blackBlockShowPictureEl = document.getElementById("blackBlock_showPicture");
+            } else {
+              this.animationBox.removeChild(this.blackBlockShowPictureEl);
+              this.animationBox.innerHTML = blackBlockStartElTotal;
+              this.blackBlockShowPictureEl = document.getElementById("blackBlock_showPicture");
+            }
+            // 循环到最后一次
+            if (index == this.blackBlockStartArr.length - 1) {
+              this.blackBlockPicture_lbt_transformFunc();
+            }
+          }, 9000 * index);
+        })
+      };
+
+      // 黑色方块和轮播图切换的函数
+      blackBlockPicture_lbt_transformFunc() {
+        var rotationMapImgStartEl = `<div id="rotation-map">`; // 轮播图起始标签
+        var rotationMapImgEndEl = `</div>`; // 结束标签
+        var rotationMapImgElStr = ``; // 轮播图内容标签
+        var rotationMapWordStartEl = `
+          <div id="rotation_map_outer" class="rotation_map_outer">
+            <div id="wedding_words" class="wedding_words">
+          `; // 最外层标签和文字起始标签
+
+        // 自上而下推图最外层标签
+        var bottomToTopElGroup = `<div id="bottomToTopElGroup" class="bottomToTopElGroup"></div>`;
+
+        this.rotationMapArr.forEach((item, index) => {
+          // 轮播图的图片标签
+          rotationMapImgElStr += `
+              <div>
+                <img src="${item.rotationMap}" alt="">
+              </div>
+              `;
+        })
+
+        this.rotationMapArr.forEach((item, index) => {
+          var rotationMapElStr = `
+            <div class="firstGroup_sentence">
+              <div class="firstGroup_sentence_english">
+          `;
+          // 从天而降的外语
+          for (var i = 0; i < item.rotationMapForeignLang.length; i++) {
+            rotationMapElStr += `
+        <div class="firstGroup_sentence_english_${i + 1}">
+          <div>
+            ${item.rotationMapForeignLang[i]}
+          </div>
+        </div>
+        `;
+            if (i == item.rotationMapForeignLang.length - 1) {
+              rotationMapElStr += `</div>`;
+            }
+          }
+
+          // 从天而降的中文
+          rotationMapElStr += `<div class="firstGroup_sentence_main">`;
+          for (var i = 0; i < item.rotationMapText.length; i++) {
+            rotationMapElStr += `
+        <div class="firstGroup_sentence_${i + 1}">
+          <div>${item.rotationMapText[i]}</div>
+        </div>
+        `;
+            if (i == item.rotationMapText.length - 1) {
+              rotationMapElStr += `</div></div>`;
+            }
+          }
+          if (item.rotationMapCenterBigTxt) {
+            rotationMapElStr += `
+            <div class="rotation_map_center_big_txt">
+              <div class="rotation_map_center_big_txt_1">
+                <div class="rotation_map_center_big_txt_end_1">${item.rotationMapCenterBigTxt[0]}</div>  
+              </div>  
+              <div class="rotation_map_center_big_txt_2">
+                <div class="rotation_map_center_big_txt_end_2">${item.rotationMapCenterBigTxt[1]}</div>  
+              </div>  
+              <div class="rotation_map_center_big_txt_3">
+                <div class="rotation_map_center_big_txt_end_3">${item.rotationMapCenterBigTxt[2]}</div>  
+              </div>  
+            </div>
+            `;
+          }
+          if (index == 0) {
+            this.rotationMap = rotationMapWordStartEl + rotationMapElStr + rotationMapImgEndEl + rotationMapImgStartEl + rotationMapImgElStr + rotationMapImgEndEl + rotationMapImgEndEl + bottomToTopElGroup;
+            setTimeout(() => {
+              // 第一次是替换blackBlockShowPictureBox下全部标签
+              this.animationBox.innerHTML = this.rotationMap;
+              this.weddingWordsEl = document.getElementById('wedding_words');
+              this.rotationMapOuter = document.getElementById('rotation_map_outer');
+              this.firstGroupSentenceEl = document.getElementsByClassName('firstGroup_sentence');
+              this.bottomToTopElGroup = document.getElementById('bottomToTopElGroup');
+            }, 8000);
+          } else {
+            setTimeout(() => {
+              this.firstGroupSentenceEl[0].style.opacity = 0;
+            }, 14000);
+            setTimeout(() => {
+              // 第二次只替换从天而降的字
+              this.rotationMap = rotationMapWordStartEl + rotationMapElStr + rotationMapImgEndEl;
+              this.weddingWordsEl.innerHTML = this.rotationMap;
+              // 自下而上推图效果
+              this.bottomToTopPushPicture();
+            }, 15000);
+          }
+        })
+        // 轮播图切换到自下而上推图的效果后，删除轮播图标签
+        setTimeout(() => {
+          this.animationBox.removeChild(this.rotationMapOuter)
+        }, 27000);
+      };
+
+      // 轮播图切换到自下而上推图和第二组轮播图
+      bottomToTopPushPicture() {
+        var loveStoryEl = `
+    <div class="love_story">
+      <div class="love_story_box">
+        <div class="love_story_love_story_box">
+          <div class="love_story_love">Love</div>
+          <div class="love_story_story">story</div>
+        </div>
+        <div class="love_story_forever_box">
+          <div class="love_story_forever">
+            <p>永</p>
+            <p>远</p>
+            <p>爱</p>
+            <p>着</p>
+            <p>你</p>
+          </div>
+        </div>
+        <div class="love_story_right_content">
+          <div>
+            <div class="love_story_and_groom_bride">
+              <div class="love_story_and_box">
+                <div class="love_story_and">&</div>
+              </div>
+              <div class="love_story_groom_bride_box">
+                <div class="love_story_groom">groom</div>
+                <div class="love_story_bride">bride</div>
+              </div>
+            </div>
+            <div class="love_story_always_box">
+              <div class="love_story_always">I'll always love you</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="our_wedding">
+      <div class="our_wedding_inner">
+        <div class="first_lace"><img src="./image/lace.png" alt=""></div>
+        <div class="second_lace"><img src="./image/lace.png" alt=""></div>
+        <div class="third_lace"><img src="./image/lace.png" alt=""></div>
+        <div class="fourth_lace"><img src="./image/lace.png" alt=""></div>
+        <div class="fifth_lace"></div>
+        <div class="our_wedding_content">
+          <div class="our_wedding_english">OUR WEDDING</div>
+          <div class="our_wedding_name">安宁&乐悦</div>
+          <div class="our_wedding_time">2018.12.12</div>
+        </div>
+      </div>
+    </div>
+    <div class="second_rotation_map">
+      <div class="second_rotation_map_word">
+        <div class="second_rotation_map_word_highlight">I love you &nbsp;</div> brto be with yd rough rain and shiny days
+      </div>
+      <div class="second_rotation_map_first_img"><img src="./image/huamulan.jpg" alt=""></div>
+      <div class="second_rotation_map_second_img"><img src="./image/jialuo_jyfx.jpg" alt=""></div>
+      <div class="second_rotation_map_third_img"><img src="./image/jialuo_taihua.jpg" alt=""></div>
+    </div>
+        `;
+        this.bottomToTopElGroup.innerHTML = loveStoryEl;
+        this.loveStoryOuterEl = document.getElementsByClassName('love_story')[0];
+        setTimeout(() => {
+          this.bottomToTopElGroup.removeChild(this.loveStoryOuterEl);
+          var rightToLeftPushPictureOuterEl = document.createElement("div");
+          rightToLeftPushPictureOuterEl.setAttribute("id", "rightToLeftPushPictureOuterEl");
+          rightToLeftPushPictureOuterEl.className = 'rightToLeftPushPictureOuterEl';
+          this.animationBox.appendChild(rightToLeftPushPictureOuterEl);
+          this.rightToLeftPushPictureOuterEl = document.getElementById('rightToLeftPushPictureOuterEl');
+        }, 18000);
+        setTimeout(() => {
+          this.rightToLeftPushPictureMe();
+        }, 36500);
+      };
+
+      // 从左向右推图效果和最爱
+      rightToLeftPushPictureMe() {
+        var TextAndEnglishObj = {
+          wordArray: [
+            {
+              id: 1,
+              title: 'F',
+            },
+            {
+              id: 2,
+              title: 'a',
+            },
+            {
+              id: 3,
+              title: 'v',
+            },
+            {
+              id: 4,
+              title: 'o',
+            },
+            {
+              id: 5,
+              title: 'r',
+            },
+            {
+              id: 6,
+              title: 'i',
+            },
+            {
+              id: 7,
+              title: 't',
+            },
+            {
+              id: 8,
+              title: 'e',
+            },
+          ],
+          textArray: [
+            {
+              id: 1,
+              title: '你',
+            },
+            {
+              id: 2,
+              title: '是',
+            },
+            {
+              id: 3,
+              title: '我',
+            },
+            {
+              id: 4,
+              title: '今',
+            },
+            {
+              id: 5,
+              title: '生',
+            },
+            {
+              id: 6,
+              title: '唯',
+            },
+            {
+              id: 7,
+              title: '一',
+            },
+            {
+              id: 8,
+              title: '的',
+            },
+            {
+              id: 9,
+              title: '最',
+            },
+            {
+              id: 10,
+              title: '爱',
+            },
+          ],
+        };
+        var TextAndEnglishElement = this.favoriteTextAndEnglishCommon(TextAndEnglishObj);
+        var rightToLeftPushPictureEl = `
+        <div class="add_equal_love_outer_el">
+          <div class="add_equal_love_left_lace">
+            <img src="./image/ten_lace.png" alt="">
+          </div>
+          <div class="add_equal_love">
+            <div class="add_equal_love_header">
+              <div class="add_equal_love_bigKorean">사랑해</div>
+              나 는 평 생 너 에 게 잘 해 줄 것 이 다
+            </div>
+            <div class="add_equal_love_content">
+              <div class="add_equal_love_first_image">
+                <div class="add_equal_love_first_image2">
+                  <img class="add_equal_love_first_image2_img" src="./image/f4.jpg" alt="">
+                </div>
+                <img class="add_equal_love_first_image_img" src="./image/f2.jpg" alt="">
+              </div>
+              <div><img src="./image/add.png" alt=""></div>
+              <div class="add_equal_love_second_image">
+                <div class="add_equal_love_second_image2">
+                  <img class="add_equal_love_second_image2_img" src="./image/f5.jpg" alt="">
+                </div>
+                <img class="add_equal_love_second_image_img" src="./image/f3.jpg" alt="">
+              </div>
+              <div><img src="./image/equal.png" alt=""></div>
+              <div><img src="./image/love.png" alt=""></div>
+            </div>
+            <div class="add_equal_love_footer">
+              <div class="add_equal_love_footer_txt">
+                사랑해 아들의 손을 잡고 해로하다
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wedding_words_favorite">
+          <div class="favorite_sentence_lace">
+            <div class="first_lace"><img src="./image/lace.png" alt=""></div>
+            <div class="second_lace"><img src="./image/lace.png" alt=""></div>
+            <div class="third_lace"><img src="./image/lace.png" alt=""></div>
+            <div class="fourth_lace"></div>
+          </div>
+          ${TextAndEnglishElement}
+        </div>
+        <div class="tell_you_outer">
+          <div class="tell_you">
+            <div class="tell_you_group">
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+            </div>
+            <div class="tell_you_group">
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+            </div>
+            <div class="tell_you_group">
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+            </div> 
+            <div class="tell_you_group">
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_tell">大声告诉你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+            </div>
+            <div class="tell_you_group">
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+            </div>
+            <div class="tell_you_group">
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+            </div>
+            <div class="tell_you_group">
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+            </div>
+            <div class="tell_you_group">
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+              <div class="tell_you_word">我爱你</div>
+            </div>
+          </div>
+        </div>
+        <div class="i_love_you_outer">
+          <div class="i_love_you">
+            <div class="i_love_you_img">
+              <img src="./image/Iloveyou.png" alt="">
+            </div>
+            <div class="i_love_you_word">I LOVE YOU</div>
+          </div>
+        </div>
+        `
+        this.rightToLeftPushPictureOuterEl.innerHTML = rightToLeftPushPictureEl;
+        var addEqualLoveOuterEl = document.getElementsByClassName('add_equal_love_outer_el')[0];
+        setTimeout(() => {
+          this.animationBox.removeChild(this.bottomToTopElGroup);
+        }, 1000);
+        setTimeout(() => {
+          this.rightToLeftPushPictureOuterEl.removeChild(addEqualLoveOuterEl);
+          var qxqyHwblOuterEl = document.createElement("div");
+          qxqyHwblOuterEl.setAttribute("id", "qxqyHwblOuterEl");
+          qxqyHwblOuterEl.className = 'qxqyHwblOuterEl';
+          this.animationBox.appendChild(qxqyHwblOuterEl);
+          this.qxqyHwblOuterEl = document.getElementById('qxqyHwblOuterEl');
+        }, 12000);
+        setTimeout(() => {
+          this.qxqyHwblAndYesIDo();
+        }, 21200);
+      };
+
+      // 全心全意毫无保留、yes i do、遇见完美的你
+      qxqyHwblAndYesIDo() {
+        this.koreanAndTextAndImgObj = {
+          koreanArr: [
+            {
+              id: 1,
+              koreanStr: '사',
+            },
+            {
+              id: 2,
+              koreanStr: '랑',
+            },
+            {
+              id: 3,
+              koreanStr: '해',
+            },
+            {
+              id: 4,
+              koreanStr: '전',
+            },
+            {
+              id: 5,
+              koreanStr: '심',
+            },
+            {
+              id: 6,
+              koreanStr: '전',
+            },
+            {
+              id: 7,
+              koreanStr: '력',
+            },
+            {
+              id: 8,
+              koreanStr: '으',
+            },
+            {
+              id: 9,
+              koreanStr: '로',
+            },
+            {
+              id: 10,
+              koreanStr: '너',
+            },
+            {
+              id: 11,
+              koreanStr: '를',
+            },
+            {
+              id: 12,
+              koreanStr: '사',
+            },
+            {
+              id: 13,
+              koreanStr: '랑',
+            },
+            {
+              id: 14,
+              koreanStr: '한',
+            },
+            {
+              id: 15,
+              koreanStr: '다',
+            },
+          ],
+          text: '我爱你，全心全意毫无保留的爱着你',
+          imgArr: [
+            {
+              id: 1,
+              imgUrl: './image/hua_mu_lan_qlz.jpg',
+            },
+            {
+              id: 2,
+              imgUrl: './image/li_yuan_fang.jpg',
+            },
+            {
+              id: 3,
+              imgUrl: './image/nv_wa.jpg',
+            },
+          ]
+        };
+        var koreanAndTextAndImgEl = this.generateKoreanAndTextAndImgEl(this.koreanAndTextAndImgObj);
+        var qxqyHwblElementStr = `
+        ${koreanAndTextAndImgEl}
+        <div class="yes_i_do_outer">
+          <div class="yes_i_do_lace">
+            <div class="yes_i_do_lace_content">
+              <div class="yes_i_do_lace_img">
+                <img src="./image/red_lace.png" alt="">
+              </div>
+              <div class="yes_i_do_lace_img">
+                <img src="./image/lace.png" alt="">
+              </div>
+              <div class="yes_i_do_lace_smallImg">
+                <img src="./image/red_lace.png" alt="">
+              </div>
+            </div>
+            <div class="yes_i_do_lace_content">
+              <div class="yes_i_do_lace_img">
+                <img src="./image/blue_lace.png" alt="">
+              </div>
+              <div class="yes_i_do_lace_img">
+                <img src="./image/blue_lace.png" alt="">
+              </div>
+              <div class="yes_i_do_lace_smallImg">
+                <img src="./image/blue_lace.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="yes_i_do">
+            <div class="yes_i_do_content">
+              <div class="will_you_marry_me">
+                <div class="will_you_marry_me_txt">W</div>
+                <div class="will_you_marry_me_txt">i</div>
+                <div class="will_you_marry_me_txt">l</div>
+                <div class="will_you_marry_me_txt space">l</div>
+                <div class="will_you_marry_me_txt">y</div>
+                <div class="will_you_marry_me_txt">o</div>
+                <div class="will_you_marry_me_txt space">u</div>
+                <div class="will_you_marry_me_txt">m</div>
+                <div class="will_you_marry_me_txt">a</div>
+                <div class="will_you_marry_me_txt">r</div>
+                <div class="will_you_marry_me_txt">r</div>
+                <div class="will_you_marry_me_txt space">y</div>
+                <div class="will_you_marry_me_txt">m</div>
+                <div class="will_you_marry_me_txt">e</div>
+                <div class="will_you_marry_me_txt">？</div>
+              </div>
+              <div class="yes_i_do_img">
+                <img src="./image/blackBackground_heart.png" alt="">
+              </div>
+              <div class="yes_i_do_word">
+                <div class="yes_i_do_word_txt">Y</div>
+                <div class="yes_i_do_word_txt">e</div>
+                <div class="yes_i_do_word_txt">s</div>
+                <div class="yes_i_do_word_txt">，</div>
+                <div class="yes_i_do_word_txt space">i</div>
+                <div class="yes_i_do_word_txt">d</div>
+                <div class="yes_i_do_word_txt">o</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="meet_the_perfect_you">
+          <div class="meet_the_perfect_you_start">
+            <div class="meet_start_three_img_1">
+              <img src="./image/wu_ze_tian.jpg" alt="">
+            </div>
+            <div class="meet_start_three_img_2">
+              <img src="./image/jialuo_taihua.jpg" alt="">
+            </div>
+            <div class="meet_start_three_img_3">
+              <img src="./image/zhen_ji_yh.jpg" alt="">
+            </div>
+          </div>
+          <div class="meet_the_perfect_you_end"></div>
+        </div>
+        `
+        this.qxqyHwblOuterEl.innerHTML = qxqyHwblElementStr;
+        this.animationBox.removeChild(this.rightToLeftPushPictureOuterEl);
+        var qxqyHwblEl = document.getElementsByClassName('qxqy_hwbl_outer')[0];
+        var yesIDoEl = document.getElementsByClassName('yes_i_do_outer')[0];
+        var meetThePerfectYouEl = document.getElementsByClassName('meet_the_perfect_you')[0];
+        var meetThePerfectYouEndEl = document.getElementsByClassName('meet_the_perfect_you_end')[0];
+        setTimeout(() => {
+          this.qxqyHwblOuterEl.removeChild(qxqyHwblEl);
+          this.qxqyHwblOuterEl.removeChild(yesIDoEl);
+          this.koreanAndTextAndImgObj = {
+            koreanArr: [
+              {
+                id: 1,
+                koreanStr: '사',
+              },
+              {
+                id: 2,
+                koreanStr: '랑',
+              },
+              {
+                id: 3,
+                koreanStr: '해',
+              },
+              {
+                id: 4,
+                koreanStr: '나',
+              },
+              {
+                id: 5,
+                koreanStr: '는',
+              },
+              {
+                id: 6,
+                koreanStr: '이',
+              },
+              {
+                id: 7,
+                koreanStr: '렇',
+              },
+              {
+                id: 8,
+                koreanStr: '게',
+              },
+              {
+                id: 9,
+                koreanStr: '완',
+              },
+              {
+                id: 10,
+                koreanStr: '벽',
+              },
+              {
+                id: 11,
+                koreanStr: '한',
+              },
+              {
+                id: 12,
+                koreanStr: '너',
+              },
+              {
+                id: 13,
+                koreanStr: '를',
+              },
+              {
+                id: 14,
+                koreanStr: '만',
+              },
+              {
+                id: 15,
+                koreanStr: '났',
+              },
+            ],
+            text: '感谢命运，让我遇见如此完美的你',
+            imgArr: [
+              {
+                id: 1,
+                imgUrl: './image/wzrygqt/fei.webp',
+              },
+              {
+                id: 2,
+                imgUrl: './image/wzrygqt/fei_pf.webp',
+              },
+            ]
+          };
+          var koreanAndTextAndImgEl2 = this.generateKoreanAndTextAndImgEl(this.koreanAndTextAndImgObj);
+          meetThePerfectYouEndEl.innerHTML = koreanAndTextAndImgEl2;
+        }, 30500);
+        setTimeout(() => {
+          this.threePicLeftMoveAndImgSwitch();
+        }, 37500);
+        setTimeout(() => {
+          this.animationBox.removeChild(this.qxqyHwblOuterEl);
+        }, 40500);
+      };
+
+      // 三张图片快速左移、图片上下切换
+      threePicLeftMoveAndImgSwitch() {
+        var threePicLeftMoveAndImgContentElStr = `
+        <div class="only_picture_switch">
+          <div class="three_pic_left_move">
+            <div class="three_pic_left_move_img">
+              <img src="./image/wzrygqt/jialuo_sgz.webp" alt="">
+            </div>
+            <div class="three_pic_left_move_img">
+              <img src="./image/wzrygqt/jialuo_sgz.webp" alt="">
+            </div>
+            <div class="three_pic_left_move_img">
+              <img src="./image/wzrygqt/jialuo_sgz.webp" alt="">
+            </div>
+          </div>
+          <div class="picture_clip_switch">
+            
+          </div>
+        </div>
+        `;
+        // 创建一个最外层标签
+        var threePicLeftMoveAndImgOuterEl = document.createElement("div");
+        threePicLeftMoveAndImgOuterEl.setAttribute("id", "threePicLeftMoveAndImgOuterEl");
+        threePicLeftMoveAndImgOuterEl.className = 'threePicLeftMoveAndImgOuterEl';
+        this.animationBox.appendChild(threePicLeftMoveAndImgOuterEl);
+        // 将三张图片快速左移的全部标签和三张图片裁剪切换的最外层标签壳String移进DOM
+        threePicLeftMoveAndImgOuterEl.innerHTML = threePicLeftMoveAndImgContentElStr;
+
+        // 获取到三张图片裁剪切换的最外层标签壳，延迟将内容标签String移入
+        var pictureClipSwitchEl = document.getElementsByClassName('picture_clip_switch')[0];
+        var pictureClipSwitchContentElStr = `
+        <div class="clip_switch_img">
+          <img src="./image/wzrygqt/nvwa_bt.webp" alt="">
+        </div>
+        <div class="clip_switch_img">
+          <img src="./image/wzrygqt/pdrr.webp" alt="">
+        </div>
+        <div class="clip_switch_img">
+          <img src="./image/wzrygqt/xiaoqiao_tezm.webp" alt="">
+        </div>
+        `;
+        setTimeout(() => {
+          pictureClipSwitchEl.innerHTML = pictureClipSwitchContentElStr;
+        }, 3000);
+        // 切换到翻片效果显示图片
+        setTimeout(() => {
+          this.fpShowPicture();
+        }, 20000);
+        // 将三张图片快速左移的全部标签和三张图片裁剪切换的标签删除
+        setTimeout(() => {
+          this.animationBox.removeChild(threePicLeftMoveAndImgOuterEl);
+        }, 23000);
+      };
+
+      // 翻片效果显示图片
+      fpShowPicture() {
+        var fpElementStr = `
+        <div class="fp_picture">
+          <div class="fp_picture_content">
+            <div class="fp_picture_1_row fp_picture_row">
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_01.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_02.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_03.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_04.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_05.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_06.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_07.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_08.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_09.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_10.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_11.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_12.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_1/fp_1_13.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_2_row fp_picture_row">
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_14.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_15.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_16.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_17.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_18.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_19.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_20.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_21.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_22.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_23.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_24.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_25.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_1/fp_1_26.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_3_row fp_picture_row">
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_27.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_28.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_29.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_30.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_31.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_32.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_33.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_34.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_35.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_36.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_37.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_38.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_1/fp_1_39.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_4_row fp_picture_row">
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_40.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_41.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_42.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_43.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_44.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_45.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_46.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_47.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_48.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_49.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_50.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_51.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_1/fp_1_52.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_5_row fp_picture_row">
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_53.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_54.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_55.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_56.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_57.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_58.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_59.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_60.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_61.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_62.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_63.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_64.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_1/fp_1_65.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_6_row fp_picture_row">
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_66.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_67.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_68.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_69.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_70.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_71.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_72.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_73.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_74.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_75.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_76.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_77.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_1/fp_1_78.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_7_row fp_picture_row">
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_79.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_80.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_81.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_82.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_83.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_84.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_85.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_86.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_87.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_88.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_89.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_90.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_1/fp_1_91.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_8_row fp_picture_row">
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_92.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_93.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_94.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_95.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_96.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_97.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_98.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_99.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_100.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_101.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_102.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_103.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_1/fp_1_104.gif" alt=""></div>
+            </div>
+          </div>
+          <div class="fp_picture_content_2">
+            <div class="fp_picture_1_row fp_picture_row">
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_01.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_02.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_03.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_04.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_05.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_06.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_07.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_08.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_09.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_10.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_11.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_12.gif" alt=""></div>
+              <div class="fp_picture_1_row_img"><img src="./image/fan_pian_2/fp_1_13.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_2_row fp_picture_row">
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_14.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_15.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_16.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_17.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_18.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_19.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_20.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_21.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_22.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_23.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_24.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_25.gif" alt=""></div>
+              <div class="fp_picture_2_row_img"><img src="./image/fan_pian_2/fp_1_26.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_3_row fp_picture_row">
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_27.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_28.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_29.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_30.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_31.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_32.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_33.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_34.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_35.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_36.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_37.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_38.gif" alt=""></div>
+              <div class="fp_picture_3_row_img"><img src="./image/fan_pian_2/fp_1_39.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_4_row fp_picture_row">
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_40.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_41.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_42.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_43.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_44.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_45.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_46.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_47.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_48.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_49.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_50.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_51.gif" alt=""></div>
+              <div class="fp_picture_4_row_img"><img src="./image/fan_pian_2/fp_1_52.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_5_row fp_picture_row">
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_53.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_54.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_55.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_56.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_57.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_58.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_59.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_60.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_61.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_62.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_63.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_64.gif" alt=""></div>
+              <div class="fp_picture_5_row_img"><img src="./image/fan_pian_2/fp_1_65.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_6_row fp_picture_row">
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_66.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_67.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_68.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_69.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_70.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_71.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_72.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_73.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_74.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_75.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_76.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_77.gif" alt=""></div>
+              <div class="fp_picture_6_row_img"><img src="./image/fan_pian_2/fp_1_78.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_7_row fp_picture_row">
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_79.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_80.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_81.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_82.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_83.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_84.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_85.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_86.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_87.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_88.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_89.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_90.gif" alt=""></div>
+              <div class="fp_picture_7_row_img"><img src="./image/fan_pian_2/fp_1_91.gif" alt=""></div>
+            </div>
+            <div class="fp_picture_8_row fp_picture_row">
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_92.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_93.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_94.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_95.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_96.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_97.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_98.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_99.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_100.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_101.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_102.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_103.gif" alt=""></div>
+              <div class="fp_picture_8_row_img"><img src="./image/fan_pian_2/fp_1_104.gif" alt=""></div>
+            </div>
+          </div>
+          <div class="ninth_palace">
+            <div><img src="./image/blackBlockStartImg/caocao.jpg" alt=""></div>
+            <div><img src="./image/blackBlockStartImg/caocao.jpg" alt=""></div>
+            <div><img src="./image/blackBlockStartImg/caocao.jpg" alt=""></div>
+            <div><img src="./image/blackBlockStartImg/caocao.jpg" alt=""></div>
+            <div><img src="./image/blackBlockStartImg/caocao.jpg" alt=""></div>
+            <div><img src="./image/blackBlockStartImg/caocao.jpg" alt=""></div>
+            <div><img src="./image/blackBlockStartImg/caocao.jpg" alt=""></div>
+            <div><img src="./image/blackBlockStartImg/caocao.jpg" alt=""></div>
+            <div><img src="./image/blackBlockStartImg/caocao.jpg" alt=""></div>
+          </div>
+        </div>
+        `;
+        // 创建翻片效果显示图片的最外层标签并将其追加进DOM树
+        var fpOuterElementStr = document.createElement("div");
+        fpOuterElementStr.setAttribute("id", "fpOuterElement");
+        fpOuterElementStr.className = 'fpOuterElement';
+        this.animationBox.appendChild(fpOuterElementStr);
+        fpOuterElementStr.innerHTML = fpElementStr;
+        setTimeout(() => {
+          this.xsczmh()
+        }, 12000);
+        setTimeout(() => {
+          this.animationBox.removeChild(fpOuterElementStr);
+        }, 15000);
+      };
+
+      // 携手创造美好
+      xsczmh() {
+        var TextAndEnglishObj2 = {
+          wordArray: [
+            {
+              id: 1,
+              title: 'L',
+            },
+            {
+              id: 2,
+              title: 'i',
+            },
+            {
+              id: 3,
+              title: 'v',
+            },
+            {
+              id: 4,
+              title: 'e',
+            },
+            {
+              id: 5,
+              title: '',
+            },
+            {
+              id: 6,
+              title: 'i',
+            },
+            {
+              id: 7,
+              title: 's',
+            },
+            {
+              id: 8,
+              title: '',
+            },
+            {
+              id: 9,
+              title: 'B',
+            },
+            {
+              id: 10,
+              title: 'e',
+            },
+            {
+              id: 11,
+              title: 'a',
+            },
+            {
+              id: 12,
+              title: 'u',
+            },
+            {
+              id: 13,
+              title: 't',
+            },
+            {
+              id: 14,
+              title: 'i',
+            },
+            {
+              id: 15,
+              title: 'f',
+            },
+            {
+              id: 16,
+              title: 'u',
+            },
+            {
+              id: 17,
+              title: 'l',
+            },
+          ],
+          textArray: [
+            {
+              id: 1,
+              title: '未',
+            },
+            {
+              id: 2,
+              title: '来',
+            },
+            {
+              id: 3,
+              title: '的',
+            },
+            {
+              id: 4,
+              title: '美',
+            },
+            {
+              id: 5,
+              title: '好',
+            },
+            {
+              id: 6,
+              title: '，',
+            },
+            {
+              id: 7,
+              title: '让',
+            },
+            {
+              id: 8,
+              title: '我',
+            },
+            {
+              id: 9,
+              title: '们',
+            },
+            {
+              id: 10,
+              title: '携',
+            },
+            {
+              id: 11,
+              title: '手',
+            },
+            {
+              id: 12,
+              title: '创',
+            },
+            {
+              id: 13,
+              title: '造',
+            },
+          ],
+        };
+        var TextAndEnglishElement2 = this.favoriteTextAndEnglishCommon(TextAndEnglishObj2);
+        var xsczmhElStr = `
+        <div class="yes_i_do_outer">
+          <div class="yes_i_do_lace">
+            <div class="yes_i_do_lace_content">
+              <div class="yes_i_do_lace_img">
+                <img src="./image/red_lace.png" alt="">
+              </div>
+              <div class="yes_i_do_lace_img">
+                <img src="./image/lace.png" alt="">
+              </div>
+              <div class="yes_i_do_lace_smallImg">
+                <img src="./image/red_lace.png" alt="">
+              </div>
+            </div>
+            <div class="yes_i_do_lace_content">
+              <div class="yes_i_do_lace_img">
+                <img src="./image/blue_lace.png" alt="">
+              </div>
+              <div class="yes_i_do_lace_img">
+                <img src="./image/blue_lace.png" alt="">
+              </div>
+              <div class="yes_i_do_lace_smallImg">
+                <img src="./image/blue_lace.png" alt="">
+              </div>
+            </div>
+          </div>
+          ${TextAndEnglishElement2}
+        </div>
+        `
+        // 创建携手创造美好的最外层标签并将其追加进DOM树
+        var xsczmhOuterEl = document.createElement("div");
+        xsczmhOuterEl.setAttribute("id", "xsczmhOuterElement");
+        xsczmhOuterEl.className = 'xsczmhOuterElement';
+        this.animationBox.appendChild(xsczmhOuterEl);
+        xsczmhOuterEl.innerHTML = xsczmhElStr;
+        setTimeout(() => {
+          this.threeDTurnBook();
+          this.animationBox.removeChild(xsczmhOuterEl);
+        }, 4000);
+      };
+
+      // 第一组3D效果：翻书
+      threeDTurnBook(){
+        var threeDTurnBookElStr = `
+        <div class="turn_book">
+          <div class="circle_divergence">
+            <div class="circle_divergence_box_1 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="circle_divergence_box_2 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="circle_divergence_box_3 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="circle_divergence_box_4 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="circle_divergence_box_5 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="turn_book_img_box">
+            <div class="turn_book_img_box_content">
+              <div class="turn_book_img"><img src="./image/wzrygqt/hanxin_axmq.webp" alt=""></div>
+              <div class="turn_book_img"><img src="./image/wzrygqt/hanxin_fh.webp" alt=""></div>
+              <div class="turn_book_img"><img src="./image/wzrygqt/nvwa_bt.webp" alt=""></div>
+              <div class="turn_book_img"><img src="./image/wzrygqt/simayi_ahmf.webp" alt=""></div>
+              <div class="turn_book_img"><img src="./image/wzrygqt/yao_yjsl.webp" alt=""></div>
+            </div>
+          </div>
+          <div class="open_close_animation">
+            <div class="open_close_animation_content">
+              <div class="close_animation">
+                <div class="close_img_box">
+                  <div class="open_close_animation_img_box">
+                    <div class="open_close_img"><img src="./image/wzrygqt/yao_yjsl.webp" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="open_close_animation_content">
+              <div class="close_animation">
+                <div class="close_img_box">
+                  <div class="open_close_animation_img_box">
+                    <div class="open_close_img"><img src="./image/wzrygqt/simayi_ahmf.webp" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="open_close_animation_content">
+              <div class="close_animation">
+                <div class="close_img_box">
+                  <div class="open_close_animation_img_box">
+                    <div class="open_close_img"><img src="./image/wzrygqt/nvwa_bt.webp" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="open_close_animation_content">
+              <div class="close_animation">
+                <div class="close_img_box">
+                  <div class="open_close_animation_img_box">
+                    <div class="open_close_img"><img src="./image/wzrygqt/hanxin_fh.webp" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="you_and_me_circle_divergence">
+            <div class="circle_divergence_box_1 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="circle_divergence_box_2 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="circle_divergence_box_3 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="circle_divergence_box_4 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="circle_divergence_box_5 circle_divergence_box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        `;
+        // 创建第一组3D效果：翻书的最外层标签并将其追加进DOM树
+        var threeDTurnBookOuterEl = document.createElement("div");
+        threeDTurnBookOuterEl.setAttribute("id", "threeDTurnBookOuterElement");
+        threeDTurnBookOuterEl.className = 'threeDTurnBookOuterElement';
+        this.animationBox.appendChild(threeDTurnBookOuterEl);
+        threeDTurnBookOuterEl.innerHTML = threeDTurnBookElStr;
+
+        setTimeout(() => {
+          this.youAndMe()
+        }, 16500);
+        setTimeout(() => {
+          this.animationBox.removeChild(threeDTurnBookOuterEl);
+        }, 18500);
+      }
+
+      // you and me
+      youAndMe(){
+        var youAndMeElStr = `
+        <div class="you_and_me">
+          <div class="you_and_me_content">
+            <div class="you_and_me_left">
+              <div>
+                <div>
+                  <img src="./image/f1.png" alt="">
+                </div>
+                <div>
+                  <img src="./image/f6.png" alt="">
+                </div>
+              </div>
+              <div>
+                <div>
+                  <img src="./image/f2.jpg" alt="">
+                </div>
+                <div>
+                  <img src="./image/f4.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="you_and_me_right">
+              <div class="you_and_me_right_youAndMeImg"><img src="./image/you_and_me.png" alt=""></div>
+              <div class="you_and_me_right_bottom">
+                <div class="you_and_me_right_secondPic">
+                  <div><img src="./image/f5.jpg" alt=""></div>
+                  <img src="./image/f7.png" alt="">
+                </div>
+                <div class="you_and_me_text">
+                  <p>Forever and a day</p>
+                  <p>And when I see you smile</p>
+                  <p>I fall into your eyes</p>
+                  <p>To never fade way</p>
+                  <p>l need you here to make the dark clouds drift away</p>
+                  <p>And to make the mornings bright again</p>
+                  <p>I'm right here for you there's nothing more to say</p>
+                  <p>I'm just happy that you're mine and here to stay</p>
+                  <p>Deep as sea wide as sky</p>
+                  <p>The beauty of our paints rain bows</p>
+                  <p>Every where we go</p>
+                  <p>Need you all my life</p>
+                  <p>You're my hope</p>
+                  <p>You're my pride</p>
+                  <p>In your eyes my sea and sky</p>
+                  <p>I love you</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        `
+        var youAndMeOuterEl = document.createElement("div");
+        youAndMeOuterEl.setAttribute("id", "youAndMeOuterElement");
+        youAndMeOuterEl.className = 'youAndMeOuterElement';
+        this.animationBox.appendChild(youAndMeOuterEl);
+        youAndMeOuterEl.innerHTML = youAndMeElStr;
+        setTimeout(() => {
+          this.twoHeartOneLove()
+        }, 7000);
+        setTimeout(() => {
+          this.animationBox.removeChild(youAndMeOuterEl);
+        }, 9000);
+      }
+
+      // two heart one love
+      twoHeartOneLove(){
+        var twoHeartOneLoveElStr = `
+        <div class="two_heart_one_love">
+          <div class="two_heart_one_love_content">
+            <div class="two_heart_one_love_left">
+                <img src="./image/wzrygqt/xishi_jn.webp" alt="">
+            </div>
+            <div class="two_heart_one_love_right">
+              <div class="two_heart_one_love_right_border">
+                <div class="two_heart_one_love_right_border_left"></div>
+                <div class="two_heart_one_love_right_border_right"></div>
+              </div>
+              <div class="two_heart_one_love_right_text">
+                <div>两</div>
+                <div>颗</div>
+                <div>心</div>
+                <div>，</div>
+                <div>一</div>
+                <div>种</div>
+                <div>爱</div>
+              </div>
+              <div class="two_heart_one_love_right_word">
+                <p>BELONGS ONLY TO YOU MY ROMANCE</p>
+                <p>When I see you smile First thing in the morning</p>
+                <p>lt raises curtains on your lazy eyes</p>
+                <p>Could it be that you and I</p>
+                <p>have the greatest love to ever be</p>
+                <p>How could this have ever been before</p>
+                <p>It's not for anybody else to know</p>
+                <p>For anybody else to know</p>
+                <p>When Friday night arrives</p>
+                <p>We'll let it pass outside</p>
+                <p>the door This is not</p>
+                <p>for anybody else</p>
+                <p>Anybody else to know</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        `
+        var twoHeartOneLoveEl = document.createElement("div");
+        twoHeartOneLoveEl.setAttribute("id", "twoHeartOneLoveElement");
+        twoHeartOneLoveEl.className = 'twoHeartOneLoveElement';
+        this.animationBox.appendChild(twoHeartOneLoveEl);
+        twoHeartOneLoveEl.innerHTML = twoHeartOneLoveElStr;
+        setTimeout(() => {
+          this.tenPicRotate()
+        }, 4000);
+        setTimeout(() => {
+          this.animationBox.removeChild(twoHeartOneLoveEl);
+        }, 5000);
+      }
+
+      // ten picture rotate
+      tenPicRotate(){
+        var tenPicRotateElStr = `
+        <div class="ten_pic_rotate">
+          <div class="spring_animation">
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+            <div><div></div></div>
+          </div>
+          <div class="ten_pic_rotate_content_1">
+            <div class="ten_pic_rotate_content">
+              <div class="ten_pic_rotate_img">
+                <div class="fj1_webp"><img src="./image/tenPictureRotate/fj1.webp" alt=""></div>
+              </div>
+              <div class="ten_pic_rotate_img">
+                <div class="fj2_webp"><img src="./image/tenPictureRotate/fj2.webp" alt=""></div>
+              </div>
+              <div class="ten_pic_rotate_img">
+                <div class="fj3_webp"><img src="./image/tenPictureRotate/fj3.webp" alt=""></div>
+              </div>
+              <div class="ten_pic_rotate_img">
+                  <div class="fj4_webp"><img src="./image/tenPictureRotate/fj4.gif" alt=""></div>
+              </div>
+              <div class="ten_pic_rotate_img">
+                <div class="fj5_webp"><img src="./image/tenPictureRotate/fj5.webp" alt=""></div>
+              </div>
+              <div class="ten_pic_rotate_img">
+                <div class="fj6_webp"><img src="./image/tenPictureRotate/fj6.webp" alt=""></div>
+              </div>
+              <div class="ten_pic_rotate_img">
+                <div class="fj7_webp">
+                  <img src="./image/tenPictureRotate/fj7.webp" alt="">
+                </div>
+              </div>
+              <div class="ten_pic_rotate_img">
+                <div class="fj8_webp">
+                  <img src="./image/tenPictureRotate/fj8.webp" alt="">
+                </div>
+              </div>
+              <div class="ten_pic_rotate_img">
+                <div class="fj9_webp">
+                  <img src="./image/tenPictureRotate/fj9.jpg" alt="">
+                </div>
+              </div>
+              <div class="ten_pic_rotate_img">
+                <div class="fj10_webp">
+                  <img src="./image/tenPictureRotate/fj10.webp" alt="">
+                </div>
+              </div>
+              <!-- 第四阶段 -->
+              <div class="ten_pic_rotate_fourth_stage">
+                <div class="ten_pic_rotate_fourth_stage_content">
+                  <div><img src="./image/tenPictureRotate/fj3.webp" alt=""></div>
+                  <div><img src="./image/tenPictureRotate/fj4.gif" alt=""></div>
+                </div>
+              </div>
+              <!-- 第五阶段 -->
+              <div class="ten_pic_rotate_fifth_stage">
+                <div class="ten_pic_rotate_fifth_stage_content">
+                  <div><img src="./image/tenPictureRotate/fj2.webp" alt=""></div>
+                </div>
+              </div>
+              <!-- 第六阶段 -->
+              <div class="ten_pic_rotate_sixth_stage">
+                <div class="ten_pic_rotate_sixth_stage_content">
+                  <div><img src="./image/tenPictureRotate/fj2.webp" alt=""></div>
+                  <div><img src="./image/tenPictureRotate/fj1.webp" alt=""></div>
+                  <div><img src="./image/tenPictureRotate/fj1.webp" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 第七阶段 -->
+          <div class="ten_pic_rotate_seventh_stage">
+            <div class="ten_pic_rotate_seventh_stage_content">
+              <div>
+                <img src="./image/tenPictureRotate/fj7.webp" alt="">
+              </div>
+              <div>
+                <img src="./image/tenPictureRotate/fj9.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- 第八阶段 -->
+          <div class="ten_pic_rotate_eighth_stage">
+            <div class="ten_pic_rotate_eighth_stage_content">
+              <div>
+                <img src="./image/tenPictureRotate/fj8.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        `;
+        var tenPicRotateEl = document.createElement("div");
+        tenPicRotateEl.setAttribute("id", "tenPicRotateElement");
+        tenPicRotateEl.className = 'tenPicRotateElement';
+        this.animationBox.appendChild(tenPicRotateEl);
+        tenPicRotateEl.innerHTML = tenPicRotateElStr;
+        setTimeout(() => {
+          this.hotHeart()
+        }, 30800);
+        setTimeout(() => {
+          this.animationBox.removeChild(tenPicRotateEl);
+        }, 31500);
+      }
+
+      // Hot Heart 炽热的真心
+      hotHeart(){
+        this.koreanAndTextAndImgObj = {
+            koreanArr: [
+              {
+                id: 1,
+                koreanStr: '사',
+              },
+              {
+                id: 2,
+                koreanStr: '랑',
+              },
+              {
+                id: 3,
+                koreanStr: '해',
+              },
+              {
+                id: 4,
+                koreanStr: '햇',
+              },
+              {
+                id: 5,
+                koreanStr: '살',
+              },
+              {
+                id: 6,
+                koreanStr: '보',
+              },
+              {
+                id: 7,
+                koreanStr: '다',
+              },
+              {
+                id: 8,
+                koreanStr: '뜨',
+              },
+              {
+                id: 9,
+                koreanStr: '거',
+              },
+              {
+                id: 10,
+                koreanStr: '운',
+              },
+              {
+                id: 11,
+                koreanStr: '건',
+              },
+              {
+                id: 12,
+                koreanStr: '너',
+              },
+              {
+                id: 13,
+                koreanStr: '에',
+              },
+              {
+                id: 14,
+                koreanStr: '대',
+              },
+              {
+                id: 15,
+                koreanStr: '한',
+              },
+              {
+                id: 16,
+                koreanStr: '나',
+              },
+              {
+                id: 17,
+                koreanStr: '의',
+              },
+              {
+                id: 18,
+                koreanStr: '진',
+              },
+            ],
+            text: '我爱你，比阳光更炽热的是我对你的真心',
+            imgArr: [
+              {
+                id: 1,
+                imgUrl: './image/wzrygqt/damo_xjlzd.webp',
+              },
+              {
+                id: 2,
+                imgUrl: './image/wzrygqt/zhaoyun_cxsq.webp',
+              },
+            ]
+          };
+        let hotHeartElStr = this.generateKoreanAndTextAndImgEl(this.koreanAndTextAndImgObj)
+        var hotHeartEl = document.createElement("div");
+        hotHeartEl.setAttribute("id", "hotHeartElement");
+        hotHeartEl.className = 'hotHeartElement';
+        this.animationBox.appendChild(hotHeartEl);
+        hotHeartEl.innerHTML = hotHeartElStr;
+        setTimeout(() => {
+          this.moreRedLace()
+        }, 9000);
+        setTimeout(() => {
+          this.animationBox.removeChild(hotHeartEl);
+        }, 10000);
+      }
+
+      // more red lace
+      moreRedLace(){
+        let moreRedLaceElStr = `
+        <div class="more_red_lace">
+          <div class="more_red_lace_content">
+            <div class="more_red_lace_lace">
+              <div class="more_red_lace_lace_white"></div>
+              <div class="more_red_lace_lace_img"><img src="./image/more_red_lace.png" alt=""></div>
+            </div>
+            <div class="more_red_lace_main_pic"><img src="./image/wzrygqt/yingzheng_ygjx.webp" alt=""></div>
+          </div>
+        </div>
+        `
+        var moreRedLaceEl = document.createElement("div");
+        moreRedLaceEl.setAttribute("id", "moreRedLaceElement");
+        moreRedLaceEl.className = 'moreRedLaceElement';
+        this.animationBox.appendChild(moreRedLaceEl);
+        moreRedLaceEl.innerHTML = moreRedLaceElStr;
+        setTimeout(() => {
+          this.protectYou();
+        }, 4000);
+        setTimeout(() => {
+          this.animationBox.removeChild(moreRedLaceEl);
+        }, 5500);
+      }
+
+      // protect you
+      protectYou(){
+        this.koreanAndTextAndImgObj = {
+            koreanArr: [
+              {
+                id: 1,
+                koreanStr: '동',
+              },
+              {
+                id: 2,
+                koreanStr: '행',
+              },
+              {
+                id: 3,
+                koreanStr: '하',
+              },
+              {
+                id: 4,
+                koreanStr: '여',
+              },
+              {
+                id: 5,
+                koreanStr: '생',
+              },
+              {
+                id: 6,
+                koreanStr: '의',
+              },
+              {
+                id: 7,
+                koreanStr: '세',
+              },
+              {
+                id: 8,
+                koreanStr: '월',
+              },
+              {
+                id: 9,
+                koreanStr: '이',
+              },
+              {
+                id: 10,
+                koreanStr: '너',
+              },
+              {
+                id: 11,
+                koreanStr: '의',
+              },
+              {
+                id: 12,
+                koreanStr: '손',
+              },
+              {
+                id: 13,
+                koreanStr: '을',
+              },
+              {
+                id: 14,
+                koreanStr: '잡',
+              },
+              {
+                id: 15,
+                koreanStr: '고',
+              },
+              {
+                id: 16,
+                koreanStr: '앞',
+              },
+              {
+                id: 17,
+                koreanStr: '으',
+              },
+              {
+                id: 18,
+                koreanStr: '로',
+              },
+            ],
+            text: '陪伴你，余生的光阴牵你手前行',
+            imgArr: [
+              {
+                id: 1,
+                imgUrl: './image/wzrygqt/damo_xjlzd.webp',
+              },
+              {
+                id: 2,
+                imgUrl: './image/wzrygqt/zhaoyun_cxsq.webp',
+              },
+            ]
+          };
+        let protectYouStr = this.generateKoreanAndTextAndImgEl(this.koreanAndTextAndImgObj)
+        var protectYou = document.createElement("div");
+        protectYou.setAttribute("id", "protectYouement");
+        protectYou.className = 'protectYouement';
+        this.animationBox.appendChild(protectYou);
+        protectYou.innerHTML = protectYouStr;
+      }
+
+      // 最爱的文字和英文效果抽离
+      favoriteTextAndEnglishCommon(TextAndEnglishObj) {
+        var TextAndEnglishOuterElStr = `
+        <div class="favorite_sentence_box">
+          <div class="favorite_sentence">
+            <div class="favorite_sentence_english">
+        `;
+
+        // 循环遍历生成英文标签
+        TextAndEnglishObj.wordArray.forEach((item, index) => {
+          TextAndEnglishOuterElStr += `
+            <div class="favorite_sentence_english_${index + 1}">${item.title}&nbsp;</div>
+          `;
+        })
+        TextAndEnglishOuterElStr += `
+          </div>
+          <div class="favorite_sentence_text">
+        `;
+
+        // 循环遍历生成中文标签
+        TextAndEnglishObj.textArray.forEach((item, index) => {
+          TextAndEnglishOuterElStr += `
+            <div class="favorite_sentence_text_${index + 1}">${item.title}&nbsp;</div>
+          `;
+        })
+        TextAndEnglishOuterElStr += `
+            </div>
+          </div>
+        </div>
+        `;
+        return TextAndEnglishOuterElStr;
+      };
+
+      // 生成韩文、中文和图片标签
+      generateKoreanAndTextAndImgEl(koreanAndTextAndImgObj) {
+        var koreanAndTextAndImgElStr = `
+        <div class="qxqy_hwbl_outer">
+          <div class="qxqy_hwbl">
+            <div class="qxqy_hwbl_main">
+              <div class="qxqy_hwbl_Korean_group">`;
+        // 遍历生成韩文标签
+        koreanAndTextAndImgObj.koreanArr.forEach((item, index) => {
+          if (index < 3) {
+            // 前三个高亮显示
+            koreanAndTextAndImgElStr += `
+            <div class="qxqy_hwbl_word">
+              <div class="qxqy_hwbl_circle_dot"></div>
+              <div class="qxqy_hwbl_Korean highlight">${item.koreanStr}</div>
+            </div>
+            `;
+          } else {
+            koreanAndTextAndImgElStr += `
+            <div class="qxqy_hwbl_word">
+              <div class="qxqy_hwbl_circle_dot"></div>
+              <div class="qxqy_hwbl_Korean">${item.koreanStr}</div>
+            </div>
+            `;
+          }
+        })
+        // 闭合标签和中文标签
+        koreanAndTextAndImgElStr += `
+          </div>
+        </div>
+        <div class="qxqy_hwbl_text">
+          <div class="qxqy_hwbl_text_content">${koreanAndTextAndImgObj.text}</div>
+        </div>
+        <div class="qxqy_hwbl_background">
+        `;
+        // 图片标签
+        koreanAndTextAndImgObj.imgArr.forEach((item, index) => {
+          koreanAndTextAndImgElStr += `
+          <div class="qxqy_hwbl_${index + 1}_img"><img src="${item.imgUrl}" alt=""></div>`;
+        })
+        // 闭合标签
+        koreanAndTextAndImgElStr += `
+        </div>
+          </div>
+            </div>`;
+        return koreanAndTextAndImgElStr;
+      };
+
+      // 散列图和轮播图切换的定时器的函数
+      hashPicture_lbt_transformFunc() {
+        setTimeout(() => {
+          rotationMap.style.opacity = 0;
+          setTimeout(() => {
+            rotationMap.style.display = 'none';
+            hashPicture.style.display = 'block';
+            hashPicture.style.opacity = 1;
+            this.xzmm_hashPicture_transformFunc();
+          }, 500);
+        }, 18000);
+      };
+
+      // 旋转木马和轮播图切换的定时器的函数
+      xzmm_lbt_transformFunc() {
+        setTimeout(() => {
+          merryGoRound.style.opacity = 0;
+          setTimeout(() => {
+            merryGoRound.style.display = 'none';
+            rotationMap.style.display = 'block';
+            rotationMap.style.opacity = 1;
+            this.hashPicture_lbt_transformFunc();
+          }, 500);
+        }, 23000);
+      };
+
+      // 旋转木马和散列图切换的定时器的函数
+      xzmm_hashPicture_transformFunc() {
+        setTimeout(() => {
+          hashPicture.style.opacity = 0;
+          setTimeout(() => {
+            hashPicture.style.display = 'none';
+            merryGoRound.style.display = 'block';
+            merryGoRound.style.opacity = 1;
+            this.xzmm_lbt_transformFunc()
+          }, 500);
+        }, 7000);
+      }
+
+    }
+    let ac = new AnimationClass();
+    // ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
+      // ac.hotHeart();
+
+    // 全屏和最小化
+    (function () {
+      if (viewFullScreen) {
+        viewFullScreen.addEventListener("click", function () {
+          var docElm = document.documentElement;
+          if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+          }
+          else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+          }
+          else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+          }
+          else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+          }
+          viewFullScreen.style.display = 'none';
+          cancelFullScreen.style.display = 'block';
+        }, false);
+      }
+
+      if (cancelFullScreen) {
+        cancelFullScreen.addEventListener("click", function () {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          }
+          else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+          }
+          else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          }
+          else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+          }
+          viewFullScreen.style.display = 'block';
+          cancelFullScreen.style.display = 'none';
+        }, false);
+      }
+
+
+      var fullscreenState = document.getElementById("fullscreen-state");
+      if (fullscreenState) {
+        document.addEventListener("fullscreenchange", function () {
+          fullscreenState.innerHTML = (document.fullscreenElement) ? "" : "not ";
+        }, false);
+
+        document.addEventListener("msfullscreenchange", function () {
+          fullscreenState.innerHTML = (document.msFullscreenElement) ? "" : "not ";
+        }, false);
+
+        document.addEventListener("mozfullscreenchange", function () {
+          fullscreenState.innerHTML = (document.mozFullScreen) ? "" : "not ";
+        }, false);
+
+        document.addEventListener("webkitfullscreenchange", function () {
+          fullscreenState.innerHTML = (document.webkitIsFullScreen) ? "" : "not ";
+        }, false);
+      }
+
+    })();
+  </script>
+</body>
+
+</html>

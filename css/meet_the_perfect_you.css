@@ -1,0 +1,65 @@
+.meet_the_perfect_you{
+    --meet_start_three_img_delay: 22.5s; /* 开始三张图片的延迟时间 */
+    width: 100%;
+    height: 100vh;
+}
+.meet_the_perfect_you .meet_the_perfect_you_start{
+    width: 100%;
+    height: 100%;
+}
+.meet_the_perfect_you .meet_the_perfect_you_start .meet_start_three_img_1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transform: scale(1.1);
+    animation: meet_start_three_img_1 4s linear;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--meet_start_three_img_delay) + 0s);
+    -webkit-animation-delay:calc(var(--meet_start_three_img_delay) + 0s);
+}
+@keyframes meet_start_three_img_1 {
+    0%{z-index: 1;}
+    99%{transform: scale(1.05);z-index: 1;opacity: 1;}
+    100%{transform: scale(1.05);z-index: 0;opacity: 0;}
+}
+.meet_the_perfect_you .meet_the_perfect_you_start .meet_start_three_img_2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: scale(1.1);
+    animation: meet_start_three_img_2 4s linear;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--meet_start_three_img_delay) + 3s);
+    -webkit-animation-delay:calc(var(--meet_start_three_img_delay) + 3s);
+}
+@keyframes meet_start_three_img_2 {
+    0%{z-index: 1;opacity: 1;}
+    99%{transform: scale(1.05);opacity: 1;z-index: 1;}
+    100%{transform: scale(1.05);z-index: 0;}
+}
+.meet_the_perfect_you .meet_the_perfect_you_start .meet_start_three_img_3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: scale(1.1);
+    animation: meet_start_three_img_2 3s linear;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--meet_start_three_img_delay) + 6s);
+    -webkit-animation-delay:calc(var(--meet_start_three_img_delay) + 6s);
+}
+.meet_the_perfect_you .meet_the_perfect_you_start .meet_start_three_img img{
+    width: 100%;
+    height: 100%;
+}

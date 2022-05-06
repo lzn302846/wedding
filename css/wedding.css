@@ -1,0 +1,74 @@
+/* 
+*   样式初始化
+*/
+*{padding: 0;margin: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none;color: #666;}
+img{display: block;}
+i{font-style: normal;}
+h1,h2,h3,h4,h5,h6{font-size: 16px;font-weight: normal;}
+html,body {
+    position: relative;
+    /* background-image: linear-gradient(to right, #f395ee, #f2b5fa, #bbf4f8); */
+    width: 100%;
+    height: 100%;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+/* 
+*   样式布局
+*/
+
+/* Fullscreen */
+html:-moz-full-screen {
+  /* background-image: linear-gradient(to right, #f395ee, #f2b5fa, #bbf4f8); */
+}
+
+html:-webkit-full-screen {
+  /* background-image: linear-gradient(to right, #f395ee, #f2b5fa, #bbf4f8); */
+}
+
+html:-ms-fullscreen {
+  /* background-image: linear-gradient(to right, #f395ee, #f2b5fa, #bbf4f8); */
+  width: 100%;
+  /* needed to center contents in IE */
+}
+
+html:fullscreen {
+  /* background-image: linear-gradient(to right, #f395ee, #f2b5fa, #bbf4f8); */
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+/* 最大化、最小化图标样式 */
+.max-min-screen-box{
+    transform-origin: center;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+.max-min-screen{
+    color: white;
+    text-align: right;
+    opacity: 0.1;
+    transition: .5s;
+}
+.max-min-screen-box:hover .max-min-screen{
+    color:white;
+    opacity: 0.8;
+    font-size: 26px;
+    transform: rotateX(180deg);
+    transition: .5s;
+}
+#full-screen{
+  display: block;
+}
+#exit-fullscreen{
+    display: none;
+}
+
+

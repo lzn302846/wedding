@@ -1,0 +1,106 @@
+.love_story{
+    width: 100%;
+    height: 100%;  
+    background-color: #343434;
+    position: absolute;
+    top: 100%;
+    animation: love_story 3s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:9s;
+    -webkit-animation-delay:9s;
+}
+@keyframes love_story {
+    0%{}
+    10%{}
+    100%{top: 0;}
+}
+.love_story .love_story_box{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* love story */
+.love_story .love_story_box .love_story_love_story_box{
+    font-size: 20vh;
+    line-height: 20vh;
+    color: #FFB301;
+}
+.love_story .love_story_box .love_story_love_story_box .love_story_love{
+    position: relative;
+    right: 6vw;
+    transform: translateY(-25vh);
+    animation: love_and_forever 2.5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:9.5s;
+    -webkit-animation-delay:9.5s;
+}
+@keyframes love_and_forever {
+    0%{transform: translateY(-25vh);}
+    10%{transform: translateY(-40vh);}
+    100%{transform: translateY(0vh);}
+}
+.love_story .love_story_box .love_story_love_story_box .love_story_story{
+    position: relative;
+    bottom: 7vh;
+    right: 1vw;
+}
+
+/* 竖着排列的5个字 */
+.love_story .love_story_box .love_story_forever_box{
+    font-size: 20px;
+    color: black;
+    transform: translateY(-25vh);
+    width: 3vw;
+    height: 50vh;
+    background-color: white;
+    margin-right: 3vw;
+    animation: love_and_forever 2.5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:9.5s;
+    -webkit-animation-delay:9.5s;
+}
+.love_story .love_story_box .love_story_forever_box .love_story_forever{
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-family:fantasy;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* &符 */
+.love_story .love_story_box .love_story_right_content{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+.love_story .love_story_box .love_story_and_groom_bride{
+    display: flex;
+}
+.love_story .love_story_box .love_story_and_box{
+    font-size: 15vh;
+    font-family: monospace;
+    line-height: 15vh;
+    font-weight: bold;
+    color: lightgray;
+}
+/* groom和bride */
+.love_story .love_story_box .love_story_groom_bride_box{
+    padding-top: 4vh;
+    font-size: 14px;
+    font-family:sans-serif;
+    color: #FFB301;
+}
+
+/* always */
+.love_story .love_story_box .love_story_always_box{
+    font-size: 16px;
+    color: lightgray;
+}

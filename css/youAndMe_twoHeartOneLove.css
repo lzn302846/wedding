@@ -1,0 +1,320 @@
+/* 上面是you_and_me，下面是two_heart_one_love */
+.you_and_me{
+    --you_and_me_delay:0s;
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    bottom: 100vh;
+    background-color: #222222;
+    animation: you_and_me 8s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--you_and_me_delay) + 0s);
+    -webkit-animation-delay:calc(var(--you_and_me_delay) + 0s);
+    z-index: 5;
+}
+@keyframes you_and_me {
+    0%{}
+    10%{bottom: 0;}
+    90%{bottom: 0;}
+    100%{bottom: -100vh;}
+}
+.you_and_me .you_and_me_content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+}
+/* 左侧 */
+.you_and_me .you_and_me_content .you_and_me_left{
+    padding-left: 1.5vw;
+    box-sizing: border-box;
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.you_and_me .you_and_me_content .you_and_me_left>div{
+    width: 23.7vw;
+    height: 100%;
+    position: relative;
+}
+.you_and_me .you_and_me_content .you_and_me_left>div>div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.you_and_me .you_and_me_content .you_and_me_left>div:nth-child(1)>div:nth-child(2){
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+    animation: you_and_me_left_1_2 .8s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--you_and_me_delay) + 3.2s);
+    -webkit-animation-delay:calc(var(--you_and_me_delay) + 3.2s);
+}
+.you_and_me .you_and_me_content .you_and_me_left>div:nth-child(2)>div:nth-child(2){
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+    animation: you_and_me_left_1_2 .8s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--you_and_me_delay) + 3.8s);
+    -webkit-animation-delay:calc(var(--you_and_me_delay) + 3.8s);
+}
+@keyframes you_and_me_left_1_2 {
+    0%{}
+    100%{-webkit-clip-path: inset(100% 0 0 0);clip-path: inset(100% 0 0 0);}
+}
+.you_and_me .you_and_me_content .you_and_me_left>div>div img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 右侧 */
+.you_and_me .you_and_me_content .you_and_me_right{
+    box-sizing: border-box;
+    width: 50vw;
+    height: 75vh;
+}
+.you_and_me .you_and_me_content .you_and_me_right .you_and_me_right_youAndMeImg{
+    width: 90%;
+    height: 10vh;
+    position: relative;
+    bottom: 1vh;
+    left: 55vw;
+    margin-bottom: 2vh;
+    animation: you_and_me_right_youAndMeImg .8s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--you_and_me_delay) + .8s);
+    -webkit-animation-delay:calc(var(--you_and_me_delay) + .8s);
+}
+@keyframes you_and_me_right_youAndMeImg {
+    0%{}
+    100%{left: 1vh;}
+}
+.you_and_me .you_and_me_content .you_and_me_right .you_and_me_right_youAndMeImg img{
+    width: 100%;
+    height: 100%;
+}
+.you_and_me .you_and_me_content .you_and_me_right .you_and_me_right_bottom{
+    width: 100%;
+    height: 63vh;
+    display: flex;
+}
+.you_and_me .you_and_me_content .you_and_me_right .you_and_me_right_bottom .you_and_me_right_secondPic{
+    height: 100%;
+    width: 24vw;
+    position: relative;
+}
+.you_and_me .you_and_me_content .you_and_me_right .you_and_me_right_bottom .you_and_me_right_secondPic>img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+    animation: you_and_me_left_1_2 .8s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--you_and_me_delay) + 4.1s);
+    -webkit-animation-delay:calc(var(--you_and_me_delay) + 4.1s);
+}
+.you_and_me .you_and_me_content .you_and_me_right .you_and_me_right_bottom .you_and_me_right_secondPic>div{
+    height: 100%;
+    width: 100%;
+}
+.you_and_me .you_and_me_content .you_and_me_right .you_and_me_right_bottom .you_and_me_right_secondPic>div img{
+    height: 100%;
+    width: 100%;
+}
+.you_and_me .you_and_me_content .you_and_me_right .you_and_me_right_bottom .you_and_me_text{
+    height: 100%;
+    width: 25vw;
+    color: white;
+    white-space:nowrap;
+    margin-left: 1vw;
+    position: relative;
+    bottom: 3px;
+}
+.you_and_me .you_and_me_content .you_and_me_right .you_and_me_right_bottom .you_and_me_text p{
+    height: 4.1vh;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+/* 圆圈发散效果 */
+.you_and_me_circle_divergence{
+    /* 变量 */
+    --circle_divergence_box_1_delay: 16.1s;
+    --circle_divergence_box_2_delay: 16.2s;
+    --circle_divergence_box_3_delay: 16.3s;
+    --circle_divergence_box_4_delay: 16.4s;
+    --circle_divergence_box_5_delay: 16.5s;
+
+    width: 32vh;
+    height: 32vh;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: -16vh;
+    transform: translateX(-50%);
+    overflow: hidden;
+    z-index: 4;
+}
+
+/* two_heart_one_love */
+.two_heart_one_love{
+    --two_heart_one_love_delay:0s;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.two_heart_one_love .two_heart_one_love_content{
+    box-sizing: border-box;
+    padding: 0 4vh;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+/* 左侧 */
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_left{
+    width: 47.5vw;
+    height: 100%;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_left img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 右侧 */
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right{
+    width: 47.5vw;
+    height: 100%;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_border{
+    width: 100%;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_border{
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_border .two_heart_one_love_right_border_left{
+    width: 2vh;
+    height: 2vh;
+    border-top: .3vh solid #DBDBDB;
+    border-left: .3vh solid #DBDBDB;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_border .two_heart_one_love_right_border_right{
+    width: 2vh;
+    height: 2vh;
+    border-top: .3vh solid #DBDBDB;
+    border-right: .3vh solid #DBDBDB;
+}
+
+/* 两颗心，一种爱 */
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_text{
+    margin: 15vh 0px 2vh 0px;
+    letter-spacing: .5vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5vh;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_text div{
+    transform: translateY(8vh);
+    opacity: 0;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_text div:nth-child(1){
+    animation: two_heart_one_love_right_text .4s ease;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--two_heart_one_love_delay) + 1.1s);
+    -webkit-animation-delay:calc(var(--two_heart_one_love_delay) + 1.1s);
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_text div:nth-child(2){
+    animation: two_heart_one_love_right_text .4s ease;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--two_heart_one_love_delay) + 1.2s);
+    -webkit-animation-delay:calc(var(--two_heart_one_love_delay) + 1.2s);
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_text div:nth-child(3){
+    animation: two_heart_one_love_right_text .4s ease;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--two_heart_one_love_delay) + 1.3s);
+    -webkit-animation-delay:calc(var(--two_heart_one_love_delay) + 1.3s);
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_text div:nth-child(4){
+    animation: two_heart_one_love_right_text .4s ease;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--two_heart_one_love_delay) + 1.4s);
+    -webkit-animation-delay:calc(var(--two_heart_one_love_delay) + 1.4s);
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_text div:nth-child(5){
+    animation: two_heart_one_love_right_text .4s ease;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--two_heart_one_love_delay) + 1.5s);
+    -webkit-animation-delay:calc(var(--two_heart_one_love_delay) + 1.5s);
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_text div:nth-child(6){
+    animation: two_heart_one_love_right_text .4s ease;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--two_heart_one_love_delay) + 1.6s);
+    -webkit-animation-delay:calc(var(--two_heart_one_love_delay) + 1.6s);
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_text div:nth-child(7){
+    animation: two_heart_one_love_right_text .4s ease;
+    animation-fill-mode : forwards;
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--two_heart_one_love_delay) + 1.7s);
+    -webkit-animation-delay:calc(var(--two_heart_one_love_delay) + 1.7s);
+}
+
+@keyframes two_heart_one_love_right_text {
+    0%{}
+    55%{opacity: 1;}
+    60%{opacity: 1;transform: translateY(-3vh);}
+    100%{transform: translateY(0vh);opacity: 1;}
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_word{
+    color: #797979;
+    font-size: 2.3vh;
+    line-height: 3.8vh;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_word p{
+    text-align: center;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_word p:nth-child(1){
+    font-size: 3vh;
+    margin-bottom: 1.5vh;
+}
+.two_heart_one_love .two_heart_one_love_content .two_heart_one_love_right .two_heart_one_love_right_word p:nth-child(8){
+    margin-bottom: 4vh;
+}

@@ -1,0 +1,437 @@
+/* 第一组文字样式及动画 */
+.wedding_words{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    perspective: 700px;
+    perspective-origin: top;
+    transition: .5s;
+    z-index: 1;
+}
+.wedding_words .firstGroup_sentence{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: 1s;
+    position: absolute;
+    top: -10%;
+    width: 100%;
+    animation: firstGroup_sentence 1.5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 3.5s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 3.5s);
+    color: white;
+}
+@keyframes firstGroup_sentence {
+    0%{}
+    50%{
+        color: transparent;
+        text-shadow: #111 0 0 5px;
+    }
+    100%{
+        text-shadow: none;
+    } 
+}
+/* 头排英文动画 -- start */
+/* 入场动画 */
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english {
+    width: 210px;
+    display: flex;
+    font-family:fantasy;
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english>div {
+    margin-right: 2px;
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_1 {
+    display: flex;
+    opacity: 0;
+    animation: firstGroup_sentence_english_1 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + .8s);
+}
+@keyframes firstGroup_sentence_english_1 {
+    0%{transform: translateY(320px);}
+    50%{transform: translateY(280px);opacity: 1;}
+    100%{transform: translateY(305px);opacity: 1;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_2 {
+    display: flex;
+    opacity: 0;
+    animation: firstGroup_sentence_english_2 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + .9s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + .9s);
+}
+@keyframes firstGroup_sentence_english_2 {
+    0%{transform: translateY(320px);}
+    50%{transform: translateY(280px);opacity: 1;}
+    100%{transform: translateY(305px);opacity: 1;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_3 {
+    display: flex;
+    opacity: 0;
+    animation: firstGroup_sentence_english_3 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1s);
+}
+@keyframes firstGroup_sentence_english_3 {
+    0%{transform: translateY(320px);}
+    50%{transform: translateY(280px);opacity: 1;}
+    100%{transform: translateY(305px);opacity: 1;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_4 {
+    display: flex;
+    opacity: 0;
+    animation: firstGroup_sentence_english_4 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1.1s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1.1s);
+}
+@keyframes firstGroup_sentence_english_4 {
+    0%{transform: translateY(320px);}
+    50%{transform: translateY(280px);opacity: 1;}
+    100%{transform: translateY(305px);opacity: 1;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_5 {
+    display: flex;
+    opacity: 0;
+    animation: firstGroup_sentence_english_5 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1.2s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1.2s);
+}
+@keyframes firstGroup_sentence_english_5 {
+    0%{transform: translateY(320px);}
+    50%{transform: translateY(280px);opacity: 1;}
+    100%{transform: translateY(305px);opacity: 1;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_6 {
+    display: flex;
+    opacity: 0;
+    animation: firstGroup_sentence_english_6 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1.3s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1.3s);
+}
+@keyframes firstGroup_sentence_english_6 {
+    0%{transform: translateY(320px);}
+    50%{transform: translateY(280px);opacity: 1;}
+    100%{transform: translateY(305px);opacity: 1;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_7 {
+    display: flex;
+    opacity: 0;
+    animation: firstGroup_sentence_english_7 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1.4s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1.4s);
+}
+@keyframes firstGroup_sentence_english_7 {
+    0%{transform: translateY(320px);}
+    50%{transform: translateY(280px);opacity: 1;}
+    100%{transform: translateY(305px);opacity: 1;} 
+}
+/* 出场动画 */
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_1_end {
+    animation: firstGroup_sentence_english_1_end 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 4.8s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 4.8s);
+}
+@keyframes firstGroup_sentence_english_1_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;}  
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_2_end {
+    animation: firstGroup_sentence_english_2_end 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 4.9s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 4.9s);
+}
+@keyframes firstGroup_sentence_english_2_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;}  
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_3_end {
+    animation: firstGroup_sentence_english_3_end 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5s);
+}
+@keyframes firstGroup_sentence_english_3_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;}  
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_4_end {
+    animation: firstGroup_sentence_english_4_end 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.1s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.1s);
+}
+@keyframes firstGroup_sentence_english_4_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;}  
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_5_end {
+    animation: firstGroup_sentence_english_5_end 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.2s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.2s);
+}
+@keyframes firstGroup_sentence_english_5_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;}  
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_6_end {
+    animation: firstGroup_sentence_english_6_end 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.3s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.3s);
+}
+@keyframes firstGroup_sentence_english_6_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;}  
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_english .firstGroup_sentence_english_7_end {
+    animation: firstGroup_sentence_english_7_end 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.4s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.4s);
+}
+@keyframes firstGroup_sentence_english_7_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;}  
+}
+/* 头排英文动画 -- end */
+
+/* 主要的字 */
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main>div{
+    margin: 0 5px;
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_1{
+    animation: firstGroup_sentence_1 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:var(--wedding_words_animation_delay);
+    -webkit-animation-delay:var(--wedding_words_animation_delay);
+}
+@keyframes firstGroup_sentence_1 {
+    0%{}
+    100%{transform: translateY(300px);color: blueviolet;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_2{
+    animation: firstGroup_sentence_2 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + .2s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + .2s);
+}
+@keyframes firstGroup_sentence_2 {
+    0%{}
+    100%{transform: translateY(300px);} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_3{
+    animation: firstGroup_sentence_3 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + .4s);
+}
+@keyframes firstGroup_sentence_3 {
+    0%{}
+    100%{transform: translateY(300px);} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_4{
+    animation: firstGroup_sentence_4 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + .8s);
+}
+@keyframes firstGroup_sentence_4 {
+    0%{}
+    100%{transform: translateY(300px);} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_5{
+    animation: firstGroup_sentence_5 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1s);
+}
+@keyframes firstGroup_sentence_5 {
+    0%{}
+    100%{transform: translateY(300px);} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_6{
+    animation: firstGroup_sentence_6 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1.2s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1.2s);
+}
+@keyframes firstGroup_sentence_6 {
+    0%{}
+    100%{transform: translateY(300px);} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_7{
+    animation: firstGroup_sentence_7 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1.4s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1.4s);
+}
+@keyframes firstGroup_sentence_7 {
+    0%{}
+    100%{transform: translateY(300px);} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_8{
+    display: flex;
+    animation: firstGroup_sentence_8 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1.6s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1.6s);
+}
+@keyframes firstGroup_sentence_8 {
+    0%{}
+    100%{transform: translateY(300px);} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_9{
+    display: flex;
+    animation: firstGroup_sentence_9 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 1.8s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 1.8s);
+}
+@keyframes firstGroup_sentence_9 {
+    0%{}
+    100%{transform: translateY(300px);} 
+}
+
+/* 第一组文字结束退出动画 */
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_1_end{
+    animation: firstGroup_sentence_1_end .5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 4.8s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 4.8s);
+}
+@keyframes firstGroup_sentence_1_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_2_end{
+    animation: firstGroup_sentence_2_end .5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 4.9s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 4.9s);
+}
+@keyframes firstGroup_sentence_2_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_3_end{
+    animation: firstGroup_sentence_3_end .5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5s);
+}
+@keyframes firstGroup_sentence_3_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_4_end{
+    animation: firstGroup_sentence_4_end .5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.1s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.1s);
+}
+@keyframes firstGroup_sentence_4_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_5_end{
+    animation: firstGroup_sentence_5_end .5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.2s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.2s);
+}
+@keyframes firstGroup_sentence_5_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_6_end{
+    animation: firstGroup_sentence_6_end .5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.3s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.3s);
+}
+@keyframes firstGroup_sentence_6_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_7_end{
+    animation: firstGroup_sentence_7_end .5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.4s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.4s);
+}
+@keyframes firstGroup_sentence_7_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_8_end{
+    animation: firstGroup_sentence_8_end .5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.5s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.5s);
+}
+@keyframes firstGroup_sentence_8_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;} 
+}
+.wedding_words .firstGroup_sentence .firstGroup_sentence_main .firstGroup_sentence_9_end{
+    animation: firstGroup_sentence_9_end .5s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--wedding_words_animation_delay) + 5.6s);
+    -webkit-animation-delay:calc(var(--wedding_words_animation_delay) + 5.6s);
+}
+@keyframes firstGroup_sentence_9_end {
+    0%{}
+    100%{transform: translateX(-880px);display: none;} 
+}

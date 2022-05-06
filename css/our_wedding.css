@@ -1,0 +1,209 @@
+.our_wedding{
+    width: 100%;
+    height: 100%;
+}
+.our_wedding .our_wedding_inner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100vh;
+    animation: our_wedding_inner 5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:14s;
+    -webkit-animation-delay:14s;
+}
+@keyframes our_wedding_inner {
+    0%{}
+    15%{top: 0;}
+    80%{top: 0;}
+    100%{top: -100vh;}
+}
+.our_wedding .our_wedding_inner .first_lace{
+    width: 100%;
+    height: 6vh;
+    animation: picture_lace 1.5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:14.4s;
+    -webkit-animation-delay:14.4s;
+}
+@keyframes picture_lace {
+    0%{}
+    10%{}
+    100%{height: 0px;}
+}
+.our_wedding .our_wedding_inner .first_lace img{
+    width: 100%;
+    height: 100%;
+}
+.our_wedding .our_wedding_inner .second_lace{
+    width: 100%;
+    height: 6vh;
+    animation: picture_lace 1.5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:14.4s;
+    -webkit-animation-delay:14.4s;
+}
+.our_wedding .our_wedding_inner .second_lace img{
+    width: 100%;
+    height: 100%;
+}
+.our_wedding .our_wedding_inner .third_lace{
+    width: 100%;
+    height: 6vh;
+    animation: picture_lace 1.5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:14.4s;
+    -webkit-animation-delay:14.4s;
+}
+.our_wedding .our_wedding_inner .third_lace img{
+    width: 100%;
+    height: 100%;
+}
+.our_wedding .our_wedding_inner .fourth_lace{
+    width: 100%;
+    height: 2vh;
+    animation: picture_lace 1.5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:14.4s;
+    -webkit-animation-delay:14.4s;
+}
+.our_wedding .our_wedding_inner .fourth_lace img{
+    width: 100%;
+    height: 100%;
+}
+.our_wedding .our_wedding_inner .fifth_lace{
+    width: 100%;
+    height: 30vh;
+    background-color: #EDC3AF;
+    animation: picture_lace 1.5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:14.4s;
+    -webkit-animation-delay:14.4s;
+}
+
+/* 内容：英文-名字-日期 */
+.our_wedding .our_wedding_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FCE7D5;
+}
+.our_wedding .our_wedding_content .our_wedding_english{
+    font-size: 10vh;
+    color: #651808;
+}
+.our_wedding .our_wedding_content .our_wedding_name{
+    font-size: 10vh;
+    color: #651808;
+}
+.our_wedding .our_wedding_content .our_wedding_time{
+    font-size: 10vh;
+    color: #651808;
+}
+
+/* 第二组轮播图 */
+.second_rotation_map{
+    width: 100%;
+    height: 100%;
+}
+/* 第二组轮播图的字 */
+.second_rotation_map .second_rotation_map_word{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    display: flex;
+    color: white;
+    z-index: 1;
+    font-size: 20px;
+    opacity: 0;
+    animation: second_rotation_map_word 16s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:19s;
+    -webkit-animation-delay:19s;
+}
+@keyframes second_rotation_map_word {
+    0%{opacity: 0;}
+    16%{opacity: 1;}
+    90%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.second_rotation_map .second_rotation_map_word .second_rotation_map_word_highlight{
+    color: #E70E65;
+}
+/* 第二组轮播图的第一张图 */
+.second_rotation_map .second_rotation_map_first_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.second_rotation_map .second_rotation_map_first_img img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    animation: second_rotation_map_first_img 4s linear;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:19s;
+    -webkit-animation-delay:19s;
+}
+@keyframes second_rotation_map_first_img {
+    0%{}
+    100%{transform: scale(1.04);}
+}
+/* 第二组轮播图的第二张图 */
+.second_rotation_map .second_rotation_map_second_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.second_rotation_map .second_rotation_map_second_img img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    opacity: 0;
+    animation: second_rotation_map_second_img 8s linear;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:23s;
+    -webkit-animation-delay:23s;
+}
+@keyframes second_rotation_map_second_img {
+    0%{}
+    20%{opacity: 1;z-index: 1;}
+    100%{opacity: 1;z-index: 1;transform: scale(1.1);}
+}
+/* 第二组轮播图的第三张图 */
+.second_rotation_map .second_rotation_map_third_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.second_rotation_map .second_rotation_map_third_img img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    opacity: 0;
+    animation: second_rotation_map_second_img 6s linear;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:29s;
+    -webkit-animation-delay:29s;
+}

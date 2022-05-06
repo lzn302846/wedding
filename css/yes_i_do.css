@@ -1,0 +1,265 @@
+.qxqyHwblOuterEl{
+    --will_you_marry_me_txt_delay: 1s; /* will you marry me 文字的延迟时间 */
+    --yes_i_do_word_txt_delay: 2s; /* yes i do 文字的延迟时间 */
+    --yes_i_do_outer_delay: 13s; /* yes i do整体入场的延迟时间13s */
+}
+.yes_i_do_outer{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    top: 100vh;
+    background-color: #222222;
+    animation: yes_i_do_outer 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:var(--yes_i_do_outer_delay);
+    -webkit-animation-delay:var(--yes_i_do_outer_delay);
+}
+@keyframes yes_i_do_outer {
+    0%{}
+    100%{transform: translateY(-100vh);}
+}
+.yes_i_do_outer .yes_i_do{
+    width: 100%;
+    height: 100vh;  
+}
+
+/* 花边 */
+.yes_i_do_outer .yes_i_do_lace{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+.yes_i_do_outer .yes_i_do_lace .yes_i_do_lace_content{
+    width: 100%;
+}
+.yes_i_do_outer .yes_i_do_lace .yes_i_do_lace_content .yes_i_do_lace_img{
+    width: 100%;
+    height: 11vh;
+    overflow: hidden;
+    animation: yes_i_do_lace_img 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + .3s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + .3s);
+}
+@keyframes yes_i_do_lace_img {
+    0%{}
+    100%{height: 0px;}
+}
+.yes_i_do_outer .yes_i_do_lace .yes_i_do_lace_content .yes_i_do_lace_img img{
+    width: 100%;
+}
+.yes_i_do_outer .yes_i_do_lace .yes_i_do_lace_content .yes_i_do_lace_smallImg{
+    width: 100%;
+    height: 5vh;
+    overflow: hidden;
+    animation: yes_i_do_lace_img 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + .3s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + .3s);
+}
+.yes_i_do_outer .yes_i_do_lace .yes_i_do_lace_content .yes_i_do_lace_smallImg img{
+    width: 100%;
+}
+/* 内容 */
+.yes_i_do_outer .yes_i_do .yes_i_do_content{
+    position: absolute;
+    left: 12%;
+    top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    color: white;
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_img{
+    width: 45%;
+    height: 40%;
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_img img{
+    width: 100%;
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2vh;
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt{
+    opacity: 0;
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(1){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 0s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 0s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(2){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + .2s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + .2s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(3){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + .4s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + .4s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(4){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + .6s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + .6s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(5){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + .8s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + .8s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(6){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(7){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1.2s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1.2s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(8){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1.4s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1.4s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(9){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1.6s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1.6s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(10){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1.8s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 1.8s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(11){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(12){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2.2s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2.2s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(13){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2.4s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2.4s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(14){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2.6s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2.6s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .will_you_marry_me .will_you_marry_me_txt:nth-child(15){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2.8s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--will_you_marry_me_txt_delay) + 2.8s);
+}
+@keyframes will_you_marry_me_txt {
+    0%{}
+    50%{transform: translateY(-4vh);opacity: 1;}
+    100%{transform: translateY(-2vh);opacity: 1;}
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_word{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2vh;
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_word .yes_i_do_word_txt{
+    opacity: 0;
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_word .yes_i_do_word_txt:nth-child(1){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_word .yes_i_do_word_txt:nth-child(2){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3.2s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3.2s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_word .yes_i_do_word_txt:nth-child(3){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3.4s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3.4s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_word .yes_i_do_word_txt:nth-child(4){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3.6s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3.6s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_word .yes_i_do_word_txt:nth-child(5){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3.8s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 3.8s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_word .yes_i_do_word_txt:nth-child(6){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 4s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 4s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .yes_i_do_word .yes_i_do_word_txt:nth-child(7){
+    animation: will_you_marry_me_txt .5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 4.2s);
+    -webkit-animation-delay:calc(var(--yes_i_do_outer_delay) + var(--yes_i_do_word_txt_delay) + 4.2s);
+}
+.yes_i_do_outer .yes_i_do .yes_i_do_content .space{
+    margin-right: .5vw;
+}

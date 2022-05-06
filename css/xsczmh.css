@@ -1,0 +1,9 @@
+.xsczmhOuterElement{
+    --favorite_delay: 0s; /* 最爱的延迟时间 10s*/
+    --will_you_marry_me_txt_delay: 0s; /* will you marry me 文字的延迟时间 */
+    --yes_i_do_word_txt_delay: 0s; /* yes i do 文字的延迟时间 */
+    --yes_i_do_outer_delay: 0s; /* yes i do整体入场的延迟时间13s */
+}
+.xsczmhOuterElement .favorite_sentence_box .favorite_sentence {
+    left: 29%;
+}

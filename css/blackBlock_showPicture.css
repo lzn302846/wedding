@@ -1,0 +1,1066 @@
+/* 黑色方块逐渐展开显示的图片 */
+
+.animation_box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.blackBlock_showPicture{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    transition: 2s;
+}
+.blackBlock_showPicture .first_group{
+    width: 100%;
+    height: 100%; 
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: first_group 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:8s;
+    -webkit-animation-delay:8s;
+}
+@keyframes first_group {
+    0%{}
+    100%{background-color: black;}
+}
+.blackBlock_showPicture .first_group .black_block{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -2%;
+    top: -2%;
+    background-color: black;
+    animation: black_block 1s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+}
+@keyframes black_block {
+    0%{}
+    100%{background-color: transparent;}
+}
+/* 第一行 -- start */
+.blackBlock_showPicture .first_group .black_block .black_block_first_row{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row>div{
+    flex-shrink: 0;
+}
+@keyframes black_block_common_animation {
+    0%{}
+    100%{background-color: transparent;} 
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_first{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + 0.9s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + 0.9s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_second{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .8s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_third{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_fourth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_fifth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_sixth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_seventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_eighth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_ninth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_tenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_eleventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_twelfth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .8s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_first_row .black_block_first_row_thirteenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .9s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .9s);
+}
+/* 第一行 -- end */
+
+/* 第二行 -- start */
+.blackBlock_showPicture .first_group .black_block .black_block_second_row{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row>div{
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_first{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .8s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_second{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_third{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_fourth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_fifth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_sixth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_seventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .2s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .2s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_eighth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_ninth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_tenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_eleventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_twelfth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_second_row .black_block_second_row_thirteenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .8s);
+}
+/* 第二行 -- end */
+
+/* 第三行 -- start */
+.blackBlock_showPicture .first_group .black_block .black_block_third_row{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row>div{
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_first{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_second{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_third{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_fourth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_fifth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_sixth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .2s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .2s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_seventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .1s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .1s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_eighth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .2s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .2s);
+}
+
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_ninth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_tenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_eleventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_twelfth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_third_row .black_block_third_row_thirteenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+/* 第三行 -- end */
+
+/* 第四行 -- start */
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row>div{
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_first{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_second{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_third{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_fourth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_fifth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .2s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .2s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_sixth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .1s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .1s);
+}
+
+/* 中心 */
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_seventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:var(--black_block_animation_delay);
+    -webkit-animation-delay:var(--black_block_animation_delay);
+}
+
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_eighth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .1s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .1s);
+}
+
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_ninth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .2s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .2s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_tenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_eleventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_twelfth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fourth_row .black_block_fourth_row_thirteenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+/* 第四行 -- end */
+
+/* 第五行 -- start */
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row>div{
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_first{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_second{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_third{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_fourth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_fifth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_sixth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .2s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .2s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_seventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .1s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .1s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_eighth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .2s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .2s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_ninth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_tenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_eleventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_twelfth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_fifth_row .black_block_fifth_row_thirteenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+/* 第五行 -- end */
+
+/* 第六行 -- start */
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row>div{
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_first{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .8s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_second{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_third{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_fourth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_fifth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_sixth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_seventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .2s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .2s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_eighth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_ninth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_tenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_eleventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_twelfth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_sixth_row .black_block_sixth_row_thirteenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .8s);
+}
+/* 第六行 -- end */
+
+/* 第七行 -- start */
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row>div{
+    flex-shrink: 0;
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_first{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .9s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .9s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_second{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .8s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_third{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_fourth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_fifth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_sixth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_seventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .3s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .3s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_eighth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .4s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .4s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_ninth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .5s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .5s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_tenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .6s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .6s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_eleventh{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .7s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .7s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_twelfth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .8s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .8s);
+}
+.blackBlock_showPicture .first_group .black_block .black_block_seventh_row .black_block_seventh_row_thirteenth{
+    width: 8%;
+    height: 100%;
+    background-color: black;
+    animation: black_block_common_animation calc(var(--first_black_block_animation_time) + .5s) ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:calc(var(--black_block_animation_delay) + .9s);
+    -webkit-animation-delay:calc(var(--black_block_animation_delay) + .9s);
+}
+/* 第七行 -- end */
+
+/* 图片 */
+.blackBlock_showPicture .first_group .picture{
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: blackBlock_showPicture_first_group_picture 10s ease;
+    animation-fill-mode : forwards ; 
+    -webkit-animation-fill-mode : forwards ;
+    animation-delay:1.2s;
+    -webkit-animation-delay:1.2s;
+    position: relative;
+    z-index: -1;
+}
+@keyframes blackBlock_showPicture_first_group_picture {
+    0%{}
+    100%{transform: scale(1.05);} 
+}

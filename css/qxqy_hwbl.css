@@ -1,0 +1,401 @@
+.qxqy_hwbl_outer{
+    width: 100%;
+    height: 100%;
+}
+.qxqy_hwbl_outer .qxqy_hwbl{
+    width: 100%;
+    height: 100%;
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: white;
+    font-size: 4vh;
+    letter-spacing: 1.2vh;
+}
+/* 韩语 */
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group{
+    display: flex;
+    margin-bottom: 1vh;
+    align-items: center;
+    justify-content: center;
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .highlight{
+    color: #B20E60;
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word{
+    opacity: 0;
+    animation: qxqy_hwbl_word 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:1s;
+    -webkit-animation-delay:1s;
+}
+@keyframes qxqy_hwbl_word {
+    0%{}
+    100%{opacity: 1;} 
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word .qxqy_hwbl_Korean{
+    opacity: .2;
+    font-weight: 100;
+}
+
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(3){
+    margin-right: 1vw;
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(1) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + .2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + .2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(2) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + .4s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + .4s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(3) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + .6s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + .6s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(4) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + .8s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + .8s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(5) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 1s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 1s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(6) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 1.2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 1.2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(7) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 1.4s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 1.4s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(8) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 1.6s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 1.6s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(9) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 1.8s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 1.8s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(10) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(11) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 2.2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 2.2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(12) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 2.4s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 2.4s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(13) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 2.6s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 2.6s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(14) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 2.8s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 2.8s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(15) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 3s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 3s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(16) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 3.2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 3.2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(17) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 3.4s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 3.4s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(18) .qxqy_hwbl_Korean{
+    animation: qxqy_hwbl_word var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_Korean) + 3.6s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_Korean) + 3.6s);
+}
+/* 中文 */
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_text{
+    position: absolute;
+    left: 50%;
+    top: 57%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    padding: 1vh 0 1vh 0;
+    z-index: 1;
+    color: white;
+    font-size: 4vh;
+    letter-spacing: .4vh;
+    opacity: 0;
+    animation: qxqy_hwbl_text 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:1s;
+    -webkit-animation-delay:1s;
+}
+@keyframes qxqy_hwbl_text {
+    0%{}
+    100%{opacity: 1;} 
+}
+/* 背景图 */
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_background{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* 15个小圆点 */
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word .qxqy_hwbl_circle_dot{
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 2vh;
+    opacity: 0;
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(1) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + .2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + .2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(2) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + .4s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + .4s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(3) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + .6s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + .6s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(4) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + .8s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + .8s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(5) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(6) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1.2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1.2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(7) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1.4s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1.4s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(8) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1.6s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1.6s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(9) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1.8s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 1.8s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(10) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(11) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2.2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2.2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(12) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2.4s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2.4s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(13) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2.6s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2.6s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(14) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2.8s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 2.8s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(15) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 3s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 3s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(16) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 3.2s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 3.2s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(17) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 3.4s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 3.4s);
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_Korean_group .qxqy_hwbl_word:nth-child(18) .qxqy_hwbl_circle_dot{
+    animation: qxqy_hwbl_circle_dot var(--qxqy_hwbl_KoreanAndDot_animation) ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 3.6s);
+    -webkit-animation-delay:calc(var(--qxqy_hwbl_circle_dot) + 3.6s);
+}
+@keyframes qxqy_hwbl_circle_dot {
+    0%{}
+    50%{transform: translateY(-3vh); opacity: 1;}
+    100%{transform: translateY(-2vh); opacity: 1;} 
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_background{
+    width: 100%;
+    height: 100%;
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_background .qxqy_hwbl_1_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(1.2);
+    width: 100%;
+    height: 100%;
+    animation: qxqy_hwbl_first_img 5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay:0s;
+}
+@keyframes qxqy_hwbl_first_img {
+    0%{}
+    10%{transform: scale(1.1);}
+    99%{transform: scale(1.06);opacity: 1;}
+    100%{transform: scale(1.06);opacity: 0;}
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_background .qxqy_hwbl_2_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(1.1);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    animation: qxqy_hwbl_second_img 5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:4s;
+    -webkit-animation-delay:4s;
+}
+@keyframes qxqy_hwbl_second_img {
+    0%{}
+    30%{opacity: 1;}
+    100%{transform: scale(1);opacity: 1;} 
+}
+.qxqy_hwbl_outer .qxqy_hwbl .qxqy_hwbl_background .qxqy_hwbl_3_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(1.1);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    animation: qxqy_hwbl_second_img 5s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:8s;
+    -webkit-animation-delay:8s;
+}
