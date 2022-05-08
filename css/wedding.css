@@ -54,7 +54,7 @@ html:fullscreen {
 .max-min-screen{
     color: white;
     text-align: right;
-    opacity: 0.1;
+    opacity: 0;
     transition: .5s;
 }
 .max-min-screen-box:hover .max-min-screen{
