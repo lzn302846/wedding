@@ -42,33 +42,8 @@
       <span id="exit-fullscreen" class="iconfont icon3zuidahua-3 max-min-screen"></span>
     </div>
 
-    <div class="jump_heart">
-      <div class="jump_heart_content">
-        <div class="jump_heart_i">
-          <div style="color: white;">I</div>
-          <div style="color: #2ABCBF;">I</div>
-          <div style="color: white;">I</div>
-          <div style="color: #F34F70;">I</div>
-        </div>
-        <div class="jump_heart_img">
-          <div><img src="./image/blackBackground_heart.png" alt=""></div>
-          <div><img src="./image/blackBackground_heart.png" alt=""></div>
-          <div><img src="./image/blackBackground_heart.png" alt=""></div>
-          <div><img src="./image/blackBackground_heart.png" alt=""></div>
-          <div><img src="./image/blackBackground_heart.png" alt=""></div>
-          <div><img src="./image/blackBackground_heart.png" alt=""></div>
-        </div>
-        <div class="jump_heart_you">
-          <div>YOU</div>
-          <div>YOU</div>
-          <div>YOU</div>
-          <div>YOU</div>
-        </div>
-      </div>
-    </div>
-
     <!-- 黑色方块逐渐展开显示图片 -->
-    <!-- <div id="animation_box" class="animation_box"></div> -->
+    <div id="animation_box" class="animation_box"></div>
 
     <!-- 散列图 -->
     <!-- <div id="hash_picture" class="hash_picture">
@@ -135,15 +110,15 @@
         this.rotationMapArr = [
           {
             id: 1,
-            rotationMapForeignLang: 'Sayeyou',
-            rotationMapText: '说出口的誓言有回音',
+            rotationMapForeignLang: 'Protectyou',
+            rotationMapText: '保护你我用行动告诉你',
             rotationMap: './image/rotationMap/changehouyi.jpg',
           },
           {
             id: 2,
-            rotationMapForeignLang: 'Askeour',
-            rotationMapCenterBigTxt: '轮播图',
-            rotationMapText: '那就让我们勇敢约定',
+            rotationMapForeignLang: 'Thankyou',
+            rotationMapCenterBigTxt: '好幸福',
+            rotationMapText: '感谢你约定相守一辈子',
             rotationMap: './image/rotationMap/dianwei.jpg',
           },
         ]
@@ -152,33 +127,33 @@
           {
             id: 1,
             blackBlockEnglishWord: 'Loveyou',
-            blackBlockWeddingWord: '晚风里藏着多少精灵',
+            blackBlockWeddingWord: '我爱你无需理由的爱你',
             blackBlockImage: './image/blackBlockStartImg/daqiao.jpg',
           },
-          // {
-          //   id: 2,
-          //   blackBlockEnglishWord: 'Missyou',
-          //   blackBlockWeddingWord: '满天的星辰都被唤醒',
-          //   blackBlockImage: './image/blackBlockStartImg/caocao.jpg',
-          // },
-          // {
-          //   id: 3,
-          //   blackBlockEnglishWord: 'Careyou',
-          //   blackBlockWeddingWord: '白天那些流放的光明',
-          //   blackBlockImage: './image/blackBlockStartImg/gongsunli.jpg',
-          // },
-          // {
-          //   id: 4,
-          //   blackBlockEnglishWord: 'Giveyou',
-          //   blackBlockWeddingWord: '剪接成夜空仰望的风景',
-          //   blackBlockImage: './image/blackBlockStartImg/nvwa.jpg',
-          // },
-          // {
-          //   id: 5,
-          //   blackBlockEnglishWord: 'Lookyou',
-          //   blackBlockWeddingWord: '看天台上路过几颗流星',
-          //   blackBlockImage: './image/blackBlockStartImg/yuji.jpg',
-          // },
+          {
+            id: 2,
+            blackBlockEnglishWord: 'Missyou',
+            blackBlockWeddingWord: '我想你无时无刻的想你',
+            blackBlockImage: './image/blackBlockStartImg/caocao.jpg',
+          },
+          {
+            id: 3,
+            blackBlockEnglishWord: 'Careyou',
+            blackBlockWeddingWord: '在乎你你就是我的全部',
+            blackBlockImage: './image/blackBlockStartImg/gongsunli.jpg',
+          },
+          {
+            id: 4,
+            blackBlockEnglishWord: 'Giveyou',
+            blackBlockWeddingWord: '陪伴你憧憬美好的未来',
+            blackBlockImage: './image/blackBlockStartImg/nvwa.jpg',
+          },
+          {
+            id: 5,
+            blackBlockEnglishWord: 'Lookyou',
+            blackBlockWeddingWord: '珍惜你我的心里只有你',
+            blackBlockImage: './image/blackBlockStartImg/yuji.jpg',
+          },
         ];
         // 第二组轮播图的数组
         this.secondRotationMapArr = [
@@ -211,13 +186,23 @@
           <div class="firstGroup_sentence_english">
             `;
           for (var i = 0; i < item.blackBlockEnglishWord.length; i++) {
-            blackBlockWeddingForeignLangStr += `
-        <div class="firstGroup_sentence_english_${i + 1}">
-          <div class="firstGroup_sentence_english_${i + 1}_end">
-            ${item.blackBlockEnglishWord[i]}
-          </div>
-        </div>
-        `;
+            if(item.blackBlockEnglishWord[i] === 'y'){
+              blackBlockWeddingForeignLangStr += `
+              <div class="firstGroup_sentence_english_${i + 1}">
+                <div class="firstGroup_sentence_english_${i + 1}_end">
+                  &nbsp;${item.blackBlockEnglishWord[i]}
+                </div>
+              </div>
+              `;
+            }else{
+              blackBlockWeddingForeignLangStr += `
+              <div class="firstGroup_sentence_english_${i + 1}">
+                <div class="firstGroup_sentence_english_${i + 1}_end">
+                  ${item.blackBlockEnglishWord[i]}
+                </div>
+              </div>
+              `;
+            }
             if (i == item.blackBlockEnglishWord.length - 1) {
               blackBlockWeddingForeignLangStr += `</div>`;
             }
@@ -421,13 +406,23 @@
           `;
           // 从天而降的外语
           for (var i = 0; i < item.rotationMapForeignLang.length; i++) {
-            rotationMapElStr += `
-        <div class="firstGroup_sentence_english_${i + 1}">
-          <div>
-            ${item.rotationMapForeignLang[i]}
-          </div>
-        </div>
-        `;
+            if(item.rotationMapForeignLang[i] === 'y'){
+              rotationMapElStr += `
+              <div class="firstGroup_sentence_english_${i + 1}">
+                <div>
+                  &nbsp;${item.rotationMapForeignLang[i]}
+                </div>
+              </div>
+              `;
+            }else{
+              rotationMapElStr += `
+              <div class="firstGroup_sentence_english_${i + 1}">
+                <div>
+                  ${item.rotationMapForeignLang[i]}
+                </div>
+              </div>
+              `;
+            }
             if (i == item.rotationMapForeignLang.length - 1) {
               rotationMapElStr += `</div>`;
             }
@@ -437,10 +432,10 @@
           rotationMapElStr += `<div class="firstGroup_sentence_main">`;
           for (var i = 0; i < item.rotationMapText.length; i++) {
             rotationMapElStr += `
-        <div class="firstGroup_sentence_${i + 1}">
-          <div>${item.rotationMapText[i]}</div>
-        </div>
-        `;
+            <div class="firstGroup_sentence_${i + 1}">
+              <div>${item.rotationMapText[i]}</div>
+            </div>
+            `;
             if (i == item.rotationMapText.length - 1) {
               rotationMapElStr += `</div></div>`;
             }
@@ -492,61 +487,61 @@
       // 轮播图切换到自下而上推图和第二组轮播图
       bottomToTopPushPicture() {
         var loveStoryEl = `
-    <div class="love_story">
-      <div class="love_story_box">
-        <div class="love_story_love_story_box">
-          <div class="love_story_love">Love</div>
-          <div class="love_story_story">story</div>
-        </div>
-        <div class="love_story_forever_box">
-          <div class="love_story_forever">
-            <p>永</p>
-            <p>远</p>
-            <p>爱</p>
-            <p>着</p>
-            <p>你</p>
-          </div>
-        </div>
-        <div class="love_story_right_content">
-          <div>
-            <div class="love_story_and_groom_bride">
-              <div class="love_story_and_box">
-                <div class="love_story_and">&</div>
-              </div>
-              <div class="love_story_groom_bride_box">
-                <div class="love_story_groom">groom</div>
-                <div class="love_story_bride">bride</div>
+        <div class="love_story">
+          <div class="love_story_box">
+            <div class="love_story_love_story_box">
+              <div class="love_story_love">Love</div>
+              <div class="love_story_story">story</div>
+            </div>
+            <div class="love_story_forever_box">
+              <div class="love_story_forever">
+                <p>永</p>
+                <p>远</p>
+                <p>爱</p>
+                <p>着</p>
+                <p>你</p>
               </div>
             </div>
-            <div class="love_story_always_box">
-              <div class="love_story_always">I'll always love you</div>
+            <div class="love_story_right_content">
+              <div>
+                <div class="love_story_and_groom_bride">
+                  <div class="love_story_and_box">
+                    <div class="love_story_and">&</div>
+                  </div>
+                  <div class="love_story_groom_bride_box">
+                    <div class="love_story_groom">groom</div>
+                    <div class="love_story_bride">bride</div>
+                  </div>
+                </div>
+                <div class="love_story_always_box">
+                  <div class="love_story_always">I'll always love you</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="our_wedding">
-      <div class="our_wedding_inner">
-        <div class="first_lace"><img src="./image/lace.png" alt=""></div>
-        <div class="second_lace"><img src="./image/lace.png" alt=""></div>
-        <div class="third_lace"><img src="./image/lace.png" alt=""></div>
-        <div class="fourth_lace"><img src="./image/lace.png" alt=""></div>
-        <div class="fifth_lace"></div>
-        <div class="our_wedding_content">
-          <div class="our_wedding_english">OUR WEDDING</div>
-          <div class="our_wedding_name">安宁&乐悦</div>
-          <div class="our_wedding_time">2018.12.12</div>
+        <div class="our_wedding">
+          <div class="our_wedding_inner">
+            <div class="first_lace"><img src="./image/lace.png" alt=""></div>
+            <div class="second_lace"><img src="./image/lace.png" alt=""></div>
+            <div class="third_lace"><img src="./image/lace.png" alt=""></div>
+            <div class="fourth_lace"><img src="./image/lace.png" alt=""></div>
+            <div class="fifth_lace"></div>
+            <div class="our_wedding_content">
+              <div class="our_wedding_english">OUR WEDDING</div>
+              <div class="our_wedding_name">安宁&乐悦</div>
+              <div class="our_wedding_time">2018.12.12</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="second_rotation_map">
-      <div class="second_rotation_map_word">
-        <div class="second_rotation_map_word_highlight">I love you &nbsp;</div> brto be with yd rough rain and shiny days
-      </div>
-      <div class="second_rotation_map_first_img"><img src="./image/huamulan.jpg" alt=""></div>
-      <div class="second_rotation_map_second_img"><img src="./image/jialuo_jyfx.jpg" alt=""></div>
-      <div class="second_rotation_map_third_img"><img src="./image/jialuo_taihua.jpg" alt=""></div>
-    </div>
+        <div class="second_rotation_map">
+          <div class="second_rotation_map_word">
+            <div class="second_rotation_map_word_highlight">I love you &nbsp;</div> May the beauty of the world be linked with us and grow old together
+          </div>
+          <div class="second_rotation_map_first_img"><img src="./image/huamulan.jpg" alt=""></div>
+          <div class="second_rotation_map_second_img"><img src="./image/jialuo_jyfx.jpg" alt=""></div>
+          <div class="second_rotation_map_third_img"><img src="./image/jialuo_taihua.jpg" alt=""></div>
+        </div>
         `;
         this.bottomToTopElGroup.innerHTML = loveStoryEl;
         this.loveStoryOuterEl = document.getElementsByClassName('love_story')[0];
@@ -1027,7 +1022,7 @@
         }, 40500);
       };
 
-      // 三张图片快速左移、图片上下切换
+      // 三张图片快速左移、图片上下裁剪
       threePicLeftMoveAndImgSwitch() {
         var threePicLeftMoveAndImgContentElStr = `
         <div class="only_picture_switch">
@@ -2175,6 +2170,77 @@
         protectYou.className = 'protectYouement';
         this.animationBox.appendChild(protectYou);
         protectYou.innerHTML = protectYouStr;
+        setTimeout(() => {
+          this.jumpHeart()
+        }, 9000);
+        setTimeout(() => {
+          this.animationBox.removeChild(protectYou);
+        }, 11000);
+      }
+
+      // jump heart
+      jumpHeart(){
+        let jumpHeartElStr = `
+        <div class="jump_heart">
+          <div class="jump_heart_content">
+            <div class="jump_heart_i">
+              <div style="color: white;">I</div>
+              <div style="color: #F34F70;">I</div>
+              <div style="color: #2ABCBF;">I</div>
+              <div style="color: white;">I</div>
+            </div>
+            <div class="jump_heart_img">
+              <div><img src="./image/blackBackground_heart.png" alt=""></div>
+              <div><img src="./image/blackBackground_heart.png" alt=""></div>
+              <div><img src="./image/blackBackground_heart.png" alt=""></div>
+              <div><img src="./image/blackBackground_heart.png" alt=""></div>
+              <div><img src="./image/blackBackground_heart.png" alt=""></div>
+              <div><img src="./image/blackBackground_heart.png" alt=""></div>
+            </div>
+            <div class="jump_heart_you">
+              <div style="color: white;">YOU</div>
+              <div style="color: #F34F70;">YOU</div>
+              <div style="color: #2ABCBF;">YOU</div>
+              <div style="color: white;">YOU</div>
+            </div>
+          </div>
+        </div>
+        `
+        var jumpHeartEl = document.createElement("div");
+        jumpHeartEl.setAttribute("id", "jumpHeartElement");
+        jumpHeartEl.className = 'jumpHeartElement';
+        this.animationBox.appendChild(jumpHeartEl);
+        jumpHeartEl.innerHTML = jumpHeartElStr;
+        setTimeout(() => {
+          this.eternalLove()
+        }, 5500);
+        setTimeout(() => {
+          this.animationBox.removeChild(jumpHeartEl);
+        }, 6500);
+      }
+
+      // eternal love
+      eternalLove(){
+        let eternalLoveElStr = `
+        <div class="eternal_love">
+          <div class="eternal_love_content">
+            <div>
+              <div>我&nbsp;</div>
+              <div>爱&nbsp;</div>
+              <div>你</div> 
+            </div>
+            <div>Eternal love</div>
+          </div>
+        </div>
+        `
+        var eternalLoveEl = document.createElement("div");
+        eternalLoveEl.setAttribute("id", "eternalLoveElement");
+        eternalLoveEl.className = 'eternalLoveElement';
+        this.animationBox.appendChild(eternalLoveEl);
+        eternalLoveEl.innerHTML = eternalLoveElStr;
+        setTimeout(() => {
+          this.animationBox.removeChild(eternalLoveEl);
+        }, 7000);
       }
 
       // 最爱的文字和英文效果抽离
@@ -2300,7 +2366,7 @@
     }
     let ac = new AnimationClass();
     // ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
-      // ac.hotHeart();
+      ac.threePicLeftMoveAndImgSwitch();
 
     // 全屏和最小化
     (function () {

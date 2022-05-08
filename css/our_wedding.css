@@ -117,6 +117,8 @@
 }
 /* 第二组轮播图的字 */
 .second_rotation_map .second_rotation_map_word{
+    font-size: 25px;
+    width: 64vw;
     position: absolute;
     left: 50%;
     top: 40%;
@@ -124,7 +126,6 @@
     display: flex;
     color: white;
     z-index: 1;
-    font-size: 20px;
     opacity: 0;
     animation: second_rotation_map_word 16s ease;
     animation-fill-mode : forwards; 

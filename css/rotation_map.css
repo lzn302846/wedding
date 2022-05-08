@@ -1,15 +1,19 @@
 /* 轮播图样式 */
-#rotation_map_outer{
-
-}
 #rotation_map_outer .firstGroup_sentence{
+    transition: 1s;
     animation: rmDiv 6s ease;
     animation-fill-mode : forwards ; 
     -webkit-animation-fill-mode : forwards ;
     animation-delay:7s;
     -webkit-animation-delay:7s;
 }
-
+@keyframes rmDiv {
+    0%{}
+    10%{transform: translateX(-50%) scale(.95);}
+    30%{transform: translateX(-50%) scale(.95);}
+    40%{transform: translateX(-50%) translateY(0) scale(.95);}
+    100%{transform: translateX(-50%) translateY(-125vh) scale(.95);}
+}
 #rotation-map{
     width: 100%;
     height: 100%;
@@ -22,18 +26,18 @@
     height: 100%; 
     display: block;
     position: absolute;
-    animation: rmDiv 6s ease;
+    animation: rmOuterDiv 6s ease;
     animation-fill-mode : forwards ; 
     -webkit-animation-fill-mode : forwards ;
     animation-delay:14s;
     -webkit-animation-delay:14s;
 }
-@keyframes rmDiv {
+@keyframes rmOuterDiv {
     0%{}
     10%{transform: scale(.95);}
     30%{transform: scale(.95);}
     40%{transform: scale(.95) translateY(0);}
-    100%{transform: scale(.95) translateY(-100vh);}
+    100%{transform: scale(.95) translateY(-125vh);}
 }
 #rotation-map div:nth-of-type(1){
     height:100%;
@@ -87,7 +91,7 @@
     display: flex;
     position: absolute;
     left: 50%;
-    bottom: 170px;
+    bottom: 210px;
     transform-origin: center;
     transform: translateX(-50%);
     z-index: 2; 
@@ -112,39 +116,27 @@
 }
 @keyframes rotation_map_center_big_txt_1 {
     0%{}
-    50%{transform: translateY(-190px);opacity: 1;}
-    80%{transform: translateY(-220px);opacity: 1;}
-    100%{transform: translateY(-200px);opacity: 1;}
+    50%{transform: translateY(-230px);opacity: 1;}
+    80%{transform: translateY(-270px);opacity: 1;}
+    100%{transform: translateY(-250px);opacity: 1;}
 }
 .rotation_map_center_big_txt_2{
     margin: 0 5px;
     opacity: 0;
-    animation: rotation_map_center_big_txt_2 .5s linear alternate;
+    animation: rotation_map_center_big_txt_1 .5s linear alternate;
     animation-fill-mode : forwards ; 
     -webkit-animation-fill-mode : forwards ;
     animation-delay:7.1s;
     -webkit-animation-delay:7.1s;
 }
-@keyframes rotation_map_center_big_txt_2 {
-    0%{}
-    50%{transform: translateY(-190px);opacity: 1;}
-    80%{transform: translateY(-220px);opacity: 1;}
-    100%{transform: translateY(-200px);opacity: 1;}
-}
 .rotation_map_center_big_txt_3{
     margin: 0 5px;
     opacity: 0;
-    animation: rotation_map_center_big_txt_3 .5s linear alternate;
+    animation: rotation_map_center_big_txt_1 .5s linear alternate;
     animation-fill-mode : forwards ; 
     -webkit-animation-fill-mode : forwards ;
     animation-delay:7.2s;
     -webkit-animation-delay:7.2s;
-}
-@keyframes rotation_map_center_big_txt_3 {
-    0%{}
-    50%{transform: translateY(-190px);opacity: 1;}
-    80%{transform: translateY(-220px);opacity: 1;}
-    100%{transform: translateY(-200px);opacity: 1;}
 }
 
 /* 从右向左推图（相加等于爱心） */

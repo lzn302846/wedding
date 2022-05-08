@@ -35,8 +35,8 @@
     animation: three_pic_left_move_img_3 1s ease;
     animation-fill-mode : forwards; 
     -webkit-animation-fill-mode : forwards;
-    animation-delay:calc(var(--only_picture_switch_delay) + 4s);
-    -webkit-animation-delay:calc(var(--only_picture_switch_delay) + 4s);
+    animation-delay:calc(var(--only_picture_switch_delay) + 5s);
+    -webkit-animation-delay:calc(var(--only_picture_switch_delay) + 5s);
 }
 @keyframes three_pic_left_move_img_3 {
     0%{}
@@ -68,8 +68,8 @@
     animation: clip_switch_img_1 5s ease;
     animation-fill-mode : forwards; 
     -webkit-animation-fill-mode : forwards;
-    animation-delay:calc(var(--only_picture_switch_delay) + 4s);
-    -webkit-animation-delay:calc(var(--only_picture_switch_delay) + 4s);
+    animation-delay:calc(var(--only_picture_switch_delay) + 3.5s);
+    -webkit-animation-delay:calc(var(--only_picture_switch_delay) + 3.5s);
 }
 @keyframes clip_switch_img_1 {
     0%{}
