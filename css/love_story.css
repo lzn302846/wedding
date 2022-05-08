@@ -4,7 +4,7 @@
     background-color: #343434;
     position: absolute;
     top: 100%;
-    animation: love_story 3s ease;
+    animation: love_story 2.5s ease;
     animation-fill-mode : forwards; 
     -webkit-animation-fill-mode : forwards ;
     animation-delay:9s;
@@ -12,7 +12,6 @@
 }
 @keyframes love_story {
     0%{}
-    10%{}
     100%{top: 0;}
 }
 .love_story .love_story_box{

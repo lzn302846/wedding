@@ -11,6 +11,7 @@
     top: 0;
     overflow: hidden;
     transition: 2s;
+    font-size: 24px;
 }
 .blackBlock_showPicture .first_group{
     width: 100%;
@@ -1059,6 +1060,10 @@
     -webkit-animation-delay:1.2s;
     position: relative;
     z-index: -1;
+}
+.blackBlock_showPicture .first_group .picture img{
+    width: 100%;
+    height: 100%;
 }
 @keyframes blackBlock_showPicture_first_group_picture {
     0%{}
