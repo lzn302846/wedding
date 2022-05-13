@@ -1,6 +1,6 @@
 /* 公共变量 */
 :root {
-    --black_block_animation_delay: 1.2s; /* 黑色方块的动画延迟时间 */
+    --black_block_animation_delay: .5s; /* 黑色方块的动画延迟时间 */
     --wedding_words_animation_delay: 1s; /* 文字的动画延迟时间 */
     --first_black_block_animation_time: 0s; /* 第一组黑色方块的动画时间 */
     --second_black_block_animation_time: 0s; /* 第二组黑色方块的动画时间 */

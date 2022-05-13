@@ -2365,11 +2365,44 @@
 
     }
     let ac = new AnimationClass();
-    // ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
-      ac.threePicLeftMoveAndImgSwitch();
+    // setTimeout(() => {
+      ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
+    // }, 5000);
+      // ac.threePicLeftMoveAndImgSwitch();
 
     // 全屏和最小化
     (function () {
+      // 按下CTRL+Q全屏
+      document.onkeydown = function(event){
+				if(event.ctrlKey && event.keyCode == 81){
+          var docElm = document.documentElement;
+          if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+          }
+          else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+          }
+          else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+          }
+          else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+          }
+				}
+			}
+
+      // 监听进入全屏、退出全屏事件
+      window.onresize = function() {
+          if (document.fullscreenElement) {
+            viewFullScreen.style.display = 'none';
+            cancelFullScreen.style.display = 'block';
+          } else {
+            viewFullScreen.style.display = 'block';
+            cancelFullScreen.style.display = 'none';
+          }
+      };
+
+      // 点击按钮全屏
       if (viewFullScreen) {
         viewFullScreen.addEventListener("click", function () {
           var docElm = document.documentElement;
@@ -2390,6 +2423,7 @@
         }, false);
       }
 
+      // 点击按钮退出全屏
       if (cancelFullScreen) {
         cancelFullScreen.addEventListener("click", function () {
           if (document.exitFullscreen) {
@@ -2408,7 +2442,6 @@
           cancelFullScreen.style.display = 'none';
         }, false);
       }
-
 
       var fullscreenState = document.getElementById("fullscreen-state");
       if (fullscreenState) {
