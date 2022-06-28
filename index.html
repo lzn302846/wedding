@@ -30,6 +30,9 @@
   <link rel="stylesheet" href="./css/tenPictureRotate.css">
   <link rel="stylesheet" href="./css/more_red_lace.css">
   <link rel="stylesheet" href="./css/jump_heart_and_end_love.css">
+  <link rel="stylesheet" href="./css/top_middle_bottom_img_clip.css">
+  <link rel="stylesheet" href="./css/sqsm_animation.css">
+  <link rel="stylesheet" href="./css/squareToCircular.css">
 
   <script src="./font_ico/iconfont.js"></script>
 </head>
@@ -40,6 +43,21 @@
     <div class="max-min-screen-box">
       <span id="full-screen" class="iconfont iconzuidahua max-min-screen"></span>
       <span id="exit-fullscreen" class="iconfont icon3zuidahua-3 max-min-screen"></span>
+    </div>
+    
+    <div class="squareToCircular">
+        <div>
+          <!-- <img src="./image/fmvp/fmvp-mwhy.webp" alt=""> -->
+        </div>
+        <div>
+          <!-- <img src="./image/fmvp/fmvp-mwhy.webp" alt=""> -->
+        </div>
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+        </div>
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+        </div>
     </div>
 
     <!-- 黑色方块逐渐展开显示图片 -->
@@ -547,11 +565,7 @@
         this.loveStoryOuterEl = document.getElementsByClassName('love_story')[0];
         setTimeout(() => {
           this.bottomToTopElGroup.removeChild(this.loveStoryOuterEl);
-          var rightToLeftPushPictureOuterEl = document.createElement("div");
-          rightToLeftPushPictureOuterEl.setAttribute("id", "rightToLeftPushPictureOuterEl");
-          rightToLeftPushPictureOuterEl.className = 'rightToLeftPushPictureOuterEl';
-          this.animationBox.appendChild(rightToLeftPushPictureOuterEl);
-          this.rightToLeftPushPictureOuterEl = document.getElementById('rightToLeftPushPictureOuterEl');
+          
         }, 18000);
         setTimeout(() => {
           this.rightToLeftPushPictureMe();
@@ -751,22 +765,26 @@
           </div>
         </div>
         `
+        var rightToLeftPushPictureOuterEl = document.createElement("div");
+        rightToLeftPushPictureOuterEl.setAttribute("id", "rightToLeftPushPictureOuterEl");
+        rightToLeftPushPictureOuterEl.className = 'rightToLeftPushPictureOuterEl';
+        this.animationBox.appendChild(rightToLeftPushPictureOuterEl);
+        this.rightToLeftPushPictureOuterEl = document.getElementById('rightToLeftPushPictureOuterEl');
         this.rightToLeftPushPictureOuterEl.innerHTML = rightToLeftPushPictureEl;
+        let randomColorTimer = setInterval(() => {
+          $('.tell_you')[0].style.color = this.randomColor()
+        }, 200);
         var addEqualLoveOuterEl = document.getElementsByClassName('add_equal_love_outer_el')[0];
         setTimeout(() => {
           this.animationBox.removeChild(this.bottomToTopElGroup);
         }, 1000);
         setTimeout(() => {
           this.rightToLeftPushPictureOuterEl.removeChild(addEqualLoveOuterEl);
-          var qxqyHwblOuterEl = document.createElement("div");
-          qxqyHwblOuterEl.setAttribute("id", "qxqyHwblOuterEl");
-          qxqyHwblOuterEl.className = 'qxqyHwblOuterEl';
-          this.animationBox.appendChild(qxqyHwblOuterEl);
-          this.qxqyHwblOuterEl = document.getElementById('qxqyHwblOuterEl');
-        }, 12000);
+        }, 22000);
         setTimeout(() => {
           this.qxqyHwblAndYesIDo();
-        }, 21200);
+          clearInterval(randomColorTimer)
+        }, 25700);
       };
 
       // 全心全意毫无保留、yes i do、遇见完美的你
@@ -927,6 +945,11 @@
           <div class="meet_the_perfect_you_end"></div>
         </div>
         `
+        var qxqyHwblOuterEl = document.createElement("div");
+        qxqyHwblOuterEl.setAttribute("id", "qxqyHwblOuterEl");
+        qxqyHwblOuterEl.className = 'qxqyHwblOuterEl';
+        this.animationBox.appendChild(qxqyHwblOuterEl);
+        this.qxqyHwblOuterEl = document.getElementById('qxqyHwblOuterEl');
         this.qxqyHwblOuterEl.innerHTML = qxqyHwblElementStr;
         this.animationBox.removeChild(this.rightToLeftPushPictureOuterEl);
         var qxqyHwblEl = document.getElementsByClassName('qxqy_hwbl_outer')[0];
@@ -2238,9 +2261,323 @@
         eternalLoveEl.className = 'eternalLoveElement';
         this.animationBox.appendChild(eternalLoveEl);
         eternalLoveEl.innerHTML = eternalLoveElStr;
+        setTimeout(()=>{
+          this.topMiddleBottomImgClip()
+        },6000)
         setTimeout(() => {
           this.animationBox.removeChild(eternalLoveEl);
         }, 7000);
+      }
+
+      // 上中下图片剪切动画
+      topMiddleBottomImgClip(){
+        let topMiddleBottomImgClipElStr = `
+        <div class="top_middle_bottom_img_clip">
+          <div class="borderBtm"></div>
+          <div class="borderTop"></div>
+          <div class="top_middle_bottom_img_clip_complete">
+            <div><img src="./image/fmvp/top-middle-bottom/fmvp-jszs.webp" alt=""></div>
+          </div>
+          <div class="top_middle_bottom_img_clip_top"> 
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-top.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-top.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-top.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-top.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-top.gif" alt=""></div>
+          </div>
+          <div class="top_middle_bottom_img_clip_middle">
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-middle.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-middle.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-middle.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-middle.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-middle.gif" alt=""></div>
+          </div>
+          <div class="top_middle_bottom_img_clip_bottom">
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-bottom.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-bottom.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-bottom.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-bottom.gif" alt=""></div>
+            <div><img src="./image/fmvp/top-middle-bottom/normal-jszs-bottom.gif" alt=""></div>
+          </div>
+          <div class="top_middle_bottom_img_clip_word">
+            <!-- 圆圈发散效果 -->
+            <div class="top_middle_bottom_img_clip_circle_divergence">
+              <div class="circle_divergence_box_1 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="circle_divergence_box_2 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="circle_divergence_box_3 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="circle_divergence_box_4 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="circle_divergence_box_5 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <!-- 圆圈发散效果2.0 方框中带原点 -->
+            <div class="top_middle_bottom_img_clip_circle_divergence_v2">
+              <div class="circle_divergence_box_v2_1 circle_divergence_box">
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+              </div>
+            </div>
+
+            <div class="top_middle_bottom_img_clip_word_box">
+              <div>有</div>
+              <div>你</div>
+              <div>的</div>
+              <div>地</div>
+              <div>方</div>
+              <div>是</div>
+              <div>我</div>
+              <div>的</div>
+              <div>心</div>
+              <div>灵</div>
+              <div>归</div>
+              <div>属</div>
+            </div>
+          </div>
+          <div class="top_middle_bottom_img_clip_background"></div>
+        </div>
+        `
+        var topMiddleBottomImgClipEl = document.createElement("div");
+        topMiddleBottomImgClipEl.setAttribute("id", "topMiddleBottomImgClipElement");
+        topMiddleBottomImgClipEl.className = 'topMiddleBottomImgClipElement';
+        this.animationBox.appendChild(topMiddleBottomImgClipEl);
+        topMiddleBottomImgClipEl.innerHTML = topMiddleBottomImgClipElStr;
+        setTimeout(() => {
+          this.topMiddleBottomImgClip2();
+        }, 7000);
+        setTimeout(() => {
+          this.animationBox.removeChild(topMiddleBottomImgClipEl);
+        }, 10000);
+      }
+
+      // 第二组上中下图片剪切动画
+      topMiddleBottomImgClip2(){
+        let topMiddleBottomImgClip2ElStr = `
+        <div class="top_middle_bottom_2_clip">
+          <div class="borderBtm_2_clip"></div>
+          <div class="borderTop_2_clip"></div>
+          <div class="top_middle_bottom_2_complete">
+            <img src="./image/fmvp/top-middle-bottom-2/fmvp-cysg.webp" alt="">
+          </div>
+          <div class="top_middle_bottom_img_clip_2_pb">
+            <div class="top_middle_bottom_img_clip_2_top img_clip_2">
+              <div><img src="./image/fmvp/top-middle-bottom-2/fmvp_j_top.gif" alt=""></div>
+            </div>
+            <div class="top_middle_bottom_img_clip_2_middle img_clip_2">
+              <div>
+                <img src="./image/fmvp/top-middle-bottom-2/fmvp_j_middle.gif" alt="">
+              </div>
+              <div>
+                <img src="./image/fmvp/top-middle-bottom-2/fmvp_j_middle.gif" alt="">
+              </div>
+            </div>
+            <div class="top_middle_bottom_img_clip_2_bottom img_clip_2">
+              <div><img src="./image/fmvp/top-middle-bottom-2/fmvp_j_bottom.gif" alt=""></div>
+            </div>
+          </div>
+          <div class="top_middle_bottom_img_clip_word">
+            <!-- 圆圈发散效果 -->
+            <div class="top_middle_bottom_img_clip_circle_divergence">
+              <div class="circle_divergence_box_1 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="circle_divergence_box_2 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="circle_divergence_box_3 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="circle_divergence_box_4 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="circle_divergence_box_5 circle_divergence_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <!-- 圆圈发散效果2.0 方框中带圆点 -->
+            <div class="top_middle_bottom_img_clip_circle_divergence_v2">
+              <div class="circle_divergence_box_v2_1 circle_divergence_box">
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+              </div>
+            </div>
+
+            <div class="top_middle_bottom_img_clip_word_box">
+              <div>你</div>
+              <div>莞</div>
+              <div>尔</div>
+              <div>一</div>
+              <div>笑</div>
+              <div>比</div>
+              <div>拟</div>
+              <div>明</div>
+              <div>媚</div>
+              <div>的</div>
+              <div>阳</div>
+              <div>光</div>
+            </div>
+          </div>
+        </div>
+        `
+        var topMiddleBottomImgClip2El = document.createElement("div");
+        topMiddleBottomImgClip2El.setAttribute("id", "topMiddleBottomImgClip2Element");
+        topMiddleBottomImgClip2El.className = 'topMiddleBottomImgClip2Element';
+        this.animationBox.appendChild(topMiddleBottomImgClip2El);
+        topMiddleBottomImgClip2El.innerHTML = topMiddleBottomImgClip2ElStr;
+        setTimeout(() => {
+          this.sqsmAnimation()
+        }, 10000);
+        setTimeout(() => {
+          this.animationBox.removeChild(topMiddleBottomImgClip2El);
+        }, 12000);
+      }
+
+      // 十全十美动画
+      sqsmAnimation(){
+        let sqsmAnimationElStr = `
+        <div></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""><div></div></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""><div></div></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""></div>
+        <div><img src="./image/fmvp/fmvp-ylqy.webp" alt=""></div>
+        `
+        var sqsmAnimationEl = document.createElement("div");
+        sqsmAnimationEl.className = 'sqsm_animation';
+        this.animationBox.appendChild(sqsmAnimationEl);
+        sqsmAnimationEl.innerHTML = sqsmAnimationElStr;
       }
 
       // 最爱的文字和英文效果抽离
@@ -2275,6 +2612,14 @@
         `;
         return TextAndEnglishOuterElStr;
       };
+
+      // 随机色
+      randomColor(){
+        let c1 = parseInt(Math.random()*(255-20)+20);
+        let c2 = parseInt(Math.random()*(255-20)+20);
+        let c3 = parseInt(Math.random()*(255-20)+20);
+        return `rgba(${c1},${c2},${c3})`
+      }
 
       // 生成韩文、中文和图片标签
       generateKoreanAndTextAndImgEl(koreanAndTextAndImgObj) {
@@ -2366,9 +2711,9 @@
     }
     let ac = new AnimationClass();
     // setTimeout(() => {
-      ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
+      // ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
     // }, 5000);
-      // ac.threePicLeftMoveAndImgSwitch();
+      // ac.loopBlackBlockStartArrGenerateEl();
 
     // 全屏和最小化
     (function () {

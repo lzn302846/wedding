@@ -4,8 +4,8 @@
     --wedding_words_animation_delay: 1s; /* 文字的动画延迟时间 */
     --first_black_block_animation_time: 0s; /* 第一组黑色方块的动画时间 */
     --second_black_block_animation_time: 0s; /* 第二组黑色方块的动画时间 */
-    --tell_delay: 13.5s; /* 大声告诉你的延迟时间*/
-    --i_love_you_delay: 10s; /* I LOVE YOU 的延迟时间*/
+    
+    --i_love_you_delay: 14.5s; /* I LOVE YOU 的延迟时间*/
 
     --qxqy_hwbl: 0s; /* 全心全意毫无保留爱着你的延迟时间 */
     --qxqy_hwbl_circle_dot: 2.2s; /* 全心全意毫无保留爱着你的15个小圆点的延迟时间 */

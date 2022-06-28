@@ -1,0 +1,375 @@
+.sqsm_animation{
+    --sqsm_animation: 0s;
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.sqsm_animation div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(5px 5px 20px rgba(0,0,0,.5));
+    animation: sqsm_animation_div 10s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + 0s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + 0s);
+}
+@keyframes sqsm_animation_div {
+    0%{filter: drop-shadow(5px 5px 20px rgba(0,0,0,.5));}
+    21%{filter: drop-shadow(5px 5px 20px rgba(0,0,0,.5));}
+    22%{filter: none;}
+    30%{
+        filter: none;
+        transform: scale(1.03);
+    } 
+    40%{
+        filter: none;
+        transform: scale(.88);
+    } 
+    60%{
+        filter: none;
+        transform: scale(.86);
+    } 
+    100%{
+        filter: none;
+        transform: scale(.86);
+    } 
+}
+.sqsm_animation div img{
+    width: 100%;
+    height: 100%;
+}
+.sqsm_animation div:nth-child(2) img{
+    opacity: 0;
+    transform: scale(1.2) translateY(1vh);
+    animation: sqsm_animation_img2 .2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + .2s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + .2s);
+}
+@keyframes sqsm_animation_img2 {
+    0%{}
+    100%{
+        opacity: 1;
+    } 
+}
+.sqsm_animation div:nth-child(11) img{
+    opacity: 0;
+    transform: scale(1.2) translateY(-1vh);
+    animation: sqsm_animation_img11 .2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + 5s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + 5s);
+}
+@keyframes sqsm_animation_img11 {
+    0%{}
+    100%{
+        opacity: 1;
+    } 
+}
+/* 右上 */
+/* .sqsm_animation div:nth-child(3) img{
+    transform: scale(1.2) translateY(1vh);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 62% 100%, 35% 0);
+    clip-path: polygon(100% 0, 100% 100%, 62% 100%, 35% 0);
+} */
+
+/* 左下 */
+/* .sqsm_animation div:nth-child(7) img{
+    transform: scale(1.2) translateY(1vh);
+    -webkit-clip-path: polygon(36% 0, 63% 100%, 0 100%, 0 0);
+    clip-path: polygon(36% 0, 63% 100%, 0 100%, 0 0);
+} */
+
+/* 第一组 */
+.sqsm_animation div:nth-child(3) div{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-clip-path: polygon(105% 0, 132% 100%, 132.2% 100%, 105.2% 0);
+    clip-path: polygon(105% 0, 132% 100%, 132.2% 100%, 105.2% 0);
+    animation: sqsm_animation_div_3 2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + 0s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + 0s);
+}
+@keyframes sqsm_animation_div_3 {
+    0%{}
+    50%{
+        -webkit-clip-path: polygon(42.8% 0, 69.8% 100%, 70% 100%, 43% 0);
+        clip-path: polygon(42.8% 0, 69.8% 100%, 70% 100%, 43% 0);
+    } 
+    55%{
+        -webkit-clip-path: polygon(42.8% 0, 69.8% 100%, 70% 100%, 43% 0);
+        clip-path: polygon(42.8% 0, 69.8% 100%, 70% 100%, 43% 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(35.7% 0, 62.7% 100%, 62.9% 100%, 35.9% 0);
+        clip-path: polygon(35.7% 0, 62.7% 100%, 62.9% 100%, 35.9% 0);
+    } 
+}
+.sqsm_animation div:nth-child(3) img{
+    transform: scale(1.2) translateY(1vh);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 121% 100%, 94% 0);
+    clip-path: polygon(100% 0, 100% 100%, 121% 100%, 94% 0);
+    animation: sqsm_animation_img3 2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + 0s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + 0s);
+}
+@keyframes sqsm_animation_img3 {
+    0%{}
+    50%{
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 69% 100%, 42% 0);
+        clip-path: polygon(100% 0, 100% 100%, 69% 100%, 42% 0);
+    } 
+    55%{
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 69% 100%, 42% 0);
+        clip-path: polygon(100% 0, 100% 100%, 69% 100%, 42% 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 63% 100%, 36% 0);
+        clip-path: polygon(100% 0, 100% 100%, 63% 100%, 36% 0);
+    } 
+}
+.sqsm_animation div:nth-child(7) div{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-clip-path: polygon(-39.7% 0, -12.7% 100%, -12.5% 100%, -39.5% 0);
+    clip-path: polygon(-39.7% 0, -12.7% 100%, -12.5% 100%, -39.5% 0);
+    animation: sqsm_animation_div_7 2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + 0s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + 0s);
+}
+@keyframes sqsm_animation_div_7 {
+    0%{}
+    50%{
+        -webkit-clip-path: polygon(28.3% 0, 55.3% 100%, 55.5% 100%, 28.5% 0);
+        clip-path: polygon(28.3% 0, 55.3% 100%, 55.5% 100%, 28.5% 0);
+    } 
+    55%{
+        -webkit-clip-path: polygon(28.3% 0, 55.3% 100%, 55.5% 100%, 28.5% 0);
+        clip-path: polygon(28.3% 0, 55.3% 100%, 55.5% 100%, 28.5% 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(35.5% 0, 62.5% 100%, 62.7% 100%, 35.7% 0);
+        clip-path: polygon(35.5% 0, 62.5% 100%, 62.7% 100%, 35.7% 0);
+    } 
+}
+.sqsm_animation div:nth-child(7) img{
+    transform: scale(1.2) translateY(1vh);
+    -webkit-clip-path: polygon(-26% 0, 0 100%, 0 100%, 0 0);
+    clip-path: polygon(-26% 0, 0 100%, 0 100%, 0 0);
+    animation: sqsm_animation_img7 2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + 0s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + 0s);
+}
+@keyframes sqsm_animation_img7 {
+    0%{}
+    50%{
+        -webkit-clip-path: polygon(30% 0, 57% 100%, 0 100%, 0 0);
+        clip-path: polygon(30% 0, 57% 100%, 0 100%, 0 0);
+    } 
+    55%{
+        -webkit-clip-path: polygon(30% 0, 57% 100%, 0 100%, 0 0);
+        clip-path: polygon(30% 0, 57% 100%, 0 100%, 0 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(36% 0, 63% 100%, 0 100%, 0 0);
+        clip-path: polygon(36% 0, 63% 100%, 0 100%, 0 0);
+    } 
+}
+
+/* 第二组 */
+.sqsm_animation div:nth-child(4) img{
+    transform: scale(1.2) translateY(0vh);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 121% 100%, 94% 0);
+    clip-path: polygon(100% 0, 100% 100%, 121% 100%, 94% 0);
+    animation: sqsm_animation_img4 2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + .2s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + .2s);
+}
+@keyframes sqsm_animation_img4 {
+    0%{}
+    50%{
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 81% 100%, 54% 0);
+        clip-path: polygon(100% 0, 100% 100%, 81% 100%, 54% 0);
+    } 
+    55%{
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 81% 100%, 54% 0);
+        clip-path: polygon(100% 0, 100% 100%, 81% 100%, 54% 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 63% 100%, 36% 0);
+        clip-path: polygon(100% 0, 100% 100%, 63% 100%, 36% 0);
+    } 
+}
+.sqsm_animation div:nth-child(8) img{
+    transform: scale(1.2);
+    -webkit-clip-path: polygon(-26% 0, 0 100%, 0 100%, 0 0);
+    clip-path: polygon(-26% 0, 0 100%, 0 100%, 0 0);
+    animation: sqsm_animation_img8 2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + .2s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + .2s);
+}
+@keyframes sqsm_animation_img8 {
+    0%{}
+    50%{
+        -webkit-clip-path: polygon(19% 0, 45% 100%, 0 100%, 0 0);
+        clip-path: polygon(19% 0, 45% 100%, 0 100%, 0 0);
+    } 
+    55%{
+        -webkit-clip-path: polygon(19% 0, 45% 100%, 0 100%, 0 0);
+        clip-path: polygon(19% 0, 45% 100%, 0 100%, 0 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(36% 0, 63% 100%, 0 100%, 0 0);
+        clip-path: polygon(36% 0, 63% 100%, 0 100%, 0 0);
+    } 
+}
+
+/* 第三组 */
+.sqsm_animation div:nth-child(5) img{
+    transform: scale(1.2) translateY(-1vh);
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 121% 100%, 94% 0);
+    clip-path: polygon(100% 0, 100% 100%, 121% 100%, 94% 0);
+    animation: sqsm_animation_img5 2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + .4s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + .4s);
+}
+@keyframes sqsm_animation_img5 {
+    0%{}
+    50%{
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 95% 100%, 68% 0);
+        clip-path: polygon(100% 0, 100% 100%, 95% 100%, 68% 0);
+    } 
+    55%{
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 95% 100%, 68% 0);
+        clip-path: polygon(100% 0, 100% 100%, 95% 100%, 68% 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 63% 100%, 36% 0);
+        clip-path: polygon(100% 0, 100% 100%, 63% 100%, 36% 0);
+    }  
+}
+.sqsm_animation div:nth-child(9) img{
+    transform: scale(1.2) translateY(-1vh);
+    -webkit-clip-path: polygon(-26% 0, 0 100%, 0 100%, 0 0);
+    clip-path: polygon(-26% 0, 0 100%, 0 100%, 0 0);
+    animation: sqsm_animation_img9 2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + .4s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + .4s);
+}
+@keyframes sqsm_animation_img9 {
+    0%{}
+    50%{
+        -webkit-clip-path: polygon(4% 0, 30% 100%, 0 100%, 0 0);
+        clip-path: polygon(4% 0, 30% 100%, 0 100%, 0 0);
+    } 
+    55%{
+        -webkit-clip-path: polygon(4% 0, 30% 100%, 0 100%, 0 0);
+        clip-path: polygon(4% 0, 30% 100%, 0 100%, 0 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(36% 0, 63% 100%, 0 100%, 0 0);
+        clip-path: polygon(36% 0, 63% 100%, 0 100%, 0 0);
+    } 
+}
+
+/* 第四组 */
+.sqsm_animation div:nth-child(6) img{
+    transform: scale(1.2) translateY(-2vh);
+    -webkit-clip-path: polygon(94% 0, 121% 100%, 121% 100%, 94% 0);
+    clip-path: polygon(94% 0, 121% 100%, 121% 100%, 94% 0);
+    animation: sqsm_animation_img6 4s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + .6s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + .6s);
+}
+@keyframes sqsm_animation_img6 {
+    0%{}
+    25%{
+        -webkit-clip-path: polygon(94% 0, 121% 100%, 103% 100%, 76% 0);
+        clip-path: polygon(94% 0, 121% 100%, 103% 100%, 76% 0);
+    } 
+    27.5%{
+        -webkit-clip-path: polygon(94% 0, 121% 100%, 103% 100%, 76% 0);
+        clip-path: polygon(94% 0, 121% 100%, 103% 100%, 76% 0);
+    } 
+    50%{
+        -webkit-clip-path: polygon(94% 0, 121% 100%, 63% 100%, 36% 0);
+        clip-path: polygon(94% 0, 121% 100%, 63% 100%, 36% 0);
+    } 
+    60%{
+        -webkit-clip-path: polygon(94% 0, 121% 100%, 63% 100%, 36% 0);
+        clip-path: polygon(94% 0, 121% 100%, 63% 100%, 36% 0);
+    } 
+    77%{
+        -webkit-clip-path: polygon(36% 0, 63% 100%, 63% 100%, 36% 0);
+        clip-path: polygon(36% 0, 63% 100%, 63% 100%, 36% 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(36% 0, 63% 100%, 63% 100%, 36% 0);
+        clip-path: polygon(36% 0, 63% 100%, 63% 100%, 36% 0);
+    } 
+}
+.sqsm_animation div:nth-child(10) img{
+    transform: scale(1.2) translateY(-2vh);
+    -webkit-clip-path: polygon(-26% 0, 0 100%, 0 100%, -26% 0);
+    clip-path: polygon(-26% 0, 0 100%, 0 100%, -26% 0);
+    animation: sqsm_animation_img10 4s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--sqsm_animation) + .6s);
+    -webkit-animation-delay:calc(var(--sqsm_animation) + .6s);
+}
+@keyframes sqsm_animation_img10 {
+    0%{}
+    25%{
+        -webkit-clip-path: polygon(-5% 0, 21% 100%, 0 100%, -26% 0);
+        clip-path: polygon(-5% 0, 21% 100%, 0 100%, -26% 0);
+    } 
+    27.5%{
+        -webkit-clip-path: polygon(-5% 0, 21% 100%, 0 100%, -26% 0);
+        clip-path: polygon(-5% 0, 21% 100%, 0 100%, -26% 0);
+    } 
+    50%{
+        -webkit-clip-path: polygon(36% 0, 63% 100%, 0 100%, -26% 0);
+        clip-path: polygon(36% 0, 63% 100%, 0 100%, -26% 0);
+    } 
+    60%{
+        -webkit-clip-path: polygon(36% 0, 63% 100%, 0 100%, -26% 0);
+        clip-path: polygon(36% 0, 63% 100%, 0 100%, -26% 0);
+    } 
+    77%{
+        -webkit-clip-path: polygon(36% 0, 63% 100%, 63% 100%, 36% 0);
+        clip-path: polygon(36% 0, 63% 100%, 63% 100%, 36% 0);
+    } 
+    100%{
+        -webkit-clip-path: polygon(36% 0, 63% 100%, 63% 100%, 36% 0);
+        clip-path: polygon(36% 0, 63% 100%, 63% 100%, 36% 0);
+    } 
+}
