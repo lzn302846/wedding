@@ -44,21 +44,6 @@
       <span id="full-screen" class="iconfont iconzuidahua max-min-screen"></span>
       <span id="exit-fullscreen" class="iconfont icon3zuidahua-3 max-min-screen"></span>
     </div>
-    
-    <div class="squareToCircular">
-        <div>
-          <!-- <img src="./image/fmvp/fmvp-mwhy.webp" alt=""> -->
-        </div>
-        <div>
-          <!-- <img src="./image/fmvp/fmvp-mwhy.webp" alt=""> -->
-        </div>
-        <div>
-          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
-        </div>
-        <div>
-          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
-        </div>
-    </div>
 
     <!-- 黑色方块逐渐展开显示图片 -->
     <div id="animation_box" class="animation_box"></div>
@@ -2578,6 +2563,64 @@
         sqsmAnimationEl.className = 'sqsm_animation';
         this.animationBox.appendChild(sqsmAnimationEl);
         sqsmAnimationEl.innerHTML = sqsmAnimationElStr;
+        setTimeout(() => {
+          this.squareToCircular()
+        }, 8000);
+        setTimeout(() => {
+          this.animationBox.removeChild(sqsmAnimationEl);
+        }, 10000);
+      }
+      
+      // 方成圆动画
+      squareToCircular(){
+        let squareToCircularElStr = `
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+        </div>
+        <div></div>
+        <!-- 第三层上② -->
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+          <div class="whiteMask17"></div>
+        </div>
+        <!-- 第三层底① -->
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+        </div>
+        <!-- 第三层上① -->
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+          <div class="whiteMask17"></div>
+        </div>
+
+        <!-- 第二层底② -->
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+        </div>
+        <!-- 第二层上② -->
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+          <div class="whiteMask30"></div>
+        </div>
+        <!-- 第二层底① -->
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+        </div>
+        <!-- 第二层上① -->
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+          <div class="whiteMask30"></div>
+        </div>
+
+        <!-- 第一层 -->
+        <div>
+          <img src="./image/fmvp/fmvp-mwhy.webp" alt="">
+        </div>
+        `
+        var squareToCircularEl = document.createElement("div");
+        squareToCircularEl.className = 'squareToCircular';
+        this.animationBox.appendChild(squareToCircularEl);
+        squareToCircularEl.innerHTML = squareToCircularElStr;
       }
 
       // 最爱的文字和英文效果抽离
@@ -2713,7 +2756,7 @@
     // setTimeout(() => {
       // ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
     // }, 5000);
-      // ac.loopBlackBlockStartArrGenerateEl();
+      ac.sqsmAnimation();
 
     // 全屏和最小化
     (function () {
