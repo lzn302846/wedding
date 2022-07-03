@@ -159,7 +159,7 @@
     transform: translateX(-50%) translateY(-50%);
     opacity: 0;
 }
- .circle_divergence_box_1 div{
+ .circle_divergence_box_1>div{
     width: 8vh;
     height: .5vh;
     border-radius: 40%;
@@ -233,7 +233,7 @@
 }
 
 /* 第一组发射效果 */
- .circle_divergence_box_1 div:nth-child(1){
+ .circle_divergence_box_1>div:nth-child(1){
     transform: translateY(-50%) rotate(18deg) translateX(-10vh);
     animation: circle_divergence_box_1 1s ease;
     animation-fill-mode : forwards; 
@@ -241,7 +241,7 @@
     animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
     -webkit-animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
 }
- .circle_divergence_box_1 div:nth-child(2){
+ .circle_divergence_box_1>div:nth-child(2){
     transform: translateY(-50%) rotate(54deg) translateX(-10vh);
     animation: circle_divergence_box_2 1s ease;
     animation-fill-mode : forwards; 
@@ -249,7 +249,7 @@
     animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
     -webkit-animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
 }
- .circle_divergence_box_1 div:nth-child(3){
+ .circle_divergence_box_1>div:nth-child(3){
     transform: translateY(-50%) rotate(90deg) translateX(-10vh);
     animation: circle_divergence_box_3 1s ease;
     animation-fill-mode : forwards; 
@@ -257,7 +257,7 @@
     animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
     -webkit-animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
 }
- .circle_divergence_box_1 div:nth-child(4){
+ .circle_divergence_box_1>div:nth-child(4){
     transform: translateY(-50%) rotate(126deg) translateX(-10vh);
     animation: circle_divergence_box_4 1s ease;
     animation-fill-mode : forwards; 
@@ -265,7 +265,7 @@
     animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
     -webkit-animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
 }
- .circle_divergence_box_1 div:nth-child(5){
+ .circle_divergence_box_1>div:nth-child(5){
     transform: translateY(-50%) rotate(162deg) translateX(-10vh);
     animation: circle_divergence_box_5 1s ease;
     animation-fill-mode : forwards; 
@@ -273,7 +273,7 @@
     animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
     -webkit-animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
 }
- .circle_divergence_box_1 div:nth-child(6){
+ .circle_divergence_box_1>div:nth-child(6){
     transform: translateY(-50%) rotate(198deg) translateX(-10vh);
     animation: circle_divergence_box_6 1s ease;
     animation-fill-mode : forwards; 
@@ -281,7 +281,7 @@
     animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
     -webkit-animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
 }
- .circle_divergence_box_1 div:nth-child(7){
+ .circle_divergence_box_1>div:nth-child(7){
     transform: translateY(-50%) rotate(234deg) translateX(-10vh);
     animation: circle_divergence_box_7 1s ease;
     animation-fill-mode : forwards; 
@@ -289,7 +289,7 @@
     animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
     -webkit-animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
 }
- .circle_divergence_box_1 div:nth-child(8){
+ .circle_divergence_box_1>div:nth-child(8){
     transform: translateY(-50%) rotate(270deg) translateX(-10vh);
     animation: circle_divergence_box_8 1s ease;
     animation-fill-mode : forwards; 
@@ -297,7 +297,7 @@
     animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
     -webkit-animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
 }
- .circle_divergence_box_1 div:nth-child(9){
+ .circle_divergence_box_1>div:nth-child(9){
     transform: translateY(-50%) rotate(306deg) translateX(-10vh);
     animation: circle_divergence_box_9 1s ease;
     animation-fill-mode : forwards; 
@@ -305,7 +305,7 @@
     animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
     -webkit-animation-delay:calc(var(--circle_divergence_box_1_delay) + 0s);
 }
- .circle_divergence_box_1 div:nth-child(10){
+ .circle_divergence_box_1>div:nth-child(10){
     transform: translateY(-50%) rotate(342deg) translateX(-10vh);
     animation: circle_divergence_box_10 1s ease;
     animation-fill-mode : forwards; 

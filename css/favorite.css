@@ -336,11 +336,13 @@
 
 /* 大声告诉你 */
 .tell_you_outer{
+    --tell_delay: 13.5s; /* 大声告诉你的延迟时间13.5s*/
+    
     width: 100%;
     height: 100vh;
     position: relative;
     background-color: black;
-    animation: tell_you_outer 8s ease;
+    animation: tell_you_outer 12.5s ease;
     animation-fill-mode : forwards; 
     -webkit-animation-fill-mode : forwards;
     animation-delay:var(--tell_delay);
@@ -348,7 +350,7 @@
 }
 @keyframes tell_you_outer {
     0%{}
-    10%{transform: translateY(-100vh);opacity: 1;} 
+    8%{transform: translateY(-100vh);opacity: 1;} 
     98%{transform: translateY(-100vh);opacity: 1;} 
     100%{transform: translateY(-100vh);opacity: 0;} 
 }
@@ -358,29 +360,32 @@
     font-size: 9.6vh;
     line-height: 12.4vh;
     letter-spacing: 1vw;
-    color: rgba(255, 255, 255, 0);
-    animation: tell_you 5.5s ease;
-    animation-fill-mode : forwards; 
-    -webkit-animation-fill-mode : forwards;
-    animation-delay:calc(var(--tell_delay) + 1s);
-    -webkit-animation-delay:calc(var(--tell_delay) + 1s);
 }
-@keyframes tell_you {
-    0%{}
-    50%{color: rgba(255, 255, 255, .5);} 
-    80%{color: rgba(255, 255, 255, .5);} 
-    100%{color: rgba(255, 255, 255, 0);} 
-}
+
 .tell_you_outer .tell_you .tell_you_group .tell_you_tell{
-    animation: tell_you_tell 1.5s ease;
+    animation: tell_you_tell 20s ease;
     animation-fill-mode : forwards; 
     -webkit-animation-fill-mode : forwards;
-    animation-delay:calc(var(--tell_delay) + 5.3s);
-    -webkit-animation-delay:calc(var(--tell_delay) + 5.3s);
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
 }
 @keyframes tell_you_tell {
     0%{}
-    100%{color: rgba(255, 255, 255, 0);} 
+    12.5%{opacity:0;} 
+    13%{opacity:1;} 
+    13.5%{opacity:0;} 
+    14.5%{opacity:0;} 
+    15%{opacity:1;} 
+    15.5%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    40%{opacity:1;} 
+    40.5%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}  
 }
 .tell_you_outer .tell_you .tell_you_group{
     display: flex;
@@ -388,8 +393,986 @@
     align-items: center;
 }
 .tell_you_outer .tell_you .tell_you_group .tell_you_tell{
+    opacity: 1;
     font-size: 5vh;
-    color: #E33E66;
+}
+
+/* 我爱你三个字的特效 */
+/* 第一行 */
+.tell_you_outer .tell_you div:nth-child(1) div:nth-child(1){
+    animation: tell_you_love_you_1_1 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_1_1 {
+    0%{}
+    10%{opacity:0;} 
+    10.5%{opacity:1;} 
+    11%{opacity:0;} 
+    14%{opacity:0;} 
+    14.5%{opacity:1;} 
+    15%{opacity:0;} 
+    34.5%{opacity:0;} 
+    35%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    45%{opacity:0;} 
+    45.5%{opacity:1;} 
+    47.5%{opacity:1;} 
+    48%{opacity:0;} 
+    100%{opacity:0;} 
+}
+.tell_you_outer .tell_you div:nth-child(1) div:nth-child(2){
+    animation: tell_you_love_you_1_2 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_1_2 {
+    0%{}
+    10.5%{opacity:0;} 
+    11%{opacity:1;} 
+    11.5%{opacity:0;} 
+    13.5%{opacity:0;} 
+    14%{opacity:1;} 
+    14.5%{opacity:0;} 
+    34%{opacity:0;} 
+    34.5%{opacity:1;} 
+    42.5%{opacity:1 ;} 
+    43%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(1) div:nth-child(3){
+    animation: tell_you_love_you_1_3 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_1_3 {
+    0%{}
+    11%{opacity:0;} 
+    11.5%{opacity:1;} 
+    12%{opacity:0;} 
+    13%{opacity:0;} 
+    13.5%{opacity:1;} 
+    14%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    40%{opacity:1;} 
+    40.5%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}   
+}
+.tell_you_outer .tell_you div:nth-child(1) div:nth-child(4){
+    animation: tell_you_love_you_1_4 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_1_4 {
+    0%{}
+    11.5%{opacity:0;} 
+    12%{opacity:1;} 
+    12.5%{opacity:0;} 
+    13%{opacity:1;} 
+    13.5%{opacity:0;} 
+    34%{opacity:0;} 
+    34.5%{opacity:1;} 
+    40%{opacity:1;} 
+    40.5%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(1) div:nth-child(5){
+    animation: tell_you_love_you_1_5 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_1_5 {
+    0%{}
+    12%{opacity:0;} 
+    12.5%{opacity:1;} 
+    13%{opacity:0;} 
+    34.5%{opacity:0;} 
+    35%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    45%{opacity:0;} 
+    45.5%{opacity:1;} 
+    47.5%{opacity:1;} 
+    48%{opacity:0;} 
+    100%{opacity:0;}
+}
+/* 第二行 */
+.tell_you_outer .tell_you div:nth-child(2) div:nth-child(1){
+    animation: tell_you_love_you_2_1 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_2_1 {
+    0%{}
+    10.5%{opacity:0;} 
+    11%{opacity:1;} 
+    11.5%{opacity:0;} 
+    14.5%{opacity:0;} 
+    15%{opacity:1;} 
+    15.5%{opacity:0;} 
+    34%{opacity:0;} 
+    34.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    100%{opacity:0;} 
+}
+.tell_you_outer .tell_you div:nth-child(2) div:nth-child(2){
+    animation: tell_you_love_you_2_2 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_2_2 {
+    0%{}
+    11%{opacity:0;} 
+    11.5%{opacity:1;} 
+    12%{opacity:0;} 
+    14%{opacity:0;} 
+    14.5%{opacity:1;} 
+    15%{opacity:0;} 
+    27.5%{opacity:0;} 
+    28%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    40%{opacity:0;} 
+    40.5%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(2) div:nth-child(3){
+    animation: tell_you_love_you_2_3 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_2_3 {
+    0%{}
+    11.5%{opacity:0;} 
+    12%{opacity:1;} 
+    12.5%{opacity:0;} 
+    13.5%{opacity:0;} 
+    14%{opacity:1;} 
+    14.5%{opacity:0;} 
+    33%{opacity:0;} 
+    33.5%{opacity:1;} 
+    40%{opacity:1;} 
+    40.5%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(2) div:nth-child(4){
+    animation: tell_you_love_you_2_4 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_2_4 {
+    0%{}
+    12%{opacity:0;} 
+    12.5%{opacity:1;} 
+    13%{opacity:0;} 
+    13.5%{opacity:1;} 
+    14%{opacity:0;} 
+    27.5%{opacity:0;} 
+    28%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;}
+}
+.tell_you_outer .tell_you div:nth-child(2) div:nth-child(5){
+    animation: tell_you_love_you_2_5 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_2_5 {
+    0%{}
+    12.5%{opacity:0;} 
+    13%{opacity:1;} 
+    13.5%{opacity:0;} 
+    34%{opacity:0;} 
+    34.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    100%{opacity:0;}  
+}
+/* 第三行 */
+.tell_you_outer .tell_you div:nth-child(3) div:nth-child(1){
+    animation: tell_you_love_you_3_1 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_3_1 {
+    0%{}
+    11%{opacity:0;} 
+    11.5%{opacity:1;} 
+    12%{opacity:0;} 
+    15%{opacity:0;} 
+    15.5%{opacity:1;} 
+    16%{opacity:0;} 
+    26%{opacity:0;} 
+    26.5%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33%{opacity:0;} 
+    34%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;}
+}
+.tell_you_outer .tell_you div:nth-child(3) div:nth-child(2){
+    animation: tell_you_love_you_3_2 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_3_2 {
+    0%{}
+    11.5%{opacity:0;} 
+    12%{opacity:1;} 
+    12.5%{opacity:0;} 
+    14.5%{opacity:0;} 
+    15%{opacity:1;} 
+    15.5%{opacity:0;} 
+    33%{opacity:0;} 
+    33.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    40%{opacity:0;} 
+    40.5%{opacity:1;} 
+    42.5%{opacity:1;} 
+    43%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}   
+}
+.tell_you_outer .tell_you div:nth-child(3) div:nth-child(3){
+    animation: tell_you_love_you_3_3 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_3_3 {
+    0%{}
+    12%{opacity:0;} 
+    12.5%{opacity:1;} 
+    13%{opacity:0;} 
+    14%{opacity:0;} 
+    14.5%{opacity:1;} 
+    15%{opacity:0;} 
+    29%{opacity:0;} 
+    29.5%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33%{opacity:1;} 
+    40%{opacity:1;} 
+    40.5%{opacity:0;} 
+    100%{opacity:0;} 
+}
+.tell_you_outer .tell_you div:nth-child(3) div:nth-child(4){
+    animation: tell_you_love_you_3_4 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_3_4 {
+    0%{}
+    12.5%{opacity:0;} 
+    13%{opacity:1;} 
+    13.5%{opacity:0;} 
+    14%{opacity:1;} 
+    14.5%{opacity:0;} 
+    33%{opacity:0;} 
+    33.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(3) div:nth-child(5){
+    animation: tell_you_love_you_3_5 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_3_5 {
+    0%{}
+    13%{opacity:0;} 
+    13.5%{opacity:1;} 
+    14%{opacity:0;} 
+    26%{opacity:0;} 
+    26.5%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;} 
+}
+/* 第四行 */
+.tell_you_outer .tell_you div:nth-child(4) div:nth-child(1){
+    animation: tell_you_love_you_4_1 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_4_1 {
+    0%{}
+    11.5%{opacity:0;} 
+    12%{opacity:1;} 
+    12.5%{opacity:0;} 
+    15.5%{opacity:0;} 
+    16%{opacity:1;} 
+    16.5%{opacity:0;} 
+    24.5%{opacity:0;} 
+    25%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33%{opacity:0;} 
+    33.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;} 
+}
+.tell_you_outer .tell_you div:nth-child(4) div:nth-child(2){
+    animation: tell_you_love_you_4_2 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_4_2 {
+    0%{}
+    12%{opacity:0;} 
+    12.5%{opacity:1;} 
+    13%{opacity:0;} 
+    15%{opacity:0;} 
+    15.5%{opacity:1;} 
+    16%{opacity:0;} 
+    32.5%{opacity:0;} 
+    33%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    40%{opacity:0;} 
+    40.5%{opacity:1;} 
+    42.5%{opacity:1;} 
+    43%{opacity:0;} 
+    45%{opacity:0;} 
+    45.5%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(4) div:nth-child(4){
+    animation: tell_you_love_you_4_4 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_4_4 {
+    0%{}
+    13%{opacity:0;} 
+    13.5%{opacity:1;} 
+    14%{opacity:0;} 
+    14.5%{opacity:1;} 
+    15%{opacity:0;} 
+    32.5%{opacity:0;} 
+    33%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    45%{opacity:0;} 
+    45.5%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(4) div:nth-child(5){
+    animation: tell_you_love_you_4_5 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_4_5 {
+    0%{}
+    13.5%{opacity:0;} 
+    14%{opacity:1;} 
+    14.5%{opacity:0;} 
+    24.5%{opacity:0;} 
+    25%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33%{opacity:0;} 
+    33.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;}
+}
+/* 第五行 */
+.tell_you_outer .tell_you div:nth-child(5) div:nth-child(1){
+    animation: tell_you_love_you_5_1 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_5_1 {
+    0%{}
+    12%{opacity:0;} 
+    12.5%{opacity:1;} 
+    13%{opacity:0;} 
+    16%{opacity:0;} 
+    16.5%{opacity:1;} 
+    17%{opacity:0;} 
+    23%{opacity:0;} 
+    23.5%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(5) div:nth-child(2){
+    animation: tell_you_love_you_5_2 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_5_2 {
+    0%{}
+    12.5%{opacity:0;} 
+    13%{opacity:1;} 
+    13.5%{opacity:0;} 
+    15.5%{opacity:0;} 
+    16%{opacity:1;} 
+    16.5%{opacity:0;} 
+    33%{opacity:0;} 
+    33.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    40%{opacity:0;} 
+    40.5%{opacity:1;} 
+    42.5%{opacity:1;} 
+    43%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(5) div:nth-child(3){
+    animation: tell_you_love_you_5_3 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_5_3 {
+    0%{}
+    13%{opacity:0;} 
+    13.5%{opacity:1;} 
+    14%{opacity:0;} 
+    15%{opacity:0;} 
+    15.5%{opacity:1;} 
+    16%{opacity:0;} 
+    32.5%{opacity:0;} 
+    33%{opacity:1;} 
+    40%{opacity:1;} 
+    40.5%{opacity:0;} 
+    100%{opacity:0;} 
+}
+.tell_you_outer .tell_you div:nth-child(5) div:nth-child(4){
+    animation: tell_you_love_you_5_4 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_5_4 {
+    0%{}
+    13.5%{opacity:0;} 
+    14%{opacity:1;} 
+    14.5%{opacity:0;} 
+    15%{opacity:1;} 
+    15.5%{opacity:0;} 
+    33%{opacity:0;} 
+    33.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    100%{opacity:0;} 
+}
+.tell_you_outer .tell_you div:nth-child(5) div:nth-child(5){
+    animation: tell_you_love_you_5_5 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_5_5 {
+    0%{}
+    14%{opacity:0;} 
+    14.5%{opacity:1;} 
+    15%{opacity:0;} 
+    23%{opacity:0;} 
+    23.5%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;}
+}
+/* 第六行 */
+.tell_you_outer .tell_you div:nth-child(6) div:nth-child(1){
+    animation: tell_you_love_you_6_1 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_6_1 {
+    0%{}
+    12.5%{opacity:0;} 
+    13%{opacity:1;} 
+    13.5%{opacity:0;} 
+    16.5%{opacity:0;} 
+    17%{opacity:1;} 
+    17.5%{opacity:0;} 
+    34%{opacity:0;} 
+    34.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;}
+}
+.tell_you_outer .tell_you div:nth-child(6) div:nth-child(2){
+    animation: tell_you_love_you_6_2 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_6_2 {
+    0%{}
+    13%{opacity:0;} 
+    13.5%{opacity:1;} 
+    14%{opacity:0;} 
+    16%{opacity:0;} 
+    16.5%{opacity:1;} 
+    17%{opacity:0;} 
+    21.5%{opacity:0;} 
+    22%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    40%{opacity:0;} 
+    40.5%{opacity:1;} 
+    42.5%{opacity:1;} 
+    43%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}      
+}
+.tell_you_outer .tell_you div:nth-child(6) div:nth-child(3){
+    animation: tell_you_love_you_6_3 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_6_3 {
+    0%{}
+    13.5%{opacity:0;} 
+    14%{opacity:1;} 
+    14.5%{opacity:0;} 
+    15.5%{opacity:0;} 
+    16%{opacity:1;} 
+    16.5%{opacity:0;} 
+    33%{opacity:0;} 
+    33.5%{opacity:1;} 
+    40%{opacity:1;} 
+    40.5%{opacity:0;} 
+    100%{opacity:0;} 
+}
+.tell_you_outer .tell_you div:nth-child(6) div:nth-child(4){
+    animation: tell_you_love_you_6_4 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_6_4 {
+    0%{}
+    14%{opacity:0;} 
+    14.5%{opacity:1;} 
+    15%{opacity:0;} 
+    15.5%{opacity:1;} 
+    16%{opacity:0;} 
+    21.5%{opacity:0;} 
+    22%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    100%{opacity:0;} 
+}
+.tell_you_outer .tell_you div:nth-child(6) div:nth-child(5){
+    animation: tell_you_love_you_6_5 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_6_5 {
+    0%{}
+    14.5%{opacity:0;} 
+    15%{opacity:1;} 
+    15.5%{opacity:0;} 
+    34%{opacity:0;} 
+    34.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;} 
+}
+/* 第七行 */
+.tell_you_outer .tell_you div:nth-child(7) div:nth-child(1){
+    animation: tell_you_love_you_7_1 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_7_1 {
+    0%{}
+    13%{opacity:0;} 
+    13.5%{opacity:1;} 
+    14%{opacity:0;} 
+    17%{opacity:0;} 
+    17.5%{opacity:1;} 
+    18%{opacity:0;} 
+    34.5%{opacity:0;} 
+    35%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    100%{opacity:0;} 
+}
+.tell_you_outer .tell_you div:nth-child(7) div:nth-child(2){
+    animation: tell_you_love_you_7_2 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_7_2 {
+    0%{}
+    13.5%{opacity:0;} 
+    14%{opacity:1;} 
+    14.5%{opacity:0;} 
+    16.5%{opacity:0;} 
+    17%{opacity:1;} 
+    17.5%{opacity:0;} 
+    34%{opacity:0;} 
+    34.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    40%{opacity:0;} 
+    40.5%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(7) div:nth-child(3){
+    animation: tell_you_love_you_7_3 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_7_3 {
+    0%{}
+    14%{opacity:0;} 
+    14.5%{opacity:1;} 
+    15%{opacity:0;} 
+    16%{opacity:0;} 
+    16.5%{opacity:1;} 
+    17%{opacity:0;} 
+    20%{opacity:0;} 
+    20.5%{opacity:1;} 
+    32%{opacity:1;} 
+    32.5%{opacity:0;} 
+    33.5%{opacity:0;} 
+    34%{opacity:1;} 
+    40%{opacity:1;} 
+    40.5%{opacity:0;} 
+    45%{opacity:0;} 
+    45.5%{opacity:1;} 
+    47.5%{opacity:1;} 
+    48%{opacity:0;} 
+    100%{opacity:0;}
+}
+.tell_you_outer .tell_you div:nth-child(7) div:nth-child(4){
+    animation: tell_you_love_you_7_4 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_7_4 {
+    0%{}
+    14.5%{opacity:0;} 
+    15%{opacity:1;} 
+    15.5%{opacity:0;} 
+    16%{opacity:1;} 
+    16.5%{opacity:0;} 
+    34%{opacity:0;} 
+    34.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    42.5%{opacity:0;} 
+    43%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    100%{opacity:0;}
+}
+.tell_you_outer .tell_you div:nth-child(7) div:nth-child(5){
+    animation: tell_you_love_you_7_5 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_7_5 {
+    0%{}
+    15%{opacity:0;} 
+    15.5%{opacity:1;} 
+    16%{opacity:0;} 
+    34.5%{opacity:0;} 
+    35%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    100%{opacity:0;} 
+}
+/* 第八行 */
+.tell_you_outer .tell_you div:nth-child(8) div:nth-child(1){
+    animation: tell_you_love_you_8_1 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_8_1 {
+    0%{}
+    13.5%{opacity:0;} 
+    14%{opacity:1;} 
+    14.5%{opacity:0;} 
+    17.5%{opacity:0;} 
+    18%{opacity:1;} 
+    18.5%{opacity:0;} 
+    35%{opacity:0;} 
+    35.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    100%{opacity:0;}  
+}
+.tell_you_outer .tell_you div:nth-child(8) div:nth-child(2){
+    animation: tell_you_love_you_8_2 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_8_2 {
+    0%{}
+    14%{opacity:0;} 
+    14.5%{opacity:1;} 
+    15%{opacity:0;} 
+    17%{opacity:0;} 
+    17.5%{opacity:1;} 
+    18%{opacity:0;} 
+    34.5%{opacity:0;} 
+    35%{opacity:1;} 
+    42.5%{opacity:1;} 
+    43%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}    
+}
+.tell_you_outer .tell_you div:nth-child(8) div:nth-child(3){
+    animation: tell_you_love_you_8_3 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_8_3 {
+    0%{}
+    14.5%{opacity:0;} 
+    15%{opacity:1;} 
+    15.5%{opacity:0;} 
+    16.5%{opacity:0;} 
+    17%{opacity:1;} 
+    17.5%{opacity:0;} 
+    34%{opacity:0;} 
+    34.5%{opacity:1;} 
+    45%{opacity:1;} 
+    45.5%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}   
+}
+.tell_you_outer .tell_you div:nth-child(8) div:nth-child(4){
+    animation: tell_you_love_you_8_4 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_8_4 {
+    0%{}
+    15%{opacity:0;} 
+    15.5%{opacity:1;} 
+    16%{opacity:0;} 
+    16.5%{opacity:1;} 
+    17%{opacity:0;} 
+    34.5%{opacity:0;} 
+    35%{opacity:1;} 
+    42.5%{opacity:1;} 
+    43%{opacity:0;} 
+    47.5%{opacity:0;} 
+    48%{opacity:1;} 
+    50%{opacity:1;} 
+    50.5%{opacity:0;} 
+    100%{opacity:0;}   
+}
+.tell_you_outer .tell_you div:nth-child(8) div:nth-child(5){
+    animation: tell_you_love_you_8_5 20s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:calc(var(--tell_delay) + .2s);
+    -webkit-animation-delay:calc(var(--tell_delay) + .2s);
+}
+@keyframes tell_you_love_you_8_5 {
+    0%{}
+    15.5%{opacity:0;} 
+    16%{opacity:1;} 
+    16.5%{opacity:0;} 
+    35%{opacity:0;} 
+    35.5%{opacity:1;} 
+    37.5%{opacity:1;} 
+    38%{opacity:0;} 
+    100%{opacity:0;} 
 }
 
 /* I LOVE YOU */
