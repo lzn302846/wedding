@@ -1,0 +1,133 @@
+.tell_you_loudly{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 11;
+}
+.tyl_background1{
+    transform: rotate(180deg) scale(0);
+    width: 100%;
+    height: 100%;
+    background: #FF1F65;
+    position: absolute;
+    top: 0;
+    animation: tyl_rotate 1s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+@keyframes tyl_rotate {
+    0%{}
+    100%{
+        transform: rotate(0deg) scale(1);
+    }
+}
+.tyl_background2{
+    transform: rotate(180deg) scale(0);
+    width: 100%;
+    height: 100%;
+    background: #ffff66;
+    position: absolute;
+    top: 0;
+    animation: tyl_rotate 1s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:.2s;
+    -webkit-animation-delay: .2s;
+}
+.tyl_content{
+    transform: rotate(180deg) scale(0);
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    animation: tyl_rotate 1s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:.4s;
+    -webkit-animation-delay: .4s;
+}
+.tyl_content .tyl_content_inner{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: tyl_content_inner 1s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:4s;
+    -webkit-animation-delay: 4s;
+}
+@keyframes tyl_content_inner {
+    0%{}
+    100%{
+        transform: translateX(-50%) scale(0);
+    }
+}
+.tyl_content .tyl_dot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tyl_content .tyl_dot div{
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background: white;
+    margin-right: 4vw;
+    position: relative;
+    left: 3.5vh;
+    opacity: .2;
+    animation: tyl_dot 1s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+}
+.tyl_content .tyl_dot div:nth-child(1){
+    animation-delay:1.5s;
+    -webkit-animation-delay: 1.5s;
+}
+.tyl_content .tyl_dot div:nth-child(2){
+    animation-delay:1.7s;
+    -webkit-animation-delay: 1.7s;
+}
+.tyl_content .tyl_dot div:nth-child(3){
+    animation-delay:1.9s;
+    -webkit-animation-delay: 1.9s;
+}
+.tyl_content .tyl_dot div:nth-child(4){
+    animation-delay:2.1s;
+    -webkit-animation-delay: 2.1s;
+}
+.tyl_content .tyl_dot div:nth-child(5){
+    animation-delay:2.5s;
+    -webkit-animation-delay: 2.5s;
+}
+@keyframes tyl_dot {
+    0%{}
+    100%{
+        opacity: 1;
+    }
+}
+.tyl_content .tyl_tyl{
+    text-align: center;
+    font-size: 10vh;
+    color: white;
+    font-weight: bold;
+    word-spacing: 1.5vw;
+    margin-top: 2vh;
+}
+.tyl_content .tyl_ily{
+    text-align: center;
+    font-size: 20vh;
+    font-weight: bold;
+    color: #FF1F59;
+    letter-spacing: 1vw;
+}
+.tyl_content .tyl_txt{
+    text-align: center;
+    font-size: 8vh;
+    color: white;
+}

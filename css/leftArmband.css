@@ -1,0 +1,127 @@
+.leftArmband{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 14;
+}
+.leftArmband div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.leftArmband div:nth-child(1){
+    -webkit-clip-path: polygon(145% 0%, 120% 50%, 145% 100%, 125% 100%, 100% 50%, 125% 0%);
+    clip-path: polygon(145% 0%, 120% 50%, 145% 100%, 125% 100%, 100% 50%, 125% 0%);
+    animation: leftArmband_div 1.4s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+.leftArmband div:nth-child(2){
+    -webkit-clip-path: polygon(145% 0%, 120% 50%, 145% 100%, 125% 100%, 100% 50%, 125% 0%);
+    clip-path: polygon(145% 0%, 120% 50%, 145% 100%, 125% 100%, 100% 50%, 125% 0%);
+    animation: leftArmband_div 1.4s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:.2s;
+    -webkit-animation-delay: .2s;
+}
+.leftArmband div:nth-child(3){
+    -webkit-clip-path: polygon(145% 0%, 120% 50%, 145% 100%, 125% 100%, 100% 50%, 125% 0%);
+    clip-path: polygon(145% 0%, 120% 50%, 145% 100%, 125% 100%, 100% 50%, 125% 0%);
+    animation: leftArmband_div 1.4s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:.4s;
+    -webkit-animation-delay: .4s;
+}
+@keyframes leftArmband_div {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(0% 0, -25% 50%, 0% 100%, -20% 100%, -45% 50%, -20% 0%);
+        clip-path: polygon(0% 0, -25% 50%, 0% 100%, -20% 100%, -45% 50%, -20% 0%);
+    }
+}
+.leftArmband div:nth-child(4){
+    -webkit-clip-path: polygon(145% 0%, 120% 50%, 145% 100%, 125% 100%, 100% 50%, 125% 0%);
+    clip-path: polygon(145% 0%, 120% 50%, 145% 100%, 125% 100%, 100% 50%, 125% 0%);
+    animation: leftArmband_div_last 1.4s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:.6s;
+    -webkit-animation-delay: .6s;
+}
+@keyframes leftArmband_div_last {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(0% 0, -25% 50%, 0% 100%, 125% 100%, 100% 50%, 125% 0%);
+        clip-path: polygon(0% 0, -25% 50%, 0% 100%, 125% 100%, 100% 50%, 125% 0%);
+    }
+}
+/* 图片 */
+.leftArmband div img{
+    width: 100%;
+    height: 100%;
+}
+.leftArmband div:nth-child(1) img{
+    transform: scale(1.45) translateX(-10vw);
+}
+.leftArmband div:nth-child(2) img{
+    transform: scale(1.4) translateX(-10vw);
+}
+.leftArmband div:nth-child(3) img{
+    transform: scale(1.35) translateX(-10vw);
+}
+.leftArmband div:nth-child(4) img{
+    transform: scale(1.3) translateX(-10vw);
+    animation: leftArmband_div4_img 2s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:1s;
+    -webkit-animation-delay: 1s;
+}
+@keyframes leftArmband_div4_img {
+    0%{}
+    100%{
+        transform: scale(1.1) translateX(0vw);
+    }
+}
+.bottom_txt{
+    width: 100%;
+    position: absolute;
+    z-index: 50;
+    bottom: 7vh;
+    font-size: 8vh;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    animation: bottom_txt 6s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:2s;
+    -webkit-animation-delay: 2s;
+}
+@keyframes bottom_txt {
+    0%{}
+    35%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.bottom_txt .whiteClr{
+    color: white;
+}
+.bottom_txt .ffee00Clr{
+    color: #ffee00;
+}
+.bottom_txt .qianlanClr{
+    color: #54D0E3;
+}

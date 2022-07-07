@@ -1,0 +1,331 @@
+.alwaysProtectYou{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 12;
+}
+.alwaysProtectYou .alwaysProtectYou_pic{
+    width: 100%;
+    height: 100%;
+}
+.alwaysProtectYou .alwaysProtectYou_pic div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.alwaysProtectYou .alwaysProtectYou_pic div img{
+    width: 100%;
+    height: 100%;
+}
+.black_background{
+    background: black;
+}
+
+/* 1 ~ 10 div */
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(10){
+    -webkit-clip-path: circle(10.1% at 50% 50%);
+    clip-path: circle(10.1% at 50% 50%);
+    animation: alwaysProtectYou_pic_div10 3s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.8s;
+    -webkit-animation-delay: 0.8s;
+}
+@keyframes alwaysProtectYou_pic_div10 {
+    0%{}
+    50%{
+        -webkit-clip-path: circle(5% at 50% 50%);
+        clip-path: circle(5% at 50% 50%);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        -webkit-clip-path: circle(0% at 50% 50%);
+        clip-path: circle(0% at 50% 50%);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(9){
+    -webkit-clip-path: circle(10% at 50% 50%);
+    clip-path: circle(10% at 50% 50%);
+    animation: alwaysProtectYou_pic_div9 2s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:2.6s;
+    -webkit-animation-delay: 2.6s;
+}
+@keyframes alwaysProtectYou_pic_div9 {
+    0%{}
+    100%{
+        -webkit-clip-path: circle(35.1% at 50% 50%);
+        clip-path: circle(35.1% at 50% 50%);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(8){
+    -webkit-clip-path: circle(20.1% at 50% 50%);
+    clip-path: circle(20.1% at 50% 50%);
+    animation: alwaysProtectYou_pic_div8 3s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+@keyframes alwaysProtectYou_pic_div8 {
+    0%{}
+    50%{
+        -webkit-clip-path: circle(15% at 50% 50%);
+        clip-path: circle(15% at 50% 50%);
+    }
+    100%{
+        -webkit-clip-path: circle(12% at 50% 50%);
+        clip-path: circle(12% at 50% 50%);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(7){
+    -webkit-clip-path: circle(20% at 50% 50%);
+    clip-path: circle(20% at 50% 50%);
+    animation: alwaysProtectYou_pic_div7 2s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:2.4s;
+    -webkit-animation-delay: 2.4s;
+}
+@keyframes alwaysProtectYou_pic_div7 {
+    0%{}
+    100%{
+        -webkit-clip-path: circle(35% at 50% 50%);
+        clip-path: circle(35% at 50% 50%);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(6){
+    -webkit-clip-path: circle(30.1% at 50% 50%);
+    clip-path: circle(30.1% at 50% 50%);
+    animation: alwaysProtectYou_pic_div6 3s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+@keyframes alwaysProtectYou_pic_div6 {
+    0%{}
+    50%{
+        -webkit-clip-path: circle(25% at 50% 50%);
+        clip-path: circle(25% at 50% 50%);
+    }
+    100%{
+        -webkit-clip-path: circle(22% at 50% 50%);
+        clip-path: circle(22% at 50% 50%);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(5){
+    -webkit-clip-path: circle(30% at 50% 50%);
+    clip-path: circle(30% at 50% 50%);
+    animation: alwaysProtectYou_pic_div5 2s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:2.2s;
+    -webkit-animation-delay: 2.2s;
+}
+@keyframes alwaysProtectYou_pic_div5 {
+    0%{}
+    100%{
+        -webkit-clip-path: circle(60.1% at 50% 50%);
+        clip-path: circle(60.1% at 50% 50%);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(4){
+    -webkit-clip-path: circle(40.1% at 50% 50%);
+    clip-path: circle(40.1% at 50% 50%);
+    animation: alwaysProtectYou_pic_div4 3s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+@keyframes alwaysProtectYou_pic_div4 {
+    0%{}
+    50%{
+        -webkit-clip-path: circle(35% at 50% 50%);
+        clip-path: circle(35% at 50% 50%);
+    }
+    100%{
+        -webkit-clip-path: circle(32% at 50% 50%);
+        clip-path: circle(32% at 50% 50%);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(3){
+    -webkit-clip-path: circle(40% at 50% 50%);
+    clip-path: circle(40% at 50% 50%);
+    animation: alwaysProtectYou_pic_div3 2.1s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:2s;
+    -webkit-animation-delay: 2s;
+}
+@keyframes alwaysProtectYou_pic_div3 {
+    0%{}
+    100%{
+        -webkit-clip-path: circle(60% at 50% 50%);
+        clip-path: circle(60% at 50% 50%);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(2){
+    -webkit-clip-path: circle(50.1% at 50% 50%);
+    clip-path: circle(50.1% at 50% 50%);
+    animation: alwaysProtectYou_pic_div2 3s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+@keyframes alwaysProtectYou_pic_div2 {
+    0%{}
+    65%{
+        -webkit-clip-path: circle(45% at 50% 50%);
+        clip-path: circle(45% at 50% 50%);
+    }
+    100%{
+        -webkit-clip-path: circle(42% at 50% 50%);
+        clip-path: circle(42% at 50% 50%);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(1){
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    animation: alwaysProtectYou_pic_div1 2s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:2s;
+    -webkit-animation-delay: 2s;
+}
+@keyframes alwaysProtectYou_pic_div1 {
+    0%{}
+    100%{
+        -webkit-clip-path: circle(80% at 50% 50%);
+        clip-path: circle(80% at 50% 50%);
+    }
+}
+
+/* img */
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(9) img{
+    transform: scale(1.25) translateX(-5vh);
+    animation: alwaysProtectYou_pic_div1_img 5s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(7) img{
+    transform: scale(1.3) translateX(5vh);
+    -webkit-filter: brightness(1.55);
+    filter: brightness(1.55);
+    animation: alwaysProtectYou_pic_div7_img 5s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+@keyframes alwaysProtectYou_pic_div7_img {
+    0%{}
+    40%{
+        transform: scale(1.3) translateX(0vh);
+    }
+    95%{
+        transform: scale(1.1) translateX(0vh);
+    }
+    100%{
+        transform: scale(1.1) translateX(0vh);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(5) img{
+    transform: scale(1.25) translateX(-5vh);
+    animation: alwaysProtectYou_pic_div1_img 5s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(3) img{
+    -webkit-filter: saturate(1.5); 
+    filter: saturate(1.5);
+    transform: scale(1.4) translateX(5vh);
+    animation: alwaysProtectYou_pic_div3_img 5s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+@keyframes alwaysProtectYou_pic_div3_img {
+    0%{}
+    40%{
+        transform: scale(1.5) translateX(0vh);
+    }
+    95%{
+        transform: scale(1.2) translateX(0vh);
+    }
+    100%{
+        transform: scale(1.2) translateX(0vh);
+    }
+}
+.alwaysProtectYou .alwaysProtectYou_pic div:nth-child(1) img{
+    transform: scale(1.25) translateX(-5vh);
+    animation: alwaysProtectYou_pic_div1_img 5s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+@keyframes alwaysProtectYou_pic_div1_img {
+    0%{}
+    40%{
+        transform: scale(1.25) translateX(0vh);
+    }
+    95%{
+        transform: scale(1.05) translateX(0vh);
+    }
+    100%{
+        transform: scale(1.05) translateX(0vh);
+    }
+}
+
+/* 文字部分 多个动画共用 */
+.bottom_txt{
+    width: 100%;
+    position: absolute;
+    z-index: 13;
+    bottom: 7vh;
+    font-size: 8vh;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    animation: bottom_txt 6s ease-in-out;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:2s;
+    -webkit-animation-delay: 2s;
+}
+@keyframes bottom_txt {
+    0%{}
+    35%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.bottom_txt .whiteClr{
+    color: white;
+}
+.bottom_txt .ffee00Clr{
+    color: #ffee00;
+}
+.bottom_txt .qianlanClr{
+    color: #54D0E3;
+}
+.bottom_txt .qianlvClr{
+    color: #80F1B8;
+}
