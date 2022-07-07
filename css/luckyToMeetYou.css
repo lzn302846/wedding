@@ -1,0 +1,214 @@
+.luckyToMeetYou{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 16;
+    filter: drop-shadow(5px 5px 20px rgba(0,0,0,.5));
+}
+.luckyToMeetYou div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.luckyToMeetYou div img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+/* 下半部分 */
+.luckyToMeetYou div:nth-child(1){
+    -webkit-clip-path: polygon(100% 0%, 100% 16%, 100% 16%, 100% 0%);
+    clip-path: polygon(100% 0%, 100% 16%, 100% 16%, 100% 0%);
+    animation: luckyToMeetYou_div1 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+@keyframes luckyToMeetYou_div1 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(100% 0%, 100% 16%, 16% 100%, 0% 100%);
+        clip-path: polygon(100% 0%, 100% 16%, 16% 100%, 0% 100%);
+    }
+}
+.luckyToMeetYou div:nth-child(2){
+    -webkit-clip-path: polygon(100% 16%, 100% 32%, 100% 32%, 100% 16%);
+    clip-path: polygon(100% 16%, 100% 32%, 100% 32%, 100% 16%);
+    animation: luckyToMeetYou_div2 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+@keyframes luckyToMeetYou_div2 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(100% 16%, 100% 32%, 32% 100%, 16% 100%);
+        clip-path: polygon(100% 16%, 100% 32%, 32% 100%, 16% 100%);
+    }
+}
+.luckyToMeetYou div:nth-child(3){
+    -webkit-clip-path: polygon(100% 32%, 100% 48%, 100% 48%, 100% 32%);
+    clip-path: polygon(100% 32%, 100% 48%, 100% 48%, 100% 32%);
+    animation: luckyToMeetYou_div3 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+@keyframes luckyToMeetYou_div3 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(100% 32%, 100% 48%, 48% 100%, 32% 100%);
+        clip-path: polygon(100% 32%, 100% 48%, 48% 100%, 32% 100%);
+    }
+}
+.luckyToMeetYou div:nth-child(4){
+    -webkit-clip-path: polygon(100% 48%, 100% 64%, 100% 64%, 100% 48%);
+    clip-path: polygon(100% 48%, 100% 64%, 100% 64%, 100% 48%);
+    animation: luckyToMeetYou_div4 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+@keyframes luckyToMeetYou_div4 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(100% 48%, 100% 64%, 64% 100%, 48% 100%);
+        clip-path: polygon(100% 48%, 100% 64%, 64% 100%, 48% 100%);
+    }
+}
+.luckyToMeetYou div:nth-child(5){
+    -webkit-clip-path: polygon(100% 64%, 100% 80%, 100% 80%, 100% 64%);
+    clip-path: polygon(100% 64%, 100% 80%, 100% 80%, 100% 64%);
+    animation: luckyToMeetYou_div5 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.8s;
+    -webkit-animation-delay: 0.8s;
+}
+@keyframes luckyToMeetYou_div5 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(100% 64%, 100% 80%, 80% 100%, 64% 100%);
+        clip-path: polygon(100% 64%, 100% 80%, 80% 100%, 64% 100%);
+    }
+}
+.luckyToMeetYou div:nth-child(6){
+    -webkit-clip-path: polygon(100% 80%, 100% 100%, 100% 100%, 100% 80%);
+    clip-path: polygon(100% 80%, 100% 100%, 100% 100%, 100% 80%);
+    animation: luckyToMeetYou_div6 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:1s;
+    -webkit-animation-delay: 1s;
+}
+@keyframes luckyToMeetYou_div6 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(100% 80%, 100% 100%, 100% 100%, 80% 100%);
+        clip-path: polygon(100% 80%, 100% 100%, 100% 100%, 80% 100%);
+    }
+}
+/* 上半部分 */
+.luckyToMeetYou div:nth-child(7){
+    -webkit-clip-path: polygon(0 84%, 0 100%, 0 100%, 0 84%);
+    clip-path: polygon(0 84%, 0 100%, 0 100%, 0 84%);
+    animation: luckyToMeetYou_div7 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0s;
+    -webkit-animation-delay: 0s;
+}
+@keyframes luckyToMeetYou_div7 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(84% 0, 100% 0, 0 100%, 0 84%);
+        clip-path: polygon(84% 0, 100% 0, 0 100%, 0 84%);
+    }
+}
+.luckyToMeetYou div:nth-child(8){
+    -webkit-clip-path: polygon(0 68%, 0 84%, 0 84%, 0 68%);
+    clip-path: polygon(0 68%, 0 84%, 0 84%, 0 68%);
+    animation: luckyToMeetYou_div8 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+@keyframes luckyToMeetYou_div8 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(68% 0, 84% 0, 0 84%, 0 68%);
+        clip-path: polygon(68% 0, 84% 0, 0 84%, 0 68%); 
+    }
+}
+.luckyToMeetYou div:nth-child(9){
+    -webkit-clip-path: polygon(0 52%, 0 68%, 0 68%, 0 52%);
+    clip-path: polygon(0 52%, 0 68%, 0 68%, 0 52%);
+    animation: luckyToMeetYou_div9 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+@keyframes luckyToMeetYou_div9 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(52% 0, 68% 0, 0 68%, 0 52%);
+        clip-path: polygon(52% 0, 68% 0, 0 68%, 0 52%); 
+    }
+}
+.luckyToMeetYou div:nth-child(10){
+    -webkit-clip-path: polygon(0 36%, 0 52%, 0 52%, 0 36%);
+    clip-path: polygon(0 36%, 0 52%, 0 52%, 0 36%);
+    animation: luckyToMeetYou_div10 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+@keyframes luckyToMeetYou_div10 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(36% 0, 52% 0, 0 52%, 0 36%);
+        clip-path: polygon(36% 0, 52% 0, 0 52%, 0 36%); 
+    }
+}
+.luckyToMeetYou div:nth-child(11){
+    -webkit-clip-path: polygon(0 20%, 0 36%, 0 36%, 0 20%);
+    clip-path: polygon(0 20%, 0 36%, 0 36%, 0 20%);
+    animation: luckyToMeetYou_div11 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:0.8s;
+    -webkit-animation-delay: 0.8s;
+}
+@keyframes luckyToMeetYou_div11 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(20% 0, 36% 0, 0 36%, 0 20%);
+        clip-path: polygon(20% 0, 36% 0, 0 36%, 0 20%); 
+    }
+}
+.luckyToMeetYou div:nth-child(12){
+    -webkit-clip-path: polygon(0 0%, 0 20%, 0 20%, 0 0%);
+    clip-path: polygon(0 0%, 0 20%, 0 20%, 0 0%);
+    animation: luckyToMeetYou_div12 1s ease;
+    animation-fill-mode : forwards; 
+    -webkit-animation-fill-mode : forwards;
+    animation-delay:1s;
+    -webkit-animation-delay: 1s;
+}
+@keyframes luckyToMeetYou_div12 {
+    0%{}
+    100%{
+        -webkit-clip-path: polygon(0% 0, 20% 0, 0 20%, 0 0%);
+        clip-path: polygon(0% 0, 20% 0, 0 20%, 0 0%); 
+    }
+}

@@ -33,6 +33,11 @@
   <link rel="stylesheet" href="./css/top_middle_bottom_img_clip.css">
   <link rel="stylesheet" href="./css/sqsm_animation.css">
   <link rel="stylesheet" href="./css/squareToCircular.css">
+  <link rel="stylesheet" href="./css/tell_you_loudly.css">
+  <link rel="stylesheet" href="./css/alwaysProtectYou.css">
+  <link rel="stylesheet" href="./css/leftArmband.css">
+  <link rel="stylesheet" href="./css/alwaysWithYou.css">
+  <link rel="stylesheet" href="./css/luckyToMeetYou.css">
 
   <script src="./font_ico/iconfont.js"></script>
 </head>
@@ -44,8 +49,25 @@
       <span id="full-screen" class="iconfont iconzuidahua max-min-screen"></span>
       <span id="exit-fullscreen" class="iconfont icon3zuidahua-3 max-min-screen"></span>
     </div>
+    
+    <div class="luckyToMeetYou">
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+      <div></div>
+      <div></div>
+    </div>
 
-    <!-- 黑色方块逐渐展开显示图片 -->
+    <!-- 动画盒子 -->
     <div id="animation_box" class="animation_box"></div>
 
     <!-- 散列图 -->
@@ -2570,7 +2592,7 @@
           this.animationBox.removeChild(sqsmAnimationEl);
         }, 10000);
       }
-      
+
       // 方成圆动画
       squareToCircular(){
         let squareToCircularElStr = `
@@ -2621,6 +2643,129 @@
         squareToCircularEl.className = 'squareToCircular';
         this.animationBox.appendChild(squareToCircularEl);
         squareToCircularEl.innerHTML = squareToCircularElStr;
+        setTimeout(() => {
+          this.tellYouLoudly()
+        }, 8000);
+        setTimeout(() => {
+          this.animationBox.removeChild(squareToCircularEl);
+        }, 10000);
+      }
+
+      // tell you loudly
+      tellYouLoudly(){
+        let tellYouLoudlyElStr = `
+        <div class="tyl_background1"></div>
+        <div class="tyl_background2"></div>
+        <div class="tyl_content">
+          <div class="tyl_content_inner">
+          <!-- 五个点 -->
+          <div class="tyl_dot">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="tyl_tyl">Tell You Loudly</div>
+          <div class="tyl_ily">我愛你</div>
+          <div class="tyl_txt">غیر فعال کتن کبل ـصفحه</div>
+        </div>
+        </div>
+        `
+        var tellYouLoudlyEl = document.createElement("div");
+        tellYouLoudlyEl.className = 'tell_you_loudly';
+        this.animationBox.appendChild(tellYouLoudlyEl);
+        tellYouLoudlyEl.innerHTML = tellYouLoudlyElStr;
+        setTimeout(() => {
+          this.alwaysProtectYou()
+        }, 4800);
+        setTimeout(() => {
+          this.animationBox.removeChild(tellYouLoudlyEl);
+        }, 10000);
+      }
+
+      // 一直保护你
+      alwaysProtectYou(){
+        let alwaysProtectYouElStr = `
+        <div class="alwaysProtectYou_pic">
+          <div><img src="./image/fmvp/fmvp-yyfj.webp" alt=""></div>
+          <div class="black_background"></div>
+          <div><img src="./image/fmvp/fmvp-yyfj.webp" alt=""></div>
+          <div class="black_background"></div>
+          <div><img src="./image/fmvp/fmvp-yyfj.webp" alt=""></div>
+          <div class="black_background"></div>
+          <div><img src="./image/fmvp/fmvp-yyfj.webp" alt=""></div>
+          <div class="black_background"></div>
+          <div><img src="./image/fmvp/fmvp-yyfj.webp" alt=""></div>
+          <div class="black_background"></div>
+        </div>
+        <div class="bottom_txt">
+          <div class="whiteClr">我要一直保护你</div>
+          <div class="ffee00Clr">直到太阳失去光影的那一刻</div>
+        </div>
+        `
+        var alwaysProtectYouEl = document.createElement("div");
+        alwaysProtectYouEl.className = 'alwaysProtectYou';
+        this.animationBox.appendChild(alwaysProtectYouEl);
+        alwaysProtectYouEl.innerHTML = alwaysProtectYouElStr;
+        setTimeout(() => {
+          this.leftArmband()
+        }, 7000);
+        setTimeout(() => {
+          this.animationBox.removeChild(alwaysProtectYouEl);
+        }, 10000);
+      }
+      
+      // 左肩章特效
+      leftArmband(){
+        let leftArmbandElStr = `
+        <div class="leftArmband">
+          <div><img src="./image/fmvp/fmvp_gjfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_gjfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_gjfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_gjfj.webp" alt=""></div>
+        </div>
+        <div class="bottom_txt">
+          <div class="whiteClr">我会一直爱你</div>
+          <div class="qianlanClr">直到双鬓变白的那一天</div>
+        </div>
+        `
+        var leftArmbandEl = document.createElement("div");
+        this.animationBox.appendChild(leftArmbandEl);
+        leftArmbandEl.innerHTML = leftArmbandElStr;
+
+        setTimeout(() => {
+          this.alwaysWithYou()
+        }, 7000);
+        setTimeout(() => {
+          this.animationBox.removeChild(leftArmbandEl);
+        }, 10000);
+      }
+
+      // 一直陪伴你
+      alwaysWithYou(){
+        let alwaysWithYouElStr = `
+        <div class="alwaysWithYou">
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+          <div><img src="./image/fmvp/fmvp_wsfj.webp" alt=""></div>
+        </div>
+        <div class="bottom_txt">
+          <div class="whiteClr">我会一直陪伴你</div>
+          <div class="qianlvClr">直到海枯石烂的那一天</div>
+        </div>
+        `
+        var alwaysWithYouEl = document.createElement("div");
+        this.animationBox.appendChild(alwaysWithYouEl);
+        alwaysWithYouEl.innerHTML = alwaysWithYouElStr;
       }
 
       // 最爱的文字和英文效果抽离
@@ -2756,7 +2901,7 @@
     // setTimeout(() => {
       // ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
     // }, 5000);
-      ac.sqsmAnimation();
+      // ac.leftArmband();
 
     // 全屏和最小化
     (function () {
