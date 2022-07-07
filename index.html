@@ -50,22 +50,7 @@
       <span id="exit-fullscreen" class="iconfont icon3zuidahua-3 max-min-screen"></span>
     </div>
     
-    <div class="luckyToMeetYou">
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div></div>
-      <div></div>
-    </div>
+    
 
     <!-- 动画盒子 -->
     <div id="animation_box" class="animation_box"></div>
@@ -2766,6 +2751,37 @@
         var alwaysWithYouEl = document.createElement("div");
         this.animationBox.appendChild(alwaysWithYouEl);
         alwaysWithYouEl.innerHTML = alwaysWithYouElStr;
+        setTimeout(() => {
+          this.luckyToMeetYou()
+        }, 7000);
+        setTimeout(() => {
+          this.animationBox.removeChild(alwaysWithYouEl);
+        }, 10000);
+      }
+      
+      // 遇见你很幸运
+      luckyToMeetYou(){
+        let luckyToMeetYouElStr = `
+        <div class="luckyToMeetYou">
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div></div>
+          <div></div>
+        </div>
+        `
+        var luckyToMeetYouEl = document.createElement("div");
+        this.animationBox.appendChild(luckyToMeetYouEl);
+        luckyToMeetYouEl.innerHTML = luckyToMeetYouElStr;
       }
 
       // 最爱的文字和英文效果抽离
@@ -2901,7 +2917,7 @@
     // setTimeout(() => {
       // ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
     // }, 5000);
-      // ac.leftArmband();
+      // ac.alwaysWithYou();
 
     // 全屏和最小化
     (function () {
