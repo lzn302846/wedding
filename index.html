@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="./css/leftArmband.css">
   <link rel="stylesheet" href="./css/alwaysWithYou.css">
   <link rel="stylesheet" href="./css/luckyToMeetYou.css">
+  <link rel="stylesheet" href="./css/stage_lighting.css">
 
   <script src="./font_ico/iconfont.js"></script>
 </head>
@@ -49,22 +50,14 @@
       <span id="full-screen" class="iconfont iconzuidahua max-min-screen"></span>
       <span id="exit-fullscreen" class="iconfont icon3zuidahua-3 max-min-screen"></span>
     </div>
-    
-    <div class="luckyToMeetYou">
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
-      <div></div>
-      <div></div>
+
+    <div class="stage_lighting">
+      <div><img src="./image/again/luna_qszy.webp" alt=""></div>
+      <div class="stage_lighting_color"></div>
+      <div class="stage_lighting_dot_box">
+        <div></div>
+        <div></div>
+      </div>
     </div>
 
     <!-- 动画盒子 -->
@@ -2766,6 +2759,43 @@
         var alwaysWithYouEl = document.createElement("div");
         this.animationBox.appendChild(alwaysWithYouEl);
         alwaysWithYouEl.innerHTML = alwaysWithYouElStr;
+        setTimeout(() => {
+          this.luckyToMeetYou()
+        }, 7000);
+        setTimeout(() => {
+          this.animationBox.removeChild(alwaysWithYouEl);
+        }, 10000);
+      }
+      
+      // 遇见你很幸运
+      luckyToMeetYou(){
+        let luckyToMeetYouElStr = `
+        <div class="luckyToMeetYou">
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+          <div><img src="./image/again/rydc_jxsh.webp" alt=""></div>
+        </div>
+        <div class="bottom_txt">
+          <div class="whiteClr">亲爱的我很幸运</div>
+          <div class="redClr">车水马龙人潮人海能遇见你</div>
+        </div>
+        `
+        var luckyToMeetYouEl = document.createElement("div");
+        this.animationBox.appendChild(luckyToMeetYouEl);
+        luckyToMeetYouEl.innerHTML = luckyToMeetYouElStr;
       }
 
       // 最爱的文字和英文效果抽离
@@ -2901,7 +2931,7 @@
     // setTimeout(() => {
       // ac.loopBlackBlockStartArrGenerateEl(); // 开场的五组动画
     // }, 5000);
-      // ac.leftArmband();
+      // ac.alwaysWithYou();
 
     // 全屏和最小化
     (function () {
